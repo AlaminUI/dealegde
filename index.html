@@ -5,66 +5,126 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Working Files</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    
-    <style>
-        body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    font-family: 'PT Sans', sans-serif;
-}
-        ul {
-    display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-ul li  {
- margin-bottom: 40px;
-     
-}
-ul li a {
-    padding: 12px 24px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 24px;
-    margin: 0 8px;
-    background: #8cd21e;
-    border-radius: 3px;
-    border: 1px solid #8cd21e;
-    color: #fff;
-    transition: 0.5s;
-     
-}
-
-
-
-ul li a:hover {
-    background: #fff;
-    border: 1px solid #8cd21e;
-    color: #333;
-}
-h1 {
-    text-align: center;
-    font-size: 48px;
-    margin-bottom: 50px;
-    text-transform: uppercase;
-}
-    </style>
+ 
+    <link rel="stylesheet" href="assets/style.css">
+ 
 </head>
 <body>
-  <div class="content-box">
-    <h1>All Working Files</h1>
-    <ul>
-        <li> <a target="_blank" href="/landing-page">  landing page </a></li>
-        <li> <a target="_blank" href="/champions-list/">  champions list </a></li>
-        <li> <a target="_blank" href="/dealedge-email/">  dealedge email </a></li>
-    </ul>
-  </div>
+ 
+    <header>
+        <div class="container">
+            <div class="banner-wrapper">
+                <div class="banner-info">
+                    <h1>check our Amazing <span class="yellow">Design work</span> </h1>
+                    <p>We build responsive email and landing page . We are always with you to grow your business</p>
+                    <a href="" class="button">Our work</a>
+                </div>
+                <div class="banner-img">
+                    <img src="assets/images/banner-img.png" alt="banner img">
+                </div>
+            </div>
+
+            <div class="testimoial-area">
+                <div class="testi-title">
+                    <h3>Our Recent Client</h3>
+                </div>
+                <div class="client-compnay-logo-wrap">
+                    <div class="single-logo">
+                        <img src="assets/images/logo1.png" alt="compnay logo">
+                    </div>
+                    <div class="single-logo">
+                        <img src="assets/images/logo2.webp" alt="compnay logo">
+                    </div>
+                    <div class="single-logo">
+                        <img src="assets/images/logo3.svg" alt="compnay logo">
+                    </div>
+                    <div class="single-logo">
+                        <img src="assets/images/logo4.png" alt="compnay logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+        <section class="protfolio-area">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our recent work</h2>
+                </div>
+                <div class="isotop-buttons filter-button-group">
+                    <ul>
+                        <li class="active" data-filter="*">All</li>
+                        <li data-filter=".email"> Email Template</li>
+                        <li  data-filter=".landing-page"> Landing Page </li>
+                        <li data-filter=".others"> Others </li>
+                         
+                    </ul>
+                </div>
+
+                <div class="grid project-image">
+                    
+                    <!-- single project  -->
+                    <div class="single-project-image email">
+                        <a target="_blank" href=""> VISITE WEBSITE</a>
+                            <img src="assets/images/bain-landing-page.png" alt="project image">
+                       
+                    </div>
+
+                                            <!-- single project  -->
+                    <div class="single-project-image landing-page">
+                        <a target="_blank" href=""> VISITE WEBSITE</a>
+                            <img src="assets/images/dealedge-landing-page2.png" alt="project image">
+
+                    </div>
+
+                    <!-- single project  -->
+                    <div class="single-project-image email">
+                        <a target="_blank" href="">   VISITE WEBSITE</a>
+                            <img src="assets/images/dealedge-email-tempalte.png" alt="project image">
+
+                    </div>
+
+                    <!-- single project  -->
+                    <div class="single-project-image landing-page">
+                        <a target="_blank" href="">VISITE WEBSITE</a>
+                            <img src="assets/images/dealedge-landing-page.png" alt="project image">
+                         
+                    </div>
+
+
+                    <!-- single project  -->
+                    <div class="single-project-image others">
+                        <a target="_blank" href="">VISITE WEBSITE</a>
+                            <img src="assets/images/champions-list-landing-page.png" alt="project image">
+                        
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+ 
+        <script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+        <script>
+             $(document).ready( function() {   
+
+$('.grid').isotope({
+  itemSelector: '.single-project-image',
+});
+
+// filter items on button click
+$('.filter-button-group').on( 'click', 'li', function() {
+  var filterValue = $(this).attr('data-filter');
+  $('.grid').isotope({ filter: filterValue });
+  $('.filter-button-group li').removeClass('active');
+  $(this).addClass('active');
+});
+    })
+        </script>
 </body>
 </html>
