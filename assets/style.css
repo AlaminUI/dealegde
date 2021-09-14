@@ -127,6 +127,7 @@
     
     header {
         background: #F8F8FF;
+        padding-top: 80px;
     }
     .banner-info p {
     max-width: 500px;
@@ -159,7 +160,8 @@
 }
 
 .testimoial-area {
-    padding-bottom: 56px;
+    padding-bottom: 80px;
+    padding-top: 32px;
 }
 section.protfolio-area {
     padding-top: 70px;
@@ -339,6 +341,7 @@ section.protfolio-area {
     .banner-img {
         width: 100%;
         max-width: 100%;
+        margin-top: 32px;
     }
     .banner-img img {
         width: 100%;
@@ -373,5 +376,9 @@ section.protfolio-area {
  
         max-width: 40%;
       
+    }
+    header {
+         
+        padding-top: 0;
     }
 }
