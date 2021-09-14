@@ -366,8 +366,8 @@ section.protfolio-area {
         margin-top: 32px;
     }
     .single-project-image {
-        max-height: 270px;
-      
+        max-height: 200px;
+        min-height: auto;
     }
     .single-project-image {
  
