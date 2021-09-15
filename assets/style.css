@@ -472,3 +472,24 @@ section.protfolio-area {
       
     }
 }
+
+@media (max-width:470px) {
+    .isotop-buttons ul li {
+        padding: 4px 8px;
+        margin-right: 4px;
+        font-size: 14px;
+    }
+    .single-logo {
+        width: 100%;
+        max-width: 70px;
+        height: 100%;
+        min-height: 32px;
+        max-height: 32px;
+    
+    }
+    h3 {
+         
+        font-size: 18px;
+       
+    }
+}
