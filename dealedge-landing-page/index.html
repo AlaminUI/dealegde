@@ -62,6 +62,11 @@ img.leverage-lg-img{max-width:94px!important;margin-top:14px}
 .leverage-bottom{margin-top:60px;padding-bottom:68px}
 footer{background:#000;padding:27px 0}
 .right-img a{display:none}
+
+video-js#myPlayerID {
+    width: 100%;
+    padding-bottom: 56.3%;
+}
 @media (max-width:1199px) {
 .container{max-width:970px}
 header{position:relative;padding:25px 0}
@@ -151,7 +156,8 @@ a.request-button{font-size:24px;margin:0 auto}
                 <h1>See how data-driven decision-making will transform the way you assess deals </h1>
             </div>
             <div class="video-image">
-                <a href="#"><img src="de_video_screen.png" alt="de_video_screen"></a>
+                <div id="placeHolder"></div>
+                <a href="javascript:void(0)" id="video-button"  onclick="addPlayer()"><img src="de_video_screen.png" alt="de_video_screen"></a>
                 <div class="video-caption">
                     <p>Learn how you can gain access to aggregated benchmarks based on cashflow data for more than 30,000 private market deals — and see their powerful effect on deal sourcing, due diligence, analysis, strategy, benchmarking, and fundraising.</p>
                 </div>
@@ -242,5 +248,58 @@ a.request-button{font-size:24px;margin:0 auto}
     </div>
 </footer>
 <!-- footer section end  -->
+ 
+
+ <script>
+     var myPlayer,
+  playerHTML,
+  // +++ Set the data for the player +++
+  playerData = {
+    accountId: "921483724001",
+    playerId: "N18yruxjl",
+    videoId: "6196967762001"
+  };
+
+// +++ Build the player and place in HTML DOM +++
+function addPlayer(e) {
+    document.querySelector("#video-button").style.display="none";
+    // e.preventDefault();
+  // Dynamically build the player video element
+  playerHTML =
+    '<video-js id="myPlayerID" data-video-id="' +
+    playerData.videoId +
+    '"  data-account="' +
+    playerData.accountId +
+    '" data-player="' +
+    playerData.playerId +
+    '" data-embed="default" class="video-js" controls></video-js>';
+  // Inject the player code into the DOM
+  document.getElementById("placeHolder").innerHTML = playerHTML;
+  // Add and execute the player script tag
+  var s = document.createElement("script");
+  s.src =
+    "https://players.brightcove.net/" +
+    playerData.accountId +
+    "/" +
+    playerData.playerId +
+    "_default/index.min.js";
+  // Add the script tag to the document
+  document.body.appendChild(s);
+  // Call a function to play the video once player's JavaScropt loaded
+  s.onload = callback;
+}
+
+// +++ Initialize the player and start the video +++
+function callback() {
+  myPlayer = bc("myPlayerID");
+  // Can also use the following to assign a player instance to the variable if you choose not to use IDs for elements directly
+  // myPlayer = bc(document.getElementById('myPlayerID'));
+  myPlayer.on("loadedmetadata", function() {
+    // Mute the audio track, if there is one, so video will autoplay on button click
+    // myPlayer.muted(true);
+    myPlayer.play();
+  });
+}
+ </script>
 </body>
 </html>
