@@ -59,7 +59,7 @@
 
     h1{
         font-family:"Yport-Bold",sans-serif;
-        font-size: 57px;
+        font-size: 51px;
         line-height: 1.2;
         font-weight: 600;
         text-transform: uppercase;
@@ -365,7 +365,7 @@ li.active {
 
 @media (max-width: 991px){ 
     h1 {
-        font-size: 36px;
+        font-size: 33px;
     }
     .single-project-image {
  
@@ -435,11 +435,11 @@ section.protfolio-area {
         margin: 0 auto;
     }
     h1 {
-        font-size: 40px;
+        font-size: 34px;
         max-width: 480px;
     }
     .banner-info p {
-        font-size: 17px;
+        font-size: 16px;
         max-width: 450px;
     }
     .isotop-buttons ul li {
