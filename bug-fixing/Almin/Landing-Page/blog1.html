@@ -381,13 +381,15 @@ button.btn {
         const selector = elm.getAttribute('data-target');
         collapse(selector, 'toggle');
       }
-      elm.style.display="none";
+      
+    }, false);
+    
+    document.querySelector('button').addEventListener('click',function(){
+        document.querySelector('button').style.display="none";
       document.querySelector(".last-line").style.display="inline";
       document.querySelector(".last-p").style.display="block";
       document.querySelector(".first-line").style.color="#0a0a0a";
-    }, false);
-    
-    
+    })
     const fnmap = {
       'toggle': 'toggle',
       'show': 'add',
