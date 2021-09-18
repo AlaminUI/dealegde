@@ -103,6 +103,113 @@ h4{font-size:26px;font-weight: 400;}
 .player-wrap {
     padding-top: 40px;
 }
+
+.podcast-player {
+    display: flex;
+    border: 1px solid #000;
+    max-width: 810px;
+    padding: 12px 8px;
+    position: relative;
+}
+
+.player-logo {
+    width: 100%;
+    max-width: 200px;
+}
+
+.podcast-player:after {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: #f3f3f2;
+    content: "";
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.player-top p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #b4b4b3;
+    text-transform: capitalize;
+    word-spacing: 2px;
+    letter-spacing: 0.5px;
+}
+
+.player-top h5 {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.player-top {
+    padding-bottom: 24px;
+    padding-top: 16px;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 31px;
+}
+
+.actions {
+    width: 100%;
+    max-width: 100px;
+}
+
+.actions button {
+    display: inline-block;
+    background: #1a1a1a;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 5px solid #dbdbda;
+}
+
+.info {
+    width: 100%;
+}
+
+.player-right {
+    width: 100%;
+    padding-left: 8px;
+}
+
+span.current-time {
+    background: #fbef84;
+    padding: 4px 7px;
+    font-size: 12px;
+    line-height: 1;
+    border-radius: 3px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 4px;
+    letter-spacing: 0.6px;
+}
+
+span.duration {
+    background: #fff;
+    padding: 4px 7px;
+    font-size: 12px;
+    line-height: 1;
+    border-radius: 3px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 4px;
+    letter-spacing: 0.6px;
+}
+.player-wrap iframe {
+    max-width: 810px;
+}
 @media (max-width:1199px) {
 .women-slice{display:none}
 header:before{width:calc(100% - 74px)}
@@ -195,6 +302,9 @@ h1 br {
     display: none;
 }
 }
+ 
+ 
+
     </style>
 
 </head>
@@ -231,8 +341,12 @@ h1 br {
             <h1>Invest with confidence and <br> achieve outsized returns</h1>
 
           <div class="player-wrap">
-            <a href="https://www.youtube.com/watch?v=hzER27t89ig"><img src="https://go.bain.com/rs/545-OFW-044/images/music-player.png" alt="player"></a>
+          
 
+            <iframe height="200px" width="100%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/f60239ff-6cba-4a7e-ba4f-0914efa4e139?dark=false"></iframe>
+ 
+
+         
               <div class="player-information">
                   <h3>Listen to Bain’s “Dry Powder” podcast, <br>
                     “A Glimpse into the Holy Grail of Data Sets.”</h3>
@@ -347,7 +461,113 @@ h1 br {
 <div class="mktoContent"></div>
 
  
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
  
+
+<script>
+    var player = $('.player'),
+    audio = player.find('audio'),
+    duration = $('.duration'),
+    currentTime = $('.current-time'),
+    progressBar = $('.progress span'),
+    mouseDown = false,
+    rewind, showCurrentTime;
+
+function secsToMins(time) {
+  var int = Math.floor(time),
+      mins = Math.floor(int / 60),
+      secs = int % 60,
+      newTime = mins + ':' + ('0' + secs).slice(-2);
+  
+  return newTime;
+}
+
+function getCurrentTime() {
+  var currentTimeFormatted = secsToMins(audio[0].currentTime),
+      currentTimePercentage = audio[0].currentTime / audio[0].duration * 100;
+  
+  currentTime.text(currentTimeFormatted);
+  progressBar.css('width', currentTimePercentage + '%');
+  
+  if (player.hasClass('playing')) {
+    showCurrentTime = requestAnimationFrame(getCurrentTime);
+  } else {
+    cancelAnimationFrame(showCurrentTime);
+  }
+}
+
+audio.on('loadedmetadata', function() {
+  var durationFormatted = secsToMins(audio[0].duration);
+  duration.text(durationFormatted);
+}).on('ended', function() {
+  if ($('.repeat').hasClass('active')) {
+    audio[0].currentTime = 0;
+    audio[0].play();
+  } else {
+    player.removeClass('playing').addClass('paused');
+    audio[0].currentTime = 0;
+  }
+});
+
+$('button').on('click', function() {
+  var self = $(this);
+  
+  if (self.hasClass('play-pause') && player.hasClass('paused')) {
+    player.removeClass('paused').addClass('playing');
+    audio[0].play();
+    getCurrentTime();
+  } else if (self.hasClass('play-pause') && player.hasClass('playing')) {
+    player.removeClass('playing').addClass('paused');
+    audio[0].pause();
+  }
+  
+  if (self.hasClass('shuffle') || self.hasClass('repeat')) {
+    self.toggleClass('active');
+  }
+}).on('mousedown', function() {
+  var self = $(this);
+  
+  if (self.hasClass('ff')) {
+    player.addClass('ffing');
+    audio[0].playbackRate = 2;
+  }
+  
+  if (self.hasClass('rw')) {
+    player.addClass('rwing');
+    rewind = setInterval(function() { audio[0].currentTime -= .3; }, 100);
+  }
+}).on('mouseup', function() {
+  var self = $(this);
+  
+  if (self.hasClass('ff')) {
+    player.removeClass('ffing');
+    audio[0].playbackRate = 1;
+  }
+  
+  if (self.hasClass('rw')) {
+    player.removeClass('rwing');
+    clearInterval(rewind);
+  }
+});
+
+player.on('mousedown mouseup', function() {
+  mouseDown = !mouseDown;
+});
+
+progressBar.parent().on('click mousemove', function(e) {
+  var self = $(this),
+      totalWidth = self.width(),
+      offsetX = e.offsetX,
+      offsetPercentage = offsetX / totalWidth;
+  
+  if (mouseDown || e.type === 'click') {
+    audio[0].currentTime = audio[0].duration * offsetPercentage;
+    if (player.hasClass('paused')) {
+      progressBar.css('width', offsetPercentage * 100 + '%');
+    }
+  }
+});
+</script>
 
 </body>
 </html>
