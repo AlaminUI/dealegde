@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog 2</title>
+    <title>Investor relations article</title>
     
     <link rel="stylesheet" type="text/css" media="all" href="/css/mktLPSupportCompat.css">
    
@@ -85,6 +85,16 @@ h4{font-size:26px;font-weight: 500;}
 .information-box.ebitda-top{padding-top: 24px;padding-bottom: 16px;}
 .information-box.invest-top{padding-top: 28px;}
 .information-box.value-creation{padding-top: 26px;}
+button.btn {
+    outline: none;
+    border: none;
+    background: transparent;
+    color: red;
+    font-size: 18px;
+    text-decoration: underline;
+    font-weight: 600;
+    display: none;
+}
 @media (max-width:1199px) {
 .women-slice{display:none}
 header:before{width:calc(100% - 74px)}
@@ -169,6 +179,30 @@ h1 br {
 .information-box.value-creation {
     padding-top: 0px;
 }
+button.btn {
+    display: block;
+    margin-top: 8px;
+}
+.collapse.first {
+    height: 0px;
+    overflow: hidden;
+     
+}
+
+.collapse.first.show {
+    overflow: visible;
+    height: 100%;
+     
+}
+.last-line {
+    display: none;
+}
+.first-line{
+    color:#b3b3b3;
+}
+.last-p{
+    display: none;
+}
 }
     </style>
 
@@ -191,7 +225,7 @@ h1 br {
 <div class="header-bain-logo">
     <div class="container">
         <div class="bain-logo">
-           <a href="http://www.dealedge.com/"><img src="https://go.bain.com/rs/545-OFW-044/images/cepres_bain_horizontal_logos.png" alt="cepres_bain_horizontal_logos"></a> 
+           <a href="https://www.dealedge.com/?utm_source=BLP2&utm_medium=landingpage&utm_campaign=2109transform&utm_id=2109transform&utm_content=BLP2L1"><img src="https://go.bain.com/rs/545-OFW-044/images/cepres_bain_horizontal_logos.png" alt="cepres_bain_horizontal_logos"></a> 
         </div>
     </div>
 </div>
@@ -234,14 +268,18 @@ h1 br {
  
          <div class="information-box ebitda-top">
             <h4>Demonstrate your successes            </h4>
-            <p>DealEdge allows you to bring the story of your fund and its successes to life. You can show investors how your holdings are performing compared to their peers, or to the wider sector and industry, on a deal-by-deal basis. You can demonstrate where you are outperforming, not just in top-level IRR returns but across specific value creation metrics like revenue CAGR, EBITDA margin, and more.
-
+            <p> <span class="first-line">DealEdge allows you to bring the story of your fund and its successes to life. You can show investors how your holdings are performing compared to their peers, or to</span>
+                <button class="btn" data-toggle="collapse" data-target=".collapse.first" > Read More</button>
+                 <span class="last-line">the wider sector and industry, on a deal-by-deal basis. You can demonstrate where you are outperforming, not just in top-level IRR returns but across specific value creation metrics like revenue CAGR, EBITDA margin, and more.</span>
             </p>
-            <p>Showcase how individual deals from previous funds performed against sector averages. Highlight how far above the median your winning deals were, and how deals in lower-growth areas compare to their peers.
+ 
+            <p class="last-p">Showcase how individual deals from previous funds performed against sector averages. Highlight how far above the median your winning deals were, and how deals in lower-growth areas compare to their peers.
             </p>
  
          </div>
-                <img src="https://go.bain.com/rs/545-OFW-044/images/dealedge_for_ir_02_80_.png" alt="revenue">
+
+         <div class="collapse first">
+            <img src="https://go.bain.com/rs/545-OFW-044/images/dealedge_for_ir_02_80_.png" alt="revenue">
                 <div class="information-box invest-top">
                     <h4>Showcase your strategy                    </h4>
                 <p>DealEdge doesn’t just let you demonstrate how your past and current deals have outperformed. You can also use it during fundraising to show investors where you’ll focus on to try and find value going forward with your sector strategy. Instantly compile comparisons of IRRs, MOICs, EBITDA margins, revenue CAGRs, and more, across more than 560 industry subsectors. Show investors how returns in your chosen sub-industries compare to the wider market, and how historic margin expansions and revenue growth in comparable businesses might offer significant upside potential.
@@ -252,6 +290,9 @@ h1 br {
                     <h4>Tell your story in vivid detail                    </h4>
                     <p>The private equity industry is more data-driven than ever before, and comprehensive deal-level performance data is the breakthrough next step in that progression. With DealEdge, you can give investors a much more detailed picture of who you are and how you’re succeeding, and can take your LP communications program to the next level.</p>
                 </div>
+
+         </div>
+    
         </div>
 
 
@@ -336,7 +377,7 @@ h1 br {
     <div class="container">
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="https://go.bain.com/rs/545-OFW-044/images/dealedge-logo.png" alt="logo">
+              <a href="https://www.dealedge.com/?utm_source=BLP2&utm_medium=landingpage&utm_campaign=2109transform&utm_id=2109transform&utm_content=BLP2L4"> <img src="https://go.bain.com/rs/545-OFW-044/images/dealedge-logo.png" alt="logo"></a> 
             </div>
                 
             <div class="footer-nav">
@@ -365,7 +406,36 @@ h1 br {
  
 
  
+ 
+<script>
+    const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
+    
+    window.addEventListener('click', (ev) => {
+      const elm = ev.target;
+      if (triggers.includes(elm)) {
+        const selector = elm.getAttribute('data-target');
+        collapse(selector, 'toggle');
+      }
+      elm.style.display="none";
+      document.querySelector(".last-line").style.display="inline";
+      document.querySelector(".last-p").style.display="block";
+      document.querySelector(".first-line").style.color="#0a0a0a";
+    }, false);
+    
+    
+    const fnmap = {
+      'toggle': 'toggle',
+      'show': 'add',
+      'hide': 'remove'
+    };
+    const collapse = (selector, cmd) => {
+      const targets = Array.from(document.querySelectorAll(selector));
+      targets.forEach(target => {
+        target.classList[fnmap[cmd]]('show');
+      });
+    }
 
+</script>
  
 
  

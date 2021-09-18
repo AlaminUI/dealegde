@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog 1</title>
+    <title>Team article</title>
     
     <link rel="stylesheet" type="text/css" media="all" href="/css/mktLPSupportCompat.css">
    
@@ -81,6 +81,16 @@ h4{font-size:26px;font-weight: 500;}
 .information-box.ebitda-top{padding-top:15px;padding-bottom:24px}
 .information-box.invest-top{padding-top:55px}
 .information-box.value-creation{padding-top:40px}
+button.btn {
+    outline: none;
+    border: none;
+    background: transparent;
+    color: red;
+    font-size: 18px;
+    text-decoration: underline;
+    font-weight: 600;
+    display: none;
+}
 @media (max-width:1199px) {
 .women-slice{display:none}
 header:before{width:calc(100% - 74px)}
@@ -144,13 +154,37 @@ a.request-button{font-size:24px;margin:0 auto}
 .footer-logo{margin-bottom:40px}
 h4{font-size:20px;line-height:1.3}
 .top-information-box p{font-size:15px;line-height:1.5}
-.information-box{padding-top:32px}
+.information-box{padding-top:32px;padding-bottom: 60px;}
 .information-box p{font-size:15px}
-.competitive-section{padding-top:60px}
+.competitive-section{padding-top:0px}
 .top-information-box{padding-bottom:32px}
 .information-box.first-info-box{padding-bottom:24px}
 .information-box.invest-top{padding-bottom:24px;padding-top:32px}
 .competitive-wrap:after{height:2px}
+button.btn {
+    display: block;
+    margin-top: 8px;
+}
+.collapse.first {
+    height: 0px;
+    overflow: hidden;
+     
+}
+
+.collapse.first.show {
+    overflow: visible;
+    height: 100%;
+     
+}
+.last-line {
+    display: none;
+}
+.first-line{
+    color:#b3b3b3;
+}
+.last-p{
+    display: none;
+}
 }
     </style>
 
@@ -173,7 +207,7 @@ h4{font-size:20px;line-height:1.3}
 <div class="header-bain-logo">
     <div class="container">
         <div class="bain-logo">
-           <a href="http://www.dealedge.com/"><img src="https://go.bain.com/rs/545-OFW-044/images/cepres_bain_horizontal_logos.png" alt="cepres_bain_horizontal_logos"></a> 
+           <a href="https://www.dealedge.com/?utm_source=BLP1&utm_medium=landingpage&utm_campaign=2109transform&utm_id=2109transform&utm_content=BLP1L1"><img src="https://go.bain.com/rs/545-OFW-044/images/cepres_bain_horizontal_logos.png" alt="cepres_bain_horizontal_logos"></a> 
         </div>
     </div>
 </div>
@@ -196,33 +230,38 @@ h4{font-size:20px;line-height:1.3}
              <div class="information-box first-info-box">
                 <h4>Deal analysis like never before
                 </h4>
-                <p>Actionable data-driven intelligence is an increasingly important part of the modern private equity decision-making process. But when it comes to evaluating investment opportunities, investment professionals are too often forced to rely on anecdotal evidence or incomplete data.
+                <p> <span class="first-line">Actionable data-driven intelligence is an increasingly important part of the modern private equity decision-making process. But when it comes to evaluating</span>
+                    <button class="btn" data-toggle="collapse" data-target=".collapse.first" > Read More</button>
+                     <span class="last-line">investment opportunities, investment professionals are too often forced to rely on anecdotal evidence or incomplete data.</span>
                 </p>
 
 
-                <p>That is where DealEdge comes in. It is a revolutionary platform that offers deal-level performance analytics, built for the specialized needs of the private equity industry. The depth of analysis represents a breakthrough for data-driven decision-making: it covers more than 20 outputs including IRRs, CAGRs, EBITDA margins, MOICs, and value creation metrics, backed by directly reported cashflow data from more than 30,000 private equity deals.
+                <p class="last-p">  That is where DealEdge comes in. It is a revolutionary platform that offers deal-level performance analytics, built for the specialized needs of   Read More the private equity industry. The depth of analysis represents a breakthrough for data-driven decision-making: it covers more than 20 outputs including IRRs, CAGRs, EBITDA margins, MOICs, and value creation metrics, backed by directly reported cashflow data from more than 30,000 private equity deals. 
                 </p>
              </div>
+             <div class="collapse first">
 
                 <img src="https://go.bain.com/rs/545-OFW-044/images/ebitda.png" alt="ebitda">
-         <div class="information-box ebitda-top">
-            <h4>Streamline your due diligence                </h4>
-            <p>Evaluating potential investment opportunities can be a difficult and time-consuming process. With DealEdge you can evaluate businesses more quickly, and be confident you are selecting the best opportunities.
-            </p>
-            <p>With more than 560 industry subsectors in our custom-built taxonomy, you can drill down to look at the specific segments your opportunities are in and gauge the performance of similar deals in the past. Compare that to wider sector and industry performance to get an accurate picture of their performance potential.
-            </p>
-            <p>Examine risk metrics like loss rates and write-off rates to weigh the downside potential, and explore the growth rates and returns of winning deals to see the upside. Eliminate higher-risk and lower-reward opportunities with speed and certainty, and focus on the most attractive businesses.
-            </p>
-         </div>
-                <img src="https://go.bain.com/rs/545-OFW-044/images/revanue.png" alt="revenue">
-                <div class="information-box invest-top">
-                    <h4>Test your investment theses                </h4>
-                <p>DealEdge gives you unprecedented ability to pressure test your investment theses. See where value has been created in comparable businesses with value creation waterfall charts and analysis of winning deals. Fine tune your investment approach with aggregate data to ensure that you are creating operational plans that maximize the portfolio company’s potential. Reach far beyond top-level IRR returns with an unbiased source of data to benchmark your assumptions against: MOIC, revenue CAGR, margin expansion, and more.</p>
+                <div class="information-box ebitda-top">
+                   <h4>Streamline your due diligence                </h4>
+                   <p>Evaluating potential investment opportunities can be a difficult and time-consuming process. With DealEdge you can evaluate businesses more quickly, and be confident you are selecting the best opportunities.
+                   </p>
+                   <p>With more than 560 industry subsectors in our custom-built taxonomy, you can drill down to look at the specific segments your opportunities are in and gauge the performance of similar deals in the past. Compare that to wider sector and industry performance to get an accurate picture of their performance potential.
+                   </p>
+                   <p>Examine risk metrics like loss rates and write-off rates to weigh the downside potential, and explore the growth rates and returns of winning deals to see the upside. Eliminate higher-risk and lower-reward opportunities with speed and certainty, and focus on the most attractive businesses.
+                   </p>
                 </div>
-                <img src="https://go.bain.com/rs/545-OFW-044/images/value-creation.png" alt="value ">
-                <div class="information-box value-creation">
-                    <p>DealEdge keeps your focus sharp throughout the due diligence process, offering you a faster and more certain basis for making data-driven decisions. Take your due diligence to the next level with DealEdge.</p>
+                       <img src="https://go.bain.com/rs/545-OFW-044/images/revanue.png" alt="revenue">
+                       <div class="information-box invest-top">
+                           <h4>Test your investment theses                </h4>
+                       <p>DealEdge gives you unprecedented ability to pressure test your investment theses. See where value has been created in comparable businesses with value creation waterfall charts and analysis of winning deals. Fine tune your investment approach with aggregate data to ensure that you are creating operational plans that maximize the portfolio company’s potential. Reach far beyond top-level IRR returns with an unbiased source of data to benchmark your assumptions against: MOIC, revenue CAGR, margin expansion, and more.</p>
+                       </div>
+                       <img src="https://go.bain.com/rs/545-OFW-044/images/value-creation.png" alt="value ">
+                       <div class="information-box value-creation">
+                           <p>DealEdge keeps your focus sharp throughout the due diligence process, offering you a faster and more certain basis for making data-driven decisions. Take your due diligence to the next level with DealEdge.</p>
+                       </div>
                 </div>
+  
         </div>
 
 
@@ -304,7 +343,7 @@ h4{font-size:20px;line-height:1.3}
     <div class="container">
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="https://go.bain.com/rs/545-OFW-044/images/dealedge-logo.png" alt="logo">
+               <a href="https://www.dealedge.com/?utm_source=BLP1&utm_medium=landingpage&utm_campaign=2109transform&utm_id=2109transform&utm_content=BLP1L4"> <img src="https://go.bain.com/rs/545-OFW-044/images/dealedge-logo.png" alt="logo"></a>
             </div>
                 
             <div class="footer-nav">
@@ -330,8 +369,37 @@ h4{font-size:20px;line-height:1.3}
  
 
  
+<script>
 
 
+  
+    const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
+    
+    window.addEventListener('click', (ev) => {
+      const elm = ev.target;
+      if (triggers.includes(elm)) {
+        const selector = elm.getAttribute('data-target');
+        collapse(selector, 'toggle');
+      }
+      elm.style.display="none";
+      document.querySelector(".last-line").style.display="inline";
+      document.querySelector(".last-p").style.display="block";
+      document.querySelector(".first-line").style.color="#0a0a0a";
+    }, false);
+    
+    
+    const fnmap = {
+      'toggle': 'toggle',
+      'show': 'add',
+      'hide': 'remove'
+    };
+    const collapse = (selector, cmd) => {
+      const targets = Array.from(document.querySelectorAll(selector));
+      targets.forEach(target => {
+        target.classList[fnmap[cmd]]('show');
+      });
+    }
 
+</script>
 </body>
 </html>
