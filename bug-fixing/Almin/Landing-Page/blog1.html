@@ -370,12 +370,9 @@ button.btn {
 
  
 <script>
-
-
-  
     const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
     
-    window.addEventListener('click', (ev) => {
+    document.querySelector('button').addEventListener('click', (ev) => {
       const elm = ev.target;
       if (triggers.includes(elm)) {
         const selector = elm.getAttribute('data-target');
@@ -403,5 +400,6 @@ button.btn {
     }
 
 </script>
+
 </body>
 </html>
