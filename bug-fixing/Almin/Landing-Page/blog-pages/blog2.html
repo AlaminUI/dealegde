@@ -93,6 +93,31 @@ button.btn {
     font-size: 18px;
     text-decoration: underline;
     font-weight: 600;
+    display: block;
+    margin-top: 8px;
+    cursor: pointer;
+}
+ 
+.collapse.first {
+    height: 0px;
+    overflow: hidden;
+    transition:0.8s;
+
+     
+}
+
+.collapse.first.show {
+    overflow: visible;
+    height: 100%;
+
+}
+.last-line {
+    display: none;
+}
+.first-line{
+    color:#b3b3b3;
+}
+.last-p{
     display: none;
 }
 @media (max-width:1199px) {
@@ -179,30 +204,7 @@ h1 br {
 .information-box.value-creation {
     padding-top: 0px;
 }
-button.btn {
-    display: block;
-    margin-top: 8px;
-}
-.collapse.first {
-    height: 0px;
-    overflow: hidden;
-     
-}
 
-.collapse.first.show {
-    overflow: visible;
-    height: 100%;
-     
-}
-.last-line {
-    display: none;
-}
-.first-line{
-    color:#b3b3b3;
-}
-.last-p{
-    display: none;
-}
 }
     </style>
 
