@@ -166,125 +166,143 @@ h1{font-size:24px}
     </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="jquery-csv.js"></script>
 <script>
-        var champions_list =[
-        {
-            "Name":"Alamin",
-            "Region":"CEO",
-            "Badge" : "Silver",
-            "Point" : "300",
-            "Update_time":"Sep 11,2021",
-            "image":"images/avatar.jpg"
+        // var champions_list =[
+        // {
+        //     "Name":"Alamin",
+        //     "Region":"CEO",
+        //     "Badge" : "Silver",
+        //     "Point" : "300",
+        //     "Update_time":"Sep 11,2021",
+        //     "image":"images/avatar.jpg"
 
-        },
-        {
-            "Name":"Alamin",
-            "Region":"CEO",
-            "Badge" : "Platinum",
-            "Point" : "500",
-            "Update_time":"Sep 11,2021",
-            "image":"images/avatar2.jpg"
-        },
-        {
-            "Name":"Md. Mehedi",
-            "Region":"CEO",
-            "Badge" : "Gold",
-            "Point" : "800",
-            "Update_time":"Sep 11,2021",
-            "image":"images/avatar.jpg"
-        },
-        {
-            "Name":"Akash",
-            "Region":"CEO",
-            "Badge" : "Platinum",
-            "Point" : "200",
-            "Update_time":"Sep 11,2021",
-            "image":"images/avatar2.jpg"
-        },
-        {
-            "Name":"Ron",
-            "Region":"CEO",
-            "Badge" : "Gold",
-            "Point" : "100",
-            "Update_time":"Sep 11,2021",
-            "image":"images/avatar.jpg"
-        },
-        {
-            "Name":"Md. Mehedi",
-            "Region":"CEO",
-            "Badge" : "Platinum",
-            "Point" : "950",
-            "Update_time":"Sep 11,2021",
-            "image":"images/avatar.jpg"
-        },
-        {
-            "Name":"Akash",
-            "Region":"CEO",
-            "Badge" : "Platinum",
-            "Point" : "620",
-            "Update_time":"Sep 11,2021",
-            "image":"images/avatar2.jpg"
-        },
-        {
-            "Name":"Ron",
-            "Region":"CEO",
-            "Badge" : "Platinum",
-            "Point" : "700",
-            "Update_time":"Sep 11,2021",
-            "image":"images/avatar.jpg"
-        },
-        {
-            "Name":"Md. Mehedi",
-            "Region":"CEO",
-            "Badge" : "GEO",
-            "Point" : "400",
-            "Update_time":"Sep 11,2021",
-            "image":"images/avatar.jpg"
-        },
-        {
-            "Name":"Akash",
-            "Region":"CEO",
-            "Badge" : "Platinum",
-            "Point" : "270",
-            "Update_time":"Sep 11,2021",
-            "image":"images/avatar2.jpg"
-        },
-        {
-            "Name":"Ron",
-            "Region":"CEO",
-            "Badge" : "Platinum",
-            "Point" : "230",
-            "Update_time":"Sep 11,2021",
-            "image":"images/avatar.jpg"
-        },
-        {
-            "Name":"Tervor",
-            "Region":"CEO",
-            "Badge" : "Gold",
-            "Point" : "820",
-            "Update_time":"Sep 11,2021",
-            "image":"images/avatar.jpg"
-        },
-        {
-            "Name":"Tonmoy",
-            "Region":"CEO",
-            "Badge" : "Gold",
-            "Point" : "230",
-            "Update_time":"Sep 11,2021",
-            "image":"images/avatar.jpg"
-        },
+        // },
+        // {
+        //     "Name":"Alamin",
+        //     "Region":"CEO",
+        //     "Badge" : "Platinum",
+        //     "Point" : "500",
+        //     "Update_time":"Sep 11,2021",
+        //     "image":"images/avatar2.jpg"
+        // },
+        // {
+        //     "Name":"Md. Mehedi",
+        //     "Region":"CEO",
+        //     "Badge" : "Gold",
+        //     "Point" : "800",
+        //     "Update_time":"Sep 11,2021",
+        //     "image":"images/avatar.jpg"
+        // },
+        // {
+        //     "Name":"Akash",
+        //     "Region":"CEO",
+        //     "Badge" : "Platinum",
+        //     "Point" : "200",
+        //     "Update_time":"Sep 11,2021",
+        //     "image":"images/avatar2.jpg"
+        // },
+        // {
+        //     "Name":"Ron",
+        //     "Region":"CEO",
+        //     "Badge" : "Gold",
+        //     "Point" : "100",
+        //     "Update_time":"Sep 11,2021",
+        //     "image":"images/avatar.jpg"
+        // },
+        // {
+        //     "Name":"Md. Mehedi",
+        //     "Region":"CEO",
+        //     "Badge" : "Platinum",
+        //     "Point" : "950",
+        //     "Update_time":"Sep 11,2021",
+        //     "image":"images/avatar.jpg"
+        // },
+        // {
+        //     "Name":"Akash",
+        //     "Region":"CEO",
+        //     "Badge" : "Platinum",
+        //     "Point" : "620",
+        //     "Update_time":"Sep 11,2021",
+        //     "image":"images/avatar2.jpg"
+        // },
+        // {
+        //     "Name":"Ron",
+        //     "Region":"CEO",
+        //     "Badge" : "Platinum",
+        //     "Point" : "700",
+        //     "Update_time":"Sep 11,2021",
+        //     "image":"images/avatar.jpg"
+        // },
+        // {
+        //     "Name":"Md. Mehedi",
+        //     "Region":"CEO",
+        //     "Badge" : "GEO",
+        //     "Point" : "400",
+        //     "Update_time":"Sep 11,2021",
+        //     "image":"images/avatar.jpg"
+        // },
+        // {
+        //     "Name":"Akash",
+        //     "Region":"CEO",
+        //     "Badge" : "Platinum",
+        //     "Point" : "270",
+        //     "Update_time":"Sep 11,2021",
+        //     "image":"images/avatar2.jpg"
+        // },
+        // {
+        //     "Name":"Ron",
+        //     "Region":"CEO",
+        //     "Badge" : "Platinum",
+        //     "Point" : "230",
+        //     "Update_time":"Sep 11,2021",
+        //     "image":"images/avatar.jpg"
+        // },
+        // {
+        //     "Name":"Tervor",
+        //     "Region":"CEO",
+        //     "Badge" : "Gold",
+        //     "Point" : "820",
+        //     "Update_time":"Sep 11,2021",
+        //     "image":"images/avatar.jpg"
+        // },
+        // {
+        //     "Name":"Tervor",
+        //     "Region":"CEO",
+        //     "Badge" : "Gold",
+        //     "Point" : "200",
+        //     "Update_time":"Sep 11,2021",
+        //     "image":"images/avatar.jpg"
+        // },
 
-        ]
+        // ]
     
      
  
 var bigData_Array=[];
 var smallData_Array=[];
-
-
+var champions_list = {};
  
-var sorted = champions_list.sort(function(a, b) {return b.Point - a.Point});
+$.ajax({
+    url: "result.csv",
+    async: false,
+    success: function (csvd) {
+       
+
+        var items = $.csv.toObjects(csvd);
+        var jsonobject = JSON.stringify(items);
+        champions_list.items = items;
+        console.log(  champions_list)
+    },
+    dataType: "text",
+    complete: function () {
+        // call a function on complete 
+    }
+});
+// console.log(champions_list.items[0].image)
+ 
+var sorted = champions_list.items.sort(function(a, b) {return b.Point - a.Point});
 
  
  
@@ -425,21 +443,21 @@ for(let i=0; i<sorted.length; i++){
                                 var big_card_template=`<div class="single-big-card">
                                 <div class="single-big-card-top">
                                     <div class="avatar">
-                                        <img src="${champions_list[i].image}" alt="avatar">
+                                        <img src="${champions_list.items[i].image}" alt="avatar">
                                     </div>
                                     <div class="single-big-card-info">
                                         <div class="userName-region">
-                                            <h2> ${champions_list[i].Name} </h2>
-                                            <p>Region, ${champions_list[i].Region}</p>
+                                            <h2> ${champions_list.items[i].Name} </h2>
+                                            <p>Region, ${champions_list.items[i].Region}</p>
                                         </div>
                                         <div class="user-point">
-                                            <h5>${champions_list[i].Badge}</h5>
-                                            <p>${champions_list[i].Point}</p>
+                                            <h5>${champions_list.items[i].Badge}</h5>
+                                            <p>${champions_list.items[i].Point}</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="last-update-text">
-                                    <p>Last updated <span>${champions_list[i].Update_time}</span>  </p>
+                                    <p>Last updated <span>${champions_list.items[i].Update_time}</span>  </p>
                                 </div>
                             </div>`;
 
@@ -448,13 +466,13 @@ for(let i=0; i<sorted.length; i++){
 
                                 var small_card_template=`<div class="single-small-card">
                                 <div class="small-card-header">
-                                    <h3>${champions_list[i].Name}</h3>
-                                    <p>${champions_list[i].Region}</p>
+                                    <h3>${champions_list.items[i].Name}</h3>
+                                    <p>${champions_list.items[i].Region}</p>
 
                                 </div>
                                 <div class="small-card-footer">
-                                    <h4>${champions_list[i].Badge}</h4>
-                                    <p>${champions_list[i].Point}   </p>
+                                    <h4>${champions_list.items[i].Badge}</h4>
+                                    <p>${champions_list.items[i].Point}   </p>
                                 </div>
                             </div>`;
                                 smallData_Array.push(small_card_template)
@@ -471,6 +489,46 @@ $('.all-card-wrapper').html(bigData_Array);
 $('.all-small-card').html(smallData_Array);
  
  
+
+
+const csvFilePath='Sample-Spreadsheet-10-rows.csv'
+
+// const csv=require('csvtojson')
+// const jsonArray=  csv().fromFile(csvFilePath);
+// csv()
+// .fromFile(csvFilePath)
+// .then(  (jsonObj)=>{
+//     console.log(jsonObj);
+//     /**
+//      * [
+//      * 	{a:"1", b:"2", c:"3"},
+//      * 	{a:"4", b:"5". c:"6"}
+//      * ]
+//      */ 
+// })
+
+// async function check(){
+//     const jsonArray=await csv().fromFile(csvFilePath);
+// }
+
+//var csv is the CSV file with headers
+
+$.ajax({
+   
+    url: 'https://093-jun-098.mktorest.com/rest/v1/leads.json?access_token=03618043-bb93-4729-a63d-81542ecb17a8:sj',
+    headers: { 'Access-Control-Allow-Origin': '*' },
+    // data: myData,
+    type: 'GET',
+     
+    dataType : 'jsonp',
+    crossDomain:true,
+    success: function(data) { 
+        console.log(data)
+    },
+    contentType: "application/json",
+    dataType: 'json'
+});
+
 </script>
 </body>
 </html>
