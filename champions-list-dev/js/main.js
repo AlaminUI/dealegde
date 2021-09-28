@@ -1,4 +1,4 @@
- 
+
 var bigData_Array=[];
 var smallData_Array=[];
 var champions_list = {};
