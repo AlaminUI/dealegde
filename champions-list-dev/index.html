@@ -72,6 +72,27 @@ p{font-size:16px;line-height:1.5;font-weight:400;margin-bottom:16px}
     background: #58c8e447;
     text-transform: uppercase;
 }
+.search-result {
+    margin-top: -10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+}
+select.dropdown {
+    width: 100%;
+    display: block;
+    padding: 4px;
+    margin-top: 16px;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: #263137;
+}
+
+select.dropdown option {
+    color: #263137;
+}
 @media (max-width:1199px) {
 .container{max-width:980px}
 .all-small-card{margin:0 -8px}
@@ -140,10 +161,16 @@ h1{font-size:24px}
                                 <li> <a class="filter-btn-gold" href="#" data-value="Gold"> Gold List </a></li>
                                 <li> <a class="filter-btn-silver" href="#" data-value="Silver"> Silver List </a></li>
                             </ul>
-                            <ul>
+                            <!-- <ul>
                                 <li> <a class="filter-btn-region" href="#" data-value="Region"> Region List </a></li>
                                 <li> <a class="filter-btn-geo" href="#" data-value="GEO"> GEO List </a></li>
-                            </ul>
+                            </ul> -->
+                            <select class="dropdown" id="selectOption" onchange="option_val()">
+                                <option value="0" selected="selected">Select Option</option>
+                                <option class="filter-btn-region" data-value="Region" value="Region">Region List </option>
+                                <option class="filter-btn-geo" data-value="GEO" value="GEO">GEO List</option>
+                                 
+                              </select>
                         </div>
                     </div>
                    </div> 
@@ -157,7 +184,7 @@ h1{font-size:24px}
                             <h1>The Infoblox List Of Champions</h1>
                         </div>
 
-
+                        <div class="search-result"> </div>
                         <div class="all-card-wrapper">
 
                     
@@ -246,8 +273,7 @@ h1{font-size:24px}
         // initials = (author?.Name  ? fullName[0].charAt(0) : " ") + (author?.Name ? fullName[1].charAt(0) : " ");
             
     
-    
-         console.log(initials)
+     
         results = `<div class="single-big-card border">
                                     <div class="single-big-card-top">
                                         <div class="avatar">
@@ -280,7 +306,7 @@ h1{font-size:24px}
     var notFound =`<div class="not-found">Not Found</div>`;
     function search() {
         var results = "";
-         
+         var count=0;
         var searchText = document.getElementById("filter_users").value;
          
         sorted.map(function (author) {
@@ -293,7 +319,7 @@ h1{font-size:24px}
             if (text.toLowerCase().match(searchText.toLowerCase())) {
                  
                 results += prepareList(author);
-    
+                count++;
             }
             
             // if(!text.toLowerCase().match(searchText.toLowerCase())){
@@ -305,10 +331,14 @@ h1{font-size:24px}
         });
     
         if(searchText == ""){
+    $('.search-result').html("");
+
             $('.all-card-wrapper').html(bigData_Array);
     $('.all-small-card').html(smallData_Array);
     
         }else{
+    $('.search-result').html("Results "+count);
+
             $('.all-card-wrapper').html(results);
     
     $('.all-small-card').html("");
@@ -346,12 +376,15 @@ h1{font-size:24px}
              
                  
                 results += prepareList(author);
+                count++;
             }else{
                 // console.log("heelo")
             }
     
             
         });
+        
+    $('.search-result').html("Platinum List Results "+count);
     $('.all-card-wrapper').html(results);
     $('.all-small-card').html("");
      
@@ -383,12 +416,15 @@ h1{font-size:24px}
              
                  
                 results += prepareList(author);
+                count++;
             }else{
                 // console.log("heelo")
             }
     
             
         });
+    $('.search-result').html("Gold List Results "+count);
+
     $('.all-card-wrapper').html(results);
     $('.all-small-card').html("");
      
@@ -419,27 +455,32 @@ h1{font-size:24px}
              
                  
                 results += prepareList(author);
+                count++;
             }else{
                 // console.log("heelo")
             }
     
             
         });
+    $('.search-result').html("Silver List Results "+count);
+
     $('.all-card-wrapper').html(results);
     $('.all-small-card').html("");
      
       
          })
     
-    // filter Region
-    var filter_btn=document.querySelector(".filter-btn-region");
-    
-    
-     
-         filter_btn.addEventListener('click',function(e){
-            var results = "";
+
+var e = document.getElementById("selectOption");
+
+function option_val(){
+    var value = e.options[e.selectedIndex].value;
+ 
+  // filter Region
+if(value == 'Region'){
+    var results = "";
         var count = 0;
-        e.preventDefault()
+       
         var value_text=$(this).attr('data-value');
          
         sorted.map(function (author) {
@@ -454,27 +495,25 @@ h1{font-size:24px}
              
                  
                 results += prepareList(author);
+                count++;
             }else{
                 // console.log("heelo")
             }
     
             
         });
+    $('.search-result').html("Results "+count);
+
     $('.all-card-wrapper').html(results);
     $('.all-small-card').html("");
      
-      
-         })
-    
-    // filter Geo
-    var filter_btn=document.querySelector(".filter-btn-geo");
-    
-    
-     
-         filter_btn.addEventListener('click',function(e){
-            var results = "";
+}
+
+// filter Geo
+if(value == 'GEO'){
+    var results = "";
         var count = 0;
-        e.preventDefault()
+      
         var value_text=$(this).attr('data-value');
          
         sorted.map(function (author) {
@@ -489,18 +528,26 @@ h1{font-size:24px}
              
                  
                 results += prepareList(author);
+                count++;
             }else{
                 // console.log("heelo")
             }
     
             
         });
+    $('.search-result').html("Results "+count);
+
     $('.all-card-wrapper').html(results);
     $('.all-small-card').html("");
      
-      
-         })
-        
+}
+
+
+}
+
+ 
+  
+ 
     
     
      
@@ -512,6 +559,8 @@ h1{font-size:24px}
         filter_btn_reset.addEventListener('click',function(e){
      
         e.preventDefault()
+        $('.search-result').html("");
+        $('.all-card-wrapper').html(bigData_Array);
         $('.all-card-wrapper').html(bigData_Array);
     $('.all-small-card').html(smallData_Array);
      
