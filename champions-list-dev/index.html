@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Champions list</title>
-
-    <style>
+     <style>
 @font-face{font-family:"Graphik";src:url(fonts/Graphik-Regular-Web.woff2);font-weight:400;font-style:normal;font-stretch:normal}
 @font-face{font-family:"Graphik";src:url(fonts/Graphik-Medium-Web.woff2);font-weight:500;font-style:normal;font-stretch:normal}
 @font-face{font-family:"Graphik";src:url(fonts/Graphik-Semibold-Web.woff2);font-weight:600;font-style:normal;font-stretch:normal}
@@ -26,7 +25,37 @@ p{font-size:16px;line-height:1.5;font-weight:400;margin-bottom:16px}
 .filter form input{display:block;width:100%;padding:8px 16px;border:1px solid #737373;border-radius:3px;font-size:14px}
 .filter form label{font-size:15px;display:block;margin-bottom:8px;font-weight:400}
 .filter h3{text-transform:uppercase;margin-bottom:16px;font-size:22px;font-weight:500;color:#263137}
-.filter-list ul li a{display:block;text-decoration:none;font-size:16px;font-weight:400;margin-bottom:8px;color:#263137}
+select.dropdown {
+    width: 100%;
+    display: block;
+    padding: 4px;
+    margin-top: 16px;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: #263137;
+}
+
+select.dropdown option {
+    color: #263137;
+}
+.drop-down-wrap {
+    padding-top: 16px;
+}
+
+.drop-down-wrap label {
+    display: block;
+    margin: 0;
+    font-weight: 400;
+    color: #17191a;
+}
+
+.drop-down-wrap select {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+ 
+.filter-list ul li a{display:block;text-decoration:none;font-size:16px;font-weight:400;margin-bottom:8px;color:#17191a}
 .filter-list ul li a:hover{color:#93c73f}
 .filter-list ul li:last-child a{margin-bottom:0}
 .single-big-card{background:#fff;border-radius:6px;margin-bottom:16px;-webkit-transition:.5s;-o-transition:.5s;transition:.5s;padding:24px 24px 16px}
@@ -79,20 +108,7 @@ p{font-size:16px;line-height:1.5;font-weight:400;margin-bottom:16px}
     font-weight: 500;
     letter-spacing: 0.4px;
 }
-select.dropdown {
-    width: 100%;
-    display: block;
-    padding: 4px;
-    margin-top: 16px;
-    font-size: 15px;
-    font-weight: 400;
-    margin-bottom: 8px;
-    color: #263137;
-}
 
-select.dropdown option {
-    color: #263137;
-}
 @media (max-width:1199px) {
 .container{max-width:980px}
 .all-small-card{margin:0 -8px}
@@ -164,13 +180,24 @@ h1{font-size:24px}
                             <!-- <ul>
                                 <li> <a class="filter-btn-region" href="#" data-value="Region"> Region List </a></li>
                                 <li> <a class="filter-btn-geo" href="#" data-value="GEO"> GEO List </a></li>
-                            </ul> -->
+                            </ul> --> 
+                         <div class="drop-down-wrap">
+                             <label for="selectOption">Region List</label>
                             <select class="dropdown" id="selectOption" onchange="option_val()">
-                                <option value="0" selected="selected">Select Option</option>
-                                <option class="filter-btn-region" data-value="Region" value="Region">Region List </option>
-                                <option class="filter-btn-geo" data-value="GEO" value="GEO">GEO List</option>
+                                <option value="0" selected="selected"></option>
+                    
+                              </select>
+                         </div>
+
+                         <div class="drop-down-wrap">
+                            <label for="selectOption2">GEO List</label>
+
+                            <select class="dropdown" id="selectOption2" onchange="option_val2()">
+  
+                             
                                  
                               </select>
+                         </div>
                         </div>
                     </div>
                    </div> 
@@ -207,11 +234,10 @@ h1{font-size:24px}
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<script src="js/jquery-csv.js"></script>
+ <script src="js/jquery-csv.js"></script>
 
 <script>
-
+ 
     var bigData_Array=[];
     var smallData_Array=[];
     var champions_list = {};
@@ -249,17 +275,19 @@ h1{font-size:24px}
     
         });
      
-    // console.log(champions_list_data)
+//  console.log(champions_list_data.Geo)
     
     var sorted = champions_list_data.sort(function(a, b) {return b.Point - a.Point});
     
-     
-     for(let a=0; a<sorted.length; a++){
-         if(sorted.Name == " "){
-             console.log(sorted.Name)
-         }
-     }
-    
+
+
+ 
+
+
+
+
+
+
     function prepareList(author) {
         var results = "";
         var initials="";
@@ -283,7 +311,11 @@ h1{font-size:24px}
                                         <div class="single-big-card-info">
                                             <div class="userName-region">
                                                 <h2 class="search-h"> ${author.Name} </h2>
-                                                <p> ${author.Region ? "Region, " + author.Region : " " }</p>
+                                              
+                                                <div class="right-region-geo">
+                                                    <p> ${author.Region ? "REGION, "+ author.Region : " " }</p>
+                                                    <p> ${author.Geo ? "GEO, "+ author.Geo : " " }</p>
+                                                    </div>
                                             </div>
                                             <div class="user-point">
                                                
@@ -471,34 +503,81 @@ h1{font-size:24px}
          })
     
 
+// dropdown filter 
+var geo_list=[]
+     for(let a=0; a<sorted.length; a++){
+                 geo_list.push(sorted[a].Geo)
+     }
+    
+
+     var Region_list=[]
+     for(let a=0; a<sorted.length; a++){
+         
+        Region_list.push(sorted[a].Region)
+     }
+
+ 
+
+function OptionList(author) {
+   
+     
+   results = `<option  data-value="${author}" value="${author}">${author}</option>`;
+   return results;
+}
+
+
+
+function dropdownFilter(array,htmlId){
+    let array_list_store = array.filter((item, i, ar) => ar.indexOf(item) === i);
+
+    var array_list_store_print="";
+array_list_store.map((author)=>{
+
+if(!(author == "") && !(author == "#N/A") && !(author == undefined)  && !(author == "eMEA") && !(author == "-")){
+    array_list_store_print+=OptionList(author);
+     
+}
+
+})
+
+$(htmlId).html(array_list_store_print)
+
+}
+     
+
+
+dropdownFilter(Region_list,"#selectOption")
+dropdownFilter(geo_list,"#selectOption2")
+
+ 
+
+// filter Region
 var e = document.getElementById("selectOption");
 
 function option_val(){
     var value = e.options[e.selectedIndex].value;
  
-  // filter Region
-if(value == 'Region'){
+  
+ 
     var results = "";
         var count = 0;
        
         var value_text=$(this).attr('data-value');
-         
+        // console.log(value)
         sorted.map(function (author) {
          
        
-           
+        
         var text = author.Region;
        
-     
+      
              
-            if(text){
+            if(value == text){
              
                  
                 results += prepareList(author);
                 count++;
-            }else{
-                // console.log("heelo")
-            }
+            } 
     
             
         });
@@ -507,31 +586,32 @@ if(value == 'Region'){
     $('.all-card-wrapper').html(results);
     $('.all-small-card').html("");
      
-}
 
-// filter Geo
-if(value == 'GEO'){
+
+    }
+
+var er = document.getElementById("selectOption2");
+
+function option_val2(){
+    var value = er.options[er.selectedIndex].value;
+ 
+  // filter Region
+ 
     var results = "";
         var count = 0;
-      
+       
         var value_text=$(this).attr('data-value');
-         
+        // console.log(value)
         sorted.map(function (author) {
-         
        
-           
         var text = author.Geo;
-       
-     
-             
-            if(text){
+         console.log(text)
+            if(value == text){
              
                  
                 results += prepareList(author);
                 count++;
-            }else{
-                // console.log("heelo")
-            }
+            } 
     
             
         });
@@ -540,10 +620,9 @@ if(value == 'GEO'){
     $('.all-card-wrapper').html(results);
     $('.all-small-card').html("");
      
-}
 
 
-}
+    }
 
  
   
@@ -585,7 +664,10 @@ if(value == 'GEO'){
                                         <div class="single-big-card-info">
                                             <div class="userName-region">
                                                 <h2> ${champions_list_data[i].Name} </h2>
-                                                <p> ${champions_list_data[i].Region ? "Region, "+ champions_list_data[i].Region : " " }</p>
+                                                <div class="right-region-geo">
+                                                    <p> ${champions_list_data[i].Region ? "REGION, "+ champions_list_data[i].Region : " " }</p>
+                                                    <p> ${champions_list_data[i].Geo ? "GEO, "+ champions_list_data[i].Geo : " " }</p>
+                                                    </div>
                                             </div>
                                             <div class="user-point">
                                                
@@ -606,7 +688,7 @@ if(value == 'GEO'){
                                     <div class="small-card-header">
                                         <h3>${champions_list_data[i].Name}</h3>
                                         <p>${champions_list_data[i].Region}</p>
-    
+                                       
                                     </div>
                                     <div class="small-card-footer">
                                         <h5>${ champions_list_data[i].Point > 100 ? 'Platinum'   : ( (champions_list_data[i].Point > 50 && champions_list_data[i].Point <100)  ? 'Glod' : 'Silver') } </h5>
