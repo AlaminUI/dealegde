@@ -1,10 +1,7 @@
 
      
     champions_list.items.forEach(function(d) {
-             
-            //  champions_list_data+=d['Account Owner']
-    
-    
+   
              champions_list_data.push({
                 Name:  d['Full Name'] ,
                 Region:  d['Region'] ,
@@ -15,32 +12,21 @@
     
         });
      
- 
-    
     var sorted = champions_list_data.sort(function(a, b) {return b.Point - a.Point});
     
-
-
- 
-
-
-
-
-
-
     function prepareList(author) {
         var results = "";
-        var initials="";
+        var FirstName_LastName_avatar="";
      
             const fullName = author.Name.split(' ');
        
-        initials = (fullName[0]  ? fullName[0].charAt(0) : " ") + (fullName[1] ? fullName[1].charAt(0) : " ");
+        FirstName_LastName_avatar = (fullName[0]  ? fullName[0].charAt(0) : " ") + (fullName[1] ? fullName[1].charAt(0) : " ");
  
      
         results = `<div class="single-big-card border">
                                     <div class="single-big-card-top">
                                         <div class="avatar">
-                                          ${!(author.image == " ") && !(author.image == "") && !(author.image == "-") ? '<img src="'+author.image +'" alt="avatar">': '<span>'+initials+'</span>'}
+                                          ${!(author.image == " ") && !(author.image == "") && !(author.image == "-") ? '<img src="'+author.image +'" alt="avatar">': '<span>'+FirstName_LastName_avatar+'</span>'}
                                             
                                         </div>
                                         <div class="single-big-card-info">
@@ -377,12 +363,12 @@ function option_val2(){
         allCount++;
                                 if(bigData_Array.length<10){
                                     const fullName = champions_list_data[i].Name.split(' ');
-                                    const initials = fullName.shift().charAt(0) + fullName.pop().charAt(0);
+                                    const FirstName_LastName_avatar = fullName.shift().charAt(0) + fullName.pop().charAt(0);
      
                                     var big_card_template=`<div class="single-big-card">
                                     <div class="single-big-card-top">
                                         <div class="avatar">
-                                          ${!(champions_list_data[i].image == " ") && !(champions_list_data[i].image == "") && !(champions_list_data[i].image == "-") ? '<img src="'+champions_list_data[i].image +'" alt="avatar">': '<span>'+initials+'</span>'}
+                                          ${!(champions_list_data[i].image == " ") && !(champions_list_data[i].image == "") && !(champions_list_data[i].image == "-") ? '<img src="'+champions_list_data[i].image +'" alt="avatar">': '<span>'+FirstName_LastName_avatar+'</span>'}
 
                                             
                                         </div>
