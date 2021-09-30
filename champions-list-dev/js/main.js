@@ -268,7 +268,7 @@ function dropdownFilter(array,htmlId){
     var array_list_store_print="";
 array_list_store.map((author)=>{
 
-if(!(author == "") && !(author == "#N/A") && !(author == undefined)  && !(author == "eMEA") && !(author == "-")){
+if(!(author == "") && !(author == "#N/A") && !(author == undefined)  && !(author == "eMEA") && !(author == "-")  ){
     array_list_store_print+=OptionList(author);
      
 }
