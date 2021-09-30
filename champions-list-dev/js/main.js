@@ -316,7 +316,7 @@ function option_val(){
     
             
         });
-    $('.search-result').html("Results "+count);
+    $('.search-result').html("Region List Results   "+count);
 
     $('.all-card-wrapper').html(results);
     $('.all-small-card').html("");
@@ -350,7 +350,7 @@ function option_val2(){
     
             
         });
-    $('.search-result').html("Results "+count);
+    $('.search-result').html("GEO List  Results "+count);
 
     $('.all-card-wrapper').html(results);
     $('.all-small-card').html("");
