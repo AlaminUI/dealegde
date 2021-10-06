@@ -21,48 +21,16 @@ p{font-size:16px;line-height:1.5;font-weight:400;margin-bottom:16px}
 .row{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin:0 -15px}
 .col-4{padding:0 15px;width:100%;max-width:33.33%}
 .col-8{padding:0 15px;width:100%;max-width:66.64%}
-.filter {
-    background: #fff;
-    padding: 24px;
-    border-radius: 6px;
-    max-width: 320px;
-    margin-top: 32px;
-    padding-bottom: 78px;
-}
+.filter{background:#fff;padding:24px;border-radius:6px;max-width:320px;margin-top:32px;padding-bottom:78px}
 .filter-list ul{list-style:none;padding:0;margin:0;padding-top:20px}
 .filter form input{display:block;width:100%;padding:8px 16px;border:1px solid #737373;border-radius:3px;font-size:14px}
 .filter form label{font-size:15px;display:block;margin-bottom:8px;font-weight:400}
 .filter h3{text-transform:uppercase;margin-bottom:16px;font-size:22px;font-weight:500;color:#263137}
-select.dropdown {
-    width: 100%;
-    display: block;
-    padding: 4px;
-    margin-top: 16px;
-    font-size: 15px;
-    font-weight: 400;
-    margin-bottom: 8px;
-    color: #263137;
-}
-
-select.dropdown option {
-    color: #263137;
-}
-.drop-down-wrap {
-    padding-top: 16px;
-}
-
-.drop-down-wrap label {
-    display: block;
-    margin: 0;
-    font-weight: 400;
-    color: #17191a;
-}
-
-.drop-down-wrap select {
-    margin-top: 5px;
-    margin-bottom: 0px;
-}
- 
+select.dropdown{width:100%;display:block;padding:4px;margin-top:16px;font-size:15px;font-weight:400;margin-bottom:8px;color:#263137}
+select.dropdown option{color:#263137}
+.drop-down-wrap{padding-top:16px}
+.drop-down-wrap label{display:block;margin:0;font-weight:400;color:#17191a}
+.drop-down-wrap select{margin-top:5px;margin-bottom:0}
 .filter-list ul li a{display:block;text-decoration:none;font-size:16px;font-weight:400;margin-bottom:8px;color:#17191a}
 .filter-list ul li a:hover{color:#93c73f}
 .filter-list ul li:last-child a{margin-bottom:0}
@@ -92,45 +60,12 @@ select.dropdown option {
 .small-card-footer p{margin:0;color:#737373}
 .all-small-card{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:0 -15px}
 .logo-wrap img{width:100%;max-width:200px}
-.single-big-card.border {
-    border: 1px solid #78bb43;
-}
-.avatar span {
-    width: 100px;
-    height: 100px;
-    border: 1px solid #58c8e447;
-    display: block;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    border-radius: 50%;
-    font-weight: 500;
-    background: #58c8e447;
-    text-transform: uppercase;
-}
-.search-result {
-    margin-top: -10px;
-    padding-bottom: 10px;
-    font-size: 15px;
-    font-weight: 500;
-    letter-spacing: 0.4px;
-}
-.nice-select.dropdown {
-    width: 100% !important;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    height: auto;
-    line-height: 32px;
-}
-.nice-select.open .list {
-    width: 100%;
-    max-height: 320px;
-    overflow: scroll;
-}
-.right-region-geo p {
-    text-transform: uppercase;
-}
+.single-big-card.border{border:1px solid #78bb43}
+.avatar span{width:100px;height:100px;border:1px solid #58c8e447;display:block;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;font-size:24px;border-radius:50%;font-weight:500;background:#58c8e447;text-transform:uppercase}
+.search-result{margin-top:-10px;padding-bottom:10px;font-size:15px;font-weight:500;letter-spacing:.4px}
+.nice-select.dropdown{width:100%!important;margin-top:6px;margin-bottom:16px;height:auto;line-height:32px}
+.nice-select.open .list{width:100%;max-height:320px;overflow:scroll}
+.right-region-geo p{text-transform:uppercase}
 @media (max-width:1199px) {
 .container{max-width:980px}
 .all-small-card{margin:0 -8px}
@@ -164,8 +99,7 @@ h1{font-size:24px}
 .small-card-header p{font-size:15px}
 .small-card-footer h4{font-size:17px}
 .small-card-footer p{font-size:15px}
-.avatar span { width:64px; height: 64px; font-size: 22px;
-}
+.avatar span{width:64px;height:64px;font-size:22px}
 }
     </style>
 
@@ -256,36 +190,43 @@ h1{font-size:24px}
     </div>
 
     <script src="js/jquery.js"></script>
- <script src="js/jquery-csv.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  
+ <script src="js/nice-select.js"></script>
+ <script src="js/json.js"></script>
+
 <script>
-    $(document).ready(function() {
-  $('select').niceSelect();
+  $(document).ready(function() {
+$('select').niceSelect();
 }); 
-     var bigData_Array=[];
-    var smallData_Array=[];
-    var champions_list = {};
-    var champions_list_data = [];
-     
-    $.ajax({
-        url: "champion_List.csv",
-        async: false,
-        success: function (csvd) {
-           
-    
-            var items = $.csv.toObjects(csvd);
-            var jsonobject = JSON.stringify(items);
-            champions_list.items = items;
-            // console.log(champions_list.items)
-        },
-        dataType: "text",
-        complete: function () {
-            // call a function on complete 
-        }
-    });
-     
+
+
+
+   var bigData_Array=[];
+  var smallData_Array=[];
+  var champions_list = {};
+  var storeJson=[]
+  var champions_list_data = [];
+   
+
+  // $.ajax({
+  //     url: "champion_List.csv",
+  //     async: false,
+  //     success: function (csvd) {
+         
+  
+  //         var items = $.csv.toObjects(csvd);
+  //         var jsonobject = JSON.stringify(items);
+  //         champions_list.items = items;
+  //         // console.log(champions_list.items)
+  //     },
+  //     dataType: "text",
+  //     complete: function () {
+  //         // call a function on complete 
+  //     }
+  // });
+   
 </script>
- 
+
 <script src="js/main.js"></script>
 
 

@@ -1,6 +1,6 @@
 
      
-    champions_list.items.forEach(function(d) {
+    listing_data.forEach(function(d) {
    
              champions_list_data.push({
                 Name:  d['Full Name'] ,
@@ -326,7 +326,7 @@ function option_val2(){
         sorted.map(function (author) {
        
         var text = author.Geo;
-         console.log(text)
+         
             if(value == text){
              
                  
