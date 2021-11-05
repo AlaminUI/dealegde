@@ -40,7 +40,7 @@
                                             </div>
                                             <div class="user-point">
                                                
-                                                <h5>${ author.Point > 100 ? 'Platinum'   : ( (author.Point > 50 && author.Point <100)  ? 'Gold' : 'Silver') } </h5>
+                                                <h5>${ author.Point > 99 ? 'Platinum'   : ( (author.Point > 49 && author.Point <99)  ? 'Gold' : 'Silver') } </h5>
                                                 <p>${author.Point}</p>
                                             </div>
                                         </div>
@@ -125,7 +125,7 @@
             // var slicedText = text.slice(0, value_text.length);
        
              
-            if(text >100){
+            if(text >99){
              
                  
                 results += prepareList(author);
@@ -165,7 +165,7 @@
             // var slicedText = text.slice(0, value_text.length);
        
              
-            if(text >50 && text <100){
+            if(text >49 && text <99){
              
                  
                 results += prepareList(author);
@@ -402,7 +402,7 @@ function option_val2(){
                                        
                                     </div>
                                     <div class="small-card-footer">
-                                        <h5>${ champions_list_data[i].Point > 100 ? 'Platinum'   : ( (champions_list_data[i].Point > 50 && champions_list_data[i].Point <100)  ? 'Glod' : 'Silver') } </h5>
+                                        <h5>${ champions_list_data[i].Point > 99 ? 'Platinum'   : ( (champions_list_data[i].Point > 49 && champions_list_data[i].Point <100)  ? 'Gold' : 'Silver') } </h5>
     
                                         <p>${champions_list_data[i].Point}   </p>
                                     </div>
