@@ -404,6 +404,9 @@
     padding-left: 30px;
     width: 100%;
 }
+.summary-char.mobile-show {
+    display: none;
+}
         section.section3-area {
             padding-top: 60px;
             padding-bottom: 66px
@@ -1064,7 +1067,7 @@
             .section3-right {
                 max-width: 100%;
                 width: 100%;
-                margin-top: 56px
+                margin-top: 40px;
             }
 
             .section5-left h3 {
@@ -1131,7 +1134,12 @@
     padding-top: 0;
     margin-top: 40px;
 }
-
+.summary-char.mobile-hide {
+    display: none;
+}
+.summary-char.mobile-show {
+    display: block;
+}
 .summary-chat-img {
     max-width: 100%;
     margin-bottom: 24px;
@@ -1294,7 +1302,7 @@
                     </p>
                     <p>With your custom review, you can gauge your performance directly to peers and gain a clear view of effective deal sourcing strategies among your competition.
                     </p>
-                   <div class="summary-char">
+                   <div class="summary-char mobile-hide">
                        <div class="summary-chat-img">
                            <img src="images/summary-chart.png" alt="summary chart">
                        </div>
@@ -1330,6 +1338,15 @@
                             <button type="submit">Submit</button>
                         </form>
                         <p>Please allow a week for delivery of your custom review.</p>
+                    </div>
+
+                    <div class="summary-char mobile-show">
+                        <div class="summary-chat-img">
+                            <img src="images/summary-chart.png" alt="summary chart">
+                        </div>
+                        <div class="summary-chart-desc">
+                            <p>The 2021 Deal Origination Benchmark Report (DOBR) includes results from 157 qualified PE firms, segmented into 8 peer groups, and sorted by deal size and industry. </p>
+                        </div>
                     </div>
                 </div>
             </div>
