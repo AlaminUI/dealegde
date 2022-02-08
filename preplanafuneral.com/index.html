@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+
+
+        body{
+            padding:0px;
+            margin:0px;
+            font-family: 'Roboto', sans-serif;
+        }
+        .banner {
+    background: url(img/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    height: 400px;
+}
+
+.container {
+    max-width: 970px;
+    padding: 0px 15px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.banner-text {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-text h1 {
+    font-size: 70px;
+    color: #fff;
+}
+
+.section-title h2 {
+    font-size: 34px;
+    text-align: center;
+}
+
+.thumbs-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.thumbs-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 32px;
+}
+
+.thumbs-wrap a img {
+    width: 100%;
+    max-width: 120px;
+}
+
+.thumbs-modal {
+    max-width: 700px;
+    margin: 0 auto;
+    border: 8px solid #3c5998;
+    padding: 40px 24px;
+}
+
+.review-links a img {
+    width: 100%;
+    max-width: 120px;
+}
+
+.review-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.thumbs-modal-inner {
+    text-align: center;
+}
+
+.thumbs-modal-inner h2 {
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 16px;
+}
+
+.thumbs-modal-inner p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.form-modal {
+    width: 100%;
+    max-width: 700px;
+    padding: 0px;
+}
+
+.form-modal img {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+}
+
+@media (max-width:767px) {
+    .banner {
+    
+    height: 260px;
+} 
+.banner-text h1 {
+    font-size: 40px;
+    color: #fff;
+}
+ 
+}
+    </style>
+</head>
+<body>
+<div class="banner">
+    <div class="container">
+       <div class="banner-text">
+        <h1>Review</h1>
+       </div>
+    </div>
+</div>
+
+
+<div class="thumbs-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>How did we do?</h2>
+        </div>
+
+        <div class="thumbs-wrap">
+            <a href="#thumbs-up-modal" rel="modal:open"><img src="img/thumbs-up.png" alt=""></a>
+            <a href="#thumbs-down-modal" rel="modal:open"><img src="img/thumbs-down.png" alt=""></a>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="thumbs-up-modal"   class="thumbs-modal modal">
+    <div class="thumbs-modal-inner">
+        <h2>Please Share Your Experience</h2>
+        <p>Your feedback is of the utmost importance to us. We are constantly striving to provide the best experience for our customers and your feedback helps us to define that experience.&nbsp;If you could take a minute and go to one of the platforms linked below and leave us a review, we would greatly appreciate it.&nbsp;</p>
+
+        <div class="review-links">
+            <a target="_blank" id="facebookReview" href=""><img src="img/Review-Us-On-Facebook.png" alt="facebook"></a>
+
+            <a target="_blank" href="" id="googleReview"><img src="img/review-us-on-google.png" alt="google"></a>
+        </div>
+    </div>
+</div>
+
+<div id="thumbs-down-modal"   class="form-modal modal">
+    <img src="img/form.png" alt="">
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+<!-- jQuery Modal -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<script src="data.js"></script>
+
+<script>
+    var url_string =window.location.href;
+var url = new URL(url_string);
+var c = url.searchParams.get("c");
+// console.log(c);
+
+ 
+
+var query = window.location.search.substring(1);
+ 
+var ReviewData=[]
+     
+listing_data.forEach(function(d) {
+   
+    ReviewData.push({
+      Parameter:  d['parameter'] ,
+      FacebookReview:  d['facebookReview'] ,
+      GoogleReview:  d['GoogleReview'] 
+});
+
+});
+
+
+console.log(ReviewData)
+
+for(let a=0; a<ReviewData.length; a++){
+    if(ReviewData[a].Parameter == query){
+        document.getElementById('facebookReview').href=ReviewData[a].FacebookReview;
+        document.getElementById('googleReview').href=ReviewData[a].GoogleReview;
+    }
+   
+}
+
+</script>
+
+</body>
+</html>
