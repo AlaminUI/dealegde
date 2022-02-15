@@ -202,11 +202,19 @@
         </section>
 
         <script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
+        <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
         <script src="assets/js/isotop.js"></script>
 
         <script>
             $(document).ready( function() {   
    
+       
+
+    $('.grid').imagesLoaded( function() {
+        $('.grid').isotope('layout');
+});
+
    $('.grid').isotope({
    itemSelector: '.single-project-image',
    });
