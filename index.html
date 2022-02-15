@@ -20,22 +20,7 @@
     <script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
     <script src="assets/js/isotop.js"></script>
 
-    <script>
-         $(document).ready( function() {   
 
-$('.grid').isotope({
-itemSelector: '.single-project-image',
-});
-
-// filter items on button click
-$('.filter-button-group').on( 'click', 'li', function() {
-var filterValue = $(this).attr('data-filter');
-$('.grid').isotope({ filter: filterValue });
-$('.filter-button-group li').removeClass('active');
-$(this).addClass('active');
-});
-})
-    </script>
 </head>
 <body>
  
@@ -217,7 +202,22 @@ $(this).addClass('active');
             </div>
         </section>
 
- 
+        <script>
+            $(document).ready( function() {   
+   
+   $('.grid').isotope({
+   itemSelector: '.single-project-image',
+   });
+   
+   // filter items on button click
+   $('.filter-button-group').on( 'click', 'li', function() {
+   var filterValue = $(this).attr('data-filter');
+   $('.grid').isotope({ filter: filterValue });
+   $('.filter-button-group li').removeClass('active');
+   $(this).addClass('active');
+   });
+   })
+       </script>
       
 </body>
 </html>
