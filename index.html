@@ -1,18 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#"   xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protfolio</title>
- 
+
+
+    <meta property="og:title" content="Marketofocused || Protfolio"  />
+    <meta property="twitter:image" content="https://marketofocused.netlify.app/assets/images/banner-img.png">
+    <meta property="og:image" content="https://marketofocused.netlify.app/assets/images/banner-img.png"  />
+    <meta property="og:image:width" content="600"  />
+    <meta property="og:image:height" content="315"  />
+
+    <title>Marketofocused || Protfolio</title>
+
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/style.css">
  
+    <script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/isotop.js"></script>
+
+    <script>
+         $(document).ready( function() {   
+
+$('.grid').isotope({
+itemSelector: '.single-project-image',
+});
+
+// filter items on button click
+$('.filter-button-group').on( 'click', 'li', function() {
+var filterValue = $(this).attr('data-filter');
+$('.grid').isotope({ filter: filterValue });
+$('.filter-button-group li').removeClass('active');
+$(this).addClass('active');
+});
+})
+    </script>
 </head>
 <body>
  
     <header>
+        <div class="logo-area">
         <div class="container">
+            <div class="market-logo-top">
+                <img src="assets/images/marketo-logo.png" alt="logo here">
+            </div>
+        </div>
+        </div>
+        <div class="container">
+
+       
+
             <div class="banner-wrapper">
                 <div class="banner-info">
                     <h1>Examples of Our Amazing  <span class="yellow">Design work</span> </h1>
@@ -40,6 +78,9 @@
                     </div>
                     <div class="single-logo">
                         <img src="assets/images/logo4.png" alt="compnay logo">
+                    </div>
+                    <div class="single-logo">
+                        <img src="assets/images/logo-cleardata.svg" alt="compnay logo">
                     </div>
                 </div>
             </div>
@@ -151,10 +192,24 @@
                         
                     </div>
 
+                    <!-- single project  -->
+                    <div class="single-project-image others">
+                        <a target="_blank" href="/preplanafuneral.com/?qr001">SEE LANDING TEMPLATE</a>
+                            <img src="assets/images/preplanafuneral.png" alt="project image">
+                        
+                    </div>
+
                                   <!-- single project  -->
                                   <div class="single-project-image email">
                                     <a target="_blank" href="/blog-email-tempalte/">SEE EMAIL TEMPLATE</a>
                                         <img src="assets/images/blog-email-template.jpg" alt="project image">
+                                    
+                                </div>
+
+                                  <!-- single project  -->
+                                  <div class="single-project-image email">
+                                    <a target="_blank" href="/Cleardata/email-template/">SEE EMAIL TEMPLATE</a>
+                                        <img src="assets/images/cleardata-email-template.png" alt="project image">
                                     
                                 </div>
 
@@ -163,24 +218,6 @@
         </section>
 
  
-        <script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
-        <script src="assets/js/isotop.js"></script>
-
-        <script>
-             $(document).ready( function() {   
-
-$('.grid').isotope({
-  itemSelector: '.single-project-image',
-});
-
-// filter items on button click
-$('.filter-button-group').on( 'click', 'li', function() {
-  var filterValue = $(this).attr('data-filter');
-  $('.grid').isotope({ filter: filterValue });
-  $('.filter-button-group li').removeClass('active');
-  $(this).addClass('active');
-});
-    })
-        </script>
+      
 </body>
 </html>

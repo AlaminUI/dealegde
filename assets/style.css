@@ -177,7 +177,7 @@
     
     header {
         background: #F8F8FF;
-        padding-top: 80px;
+        padding-top: 0;
     }
     .banner-info p {
     max-width: 500px;
@@ -210,7 +210,18 @@
 .single-logo img {
     width: 100%;
 }
+.market-logo-top img {
+    width: 100%;
+    max-width: 90px;
+}
 
+.logo-area {
+    background: #fff;
+    padding: 8px 0px;
+    margin-bottom: 77px;
+    border-bottom: 1px solid #fcdc54;
+    /* box-shadow: -1px -3px 11px 0px #3e3c379e; */
+}
 .client-compnay-logo-wrap {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -421,18 +432,25 @@ section.protfolio-area {
     .banner-info {
         width: 100%;
         max-width: 100%;
-        padding-top: 40px;
+        padding-top: 0;
     }
     .banner-img {
         width: 100%;
         max-width: 100%;
-        margin-top: 32px;
+        margin-top: 48px;
     }
     .banner-img img {
         width: 100%;
         max-width: 500px;
         display: block;
         margin: 0 auto;
+    }
+    .market-logo-top {
+        text-align: center;
+    }
+    
+    .logo-area {
+        margin-bottom: 56px;
     }
     h1 {
         font-size: 34px;
@@ -455,7 +473,7 @@ section.protfolio-area {
     }
     .single-project-image {
         max-height: 200px;
-        min-height: auto;
+        min-height: 180px;
     }
     .single-project-image {
  
