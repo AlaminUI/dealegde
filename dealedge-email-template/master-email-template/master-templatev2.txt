@@ -186,9 +186,9 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
 
                         <!-- button  -->
                         <tr>
-                          <td class="mktoText" mktoname="header_download_button_wrap"
-                          id="header_download_button_wrap">
-                         
+                          <td>
+                            <div class="mktoText" mktoname="header_download_button_wrap"
+                              id="header_download_button_wrap">
                               <table cellpadding="0" cellspacing="0" border="0">
                                 <tbody>
                                   <tr>
@@ -218,6 +218,7 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
                                   </tr>
                                 </tbody>
                               </table>
+                            </div>
                           </td>
                         </tr>
 
@@ -314,7 +315,6 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
             <!-- Header Area Two end  -->
 
             <!-- Body text full width area start  -->
-               <!-- Body text full width area start  -->
             <table width="600" cellpadding="0" cellspacing="0" border="0" id="text_full_width" class="mktoModule container" mktoName="text_full_width">
               <tbody>
                 <!-- extra space  -->
@@ -355,9 +355,8 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
                       <tbody>
                         <tr>
                           <td width="42" class="width-16" style="width: 42px;"></td>
-                          <td valign="top"  class="mktoText" mktoname="text_full_width_singel_list1" id="text_full_width_singel_list1">
-                            
-                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                          <td valign="top">
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0" mktoeditable="Full_width_single_item" id="Full_width_single_item" mktoName="Full_width_single_item">
                               <tbody>
                                 <!-- single line  -->
                                 <tr>
@@ -365,10 +364,10 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
                                       style="color:#3A3A3A;font-size: 22px;line-height: 20px;">•</span></td>
                                   <td
                                     style="font-family: 'Graphik','Arial', sans-serif; font-size:16px;  line-height: 22px;color:#3A3A3A;font-weight: 400;">
-                                    
+                                    <div class="mktoText" mktoname="text_full_width_singel_list1" id="text_full_width_singel_list1">
                                       <b>Since 2010 the IRR is 500 bpts higher </b> - for the median healthcare
                                       acquisiton than its counterpart in other industries.
-                                   
+                                    </div>
                                   </td>
                                 </tr>
                                 <!-- extra space  -->
@@ -387,10 +386,10 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
                                       style="color:#3A3A3A;font-size: 22px;line-height: 20px;">•</span></td>
                                   <td
                                     style="font-family: 'Graphik','Arial', sans-serif; font-size:16px;  line-height: 22px;color:#3A3A3A;font-weight: 400;">
-                                   
+                                    <div class="mktoText" mktoname="text_full_width_singel_list2" id="text_full_width_singel_list2">
                                       <b>Since 2010 the IRR is 500 bpts higher </b> - for the median healthcare
                                       acquisiton than its counterpart in other industries.
-                                    
+                                    </div>
                                   </td>
                                 </tr>
                                 <!-- extra space  -->
@@ -409,22 +408,21 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
                                       style="color:#3A3A3A;font-size: 22px;line-height: 20px;">•</span></td>
                                   <td
                                     style="font-family: 'Graphik','Arial', sans-serif; font-size:16px;  line-height: 22px;color:#3A3A3A;font-weight: 400;">
-                                    
+                                    <div class="mktoText" mktoname="text_full_width_singel_list3" id="text_full_width_singel_list3">
                                       <b>Since 2010 the IRR is 500 bpts higher </b> - for the median healthcare
                                       acquisiton than its counterpart in other industries.
-                                   
+                                    </div>
                                   </td>
                                 </tr>
                                 <!-- extra space  -->
-                              <tr>
+                                <tr>
                                   <td height="12" style="height:12px;font-size:12px; line-height:12px;">&nbsp;
                                   </td>
                                 </tr>
 
                               </tbody>
                             </table>
-                            
-                            </td>
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -449,51 +447,21 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
                 <tr>
                   <td height="17" style="font-size:17px; line-height:17px;">&nbsp;</td>
                 </tr>
-      
-
-                       <!-- button  -->
-                       <tr>
-                        <td class="mktoText" mktoname="body_download_button"
-                        id="body_download_button">
-                       
-                        <table cellpadding="0" cellspacing="0" border="0" bgcolor="#cc0100" style="border-radius:5px;">
-                          <tbody><tr>
-                            <td align="center" valign="middle" height="32" width="205">
-                          
-    
-                              <table cellpadding="0" cellspacing="0" border="0" bgcolor="#cc0100">
-                                <tbody><tr>
-                                  <td align="center" valign="middle">
-                                          <a href="#" style="font-family: 'Graphik', sans-serif;
-                                          color:#fff; display: inline-block; 
-                                          text-decoration: none; 
-                                          line-height:18px; 
-                                          font-size:14px;
-                                          font-weight: bold;
-                                          padding:7px 0px;">
-                                            DOWNLOAD NOW
-                                           </a>
-                                    </td>
-                                    <td width="8"></td>
-                                    <td width="20">
-                                      <img width="20" src="arrow-icon.png" alt="icon">
-                                    </td>
-                                    </tr>
-                                    </tbody></table>
-                            </td>
-                          </tr>
-                        </tbody></table>
-                        </td>
-                      </tr>
- 
-
+                <!-- button  -->
+                <tr>
+                  <td>
+                    <div class="mktoImg" id="download-button" mktoName="download-button">
+                      <a href="#" style="text-decoration: none;" target="_blank">
+                        <img width="205" height="32" src="https://marketofocused.netlify.app/dealedge-email-template/master-email-template/download-button.png" alt="button" style="" /></a>
+                    </div>
+                  </td>
+                </tr>
                 <!-- extra space  -->
                 <tr>
                   <td height="50" style="font-size:50px; line-height:50px;">&nbsp;</td>
                 </tr>
               </tbody>
             </table>
-           
             <!-- Body text full width area end  -->
 
             <!-- Two column  start  -->
@@ -534,41 +502,18 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
                                         <tr>
                                           <td height="15" style="font-size:15px; line-height:15px;">&nbsp;</td>
                                         </tr>
-    
-                                    <!-- button  -->
-                                            <tr>
-                                              <td class="mktoText" mktoname="Articale_button1"
-                                              id="Articale_button1">
-                                            
-                                                  <table cellpadding="0" cellspacing="0" border="0">
-                                                    <tbody>
-                                                      <tr>
-                                                        <td align="left" valign="top">
-                                                          <table cellpadding="0" cellspacing="0" border="0" bgcolor="#cc0100">
-                                                            <tbody>
-                                                              <tr>
-                                                                <td align="center" valign="middle" width="205" height="32"
-                                                                  style="font-family: 'Graphik', sans-serif; font-size:12px; font-weight:bold; ">
-                                                                
-                                                                    <div>
-                                                                      <a href="#"
-                                                                        style="padding:7px; display:block; font-size:12px; font-family: 'Graphik', sans-serif; color: #fff; text-decoration: none; line-height: 18px; font-weight:bold;"
-                                                                        target="_blank"> READ THE ARTICLE
-                                                                      </a>
-                                                                    </div>
-                                                                
-                                                                </td>
-                                                              </tr>
-                                                            </tbody>
-                                                          </table>
-                                                        </td>
-                                                      </tr>
-                    
-                                                    </tbody>
-                                                  </table>
-                                              </td>
-                                            </tr>
-
+                                        <!-- button  -->
+                                        <tr>
+                                          <td>
+                                            <div class="mktoImg" id="read-the-article-button4" mktolockimgsize="true" mktoName="read-the-article-button4">
+                                              <a href="https://go.dealedge.com/deal-team-article.html"
+                                                style="text-decoration: none;" target="_blank"><img width="205"
+                                                  height="32"
+                                                  src="https://go.bain.com/rs/545-OFW-044/images/read-button3.png"
+                                                  alt="button" style="" /></a>
+                                            </div>
+                                          </td>
+                                        </tr>
                                         <!-- extra space  -->
                                         <tr>
                                           <td height="24" style="font-size:24px; line-height:24px;">&nbsp;</td>
@@ -593,7 +538,7 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
                                                   <td width="20" style="width: 20px;"></td>
                                                   <td valign="top">
                                                     <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                      <tbody class="mktoText" id="Textz" MktoName="Textz">
+                                                      <tbody>
                                                         <!-- single line  -->
                                                         <tr>
                                                           <td valign="top" width="13"> <span
@@ -649,39 +594,18 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
                                         <tr class="mobile-hide">
                                           <td height="15" style="font-size:15px; line-height:15px;">&nbsp;</td>
                                         </tr>
-                                         <!-- button  -->
-                        <tr>
-                          <td class="mktoText" mktoname="Articale_button2"
-                          id="Articale_button2">
-                         
-                              <table cellpadding="0" cellspacing="0" border="0">
-                                <tbody>
-                                  <tr>
-                                    <td align="left" valign="top">
-                                      <table cellpadding="0" cellspacing="0" border="0" bgcolor="#cc0100">
-                                        <tbody>
-                                          <tr>
-                                            <td align="center" valign="middle" width="205" height="32"
-                                              style="font-family: 'Graphik', sans-serif; font-size:12px; font-weight:bold; ">
-                                             
-                                                <div>
-                                                  <a href="#"
-                                                    style="padding:7px; display:block; font-size:12px; font-family: 'Graphik', sans-serif; color: #fff; text-decoration: none; line-height: 18px; font-weight:bold;"
-                                                    target="_blank"> READ THE ARTICLE
-                                                  </a>
-                                                </div>
-                                             
-                                            </td>
-                                          </tr>
-                                        </tbody>
-                                      </table>
-                                    </td>
-                                  </tr>
- 
-                                </tbody>
-                              </table>
-                          </td>
-                        </tr>
+                                        <!-- button  -->
+                                        <tr>
+                                          <td class="mobile-hide">
+                                            <div class="mktoImg" id="read-the-article-button3" mktolockimgsize="true" mktoName="read-the-article-button3">
+                                              <a href="https://go.dealedge.com/deal-team-article.html"
+                                                style="text-decoration: none;" target="_blank"><img width="205"
+                                                  height="32"
+                                                  src="https://go.bain.com/rs/545-OFW-044/images/read-button3.png"
+                                                  alt="button" style="" /></a>
+                                            </div>
+                                          </td>
+                                        </tr>
                                       </tbody>
                                     </table>
                                   </td>
@@ -725,39 +649,19 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
                                                 <tr>
                                                   <td height="15" style="font-size:15px; line-height:15px;">&nbsp;</td>
                                                 </tr>
-                                                 <!-- button  -->
-                                              <tr>
-                                                <td class="mktoText" mktoname="Articale_button3"
-                                                id="Articale_button3">
-                                              
-                                                    <table cellpadding="0" cellspacing="0" border="0">
-                                                      <tbody>
-                                                        <tr>
-                                                          <td align="left" valign="top">
-                                                            <table cellpadding="0" cellspacing="0" border="0" bgcolor="#cc0100">
-                                                              <tbody>
-                                                                <tr>
-                                                                  <td align="center" valign="middle" width="205" height="32"
-                                                                    style="font-family: 'Graphik', sans-serif; font-size:12px; font-weight:bold; ">
-                                                                  
-                                                                      <div>
-                                                                        <a href="#"
-                                                                          style="padding:7px; display:block; font-size:12px; font-family: 'Graphik', sans-serif; color: #fff; text-decoration: none; line-height: 18px; font-weight:bold;"
-                                                                          target="_blank"> READ THE ARTICLE
-                                                                        </a>
-                                                                      </div>
-                                                                  
-                                                                  </td>
-                                                                </tr>
-                                                              </tbody>
-                                                            </table>
-                                                          </td>
-                                                        </tr>
-                      
-                                                      </tbody>
-                                                    </table>
-                                                </td>
-                                              </tr>
+                                                <!-- button  -->
+                                                <tr>
+                                                  <td>
+                                                    <div class="mktoImg" id="read-the-article-button1"
+                                                      mktolockimgsize="true" mktoname="read-the-article-button2">
+                                                      <a href="https://go.dealedge.com/investor-relations-article.html"
+                                                        style="text-decoration: none;" target="_blank"><img width="205"
+                                                          height="32"
+                                                          src="https://go.bain.com/rs/545-OFW-044/images/read-button3.png"
+                                                          alt="button" style="" /></a>
+                                                    </div>
+                                                  </td>
+                                                </tr>
                                                 <!-- extra space  -->
                                                 <tr>
                                                   <td height="24" style="font-size:24px; line-height:24px;">&nbsp;</td>
@@ -783,7 +687,7 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
                                                           <td valign="top">
                                                             <table width="100%" cellpadding="0" cellspacing="0"
                                                               border="0">
-                                                              <tbody class="mktoText" id="Texty" MktoName="Texty">
+                                                              <tbody>
                                                                 <!-- single line  -->
                                                                 <tr>
                                                                   <td valign="top" width="13"> <span
@@ -836,7 +740,7 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
                                                           </td>
                                                           <td> </td>
                                                         </tr>
-                                                        </tbody>
+                                                      </tbody>
                                                     </table>
                                                   </td>
                                                 </tr>
@@ -844,40 +748,19 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
                                                 <tr class="mobile-hide">
                                                   <td height="37" style="font-size:37px; line-height:37px;">&nbsp;</td>
                                                 </tr>
-                                               
-                                                 <!-- button  -->
-                                                    <tr>
-                                                      <td class="mktoText" mktoname="Articale_button4"
-                                                      id="Articale_button4">
-                                                    
-                                                          <table cellpadding="0" cellspacing="0" border="0">
-                                                            <tbody>
-                                                              <tr>
-                                                                <td align="left" valign="top">
-                                                                  <table cellpadding="0" cellspacing="0" border="0" bgcolor="#cc0100">
-                                                                    <tbody>
-                                                                      <tr>
-                                                                        <td align="center" valign="middle" width="205" height="32"
-                                                                          style="font-family: 'Graphik', sans-serif; font-size:12px; font-weight:bold; ">
-                                                                        
-                                                                            <div>
-                                                                              <a href="#"
-                                                                                style="padding:7px; display:block; font-size:12px; font-family: 'Graphik', sans-serif; color: #fff; text-decoration: none; line-height: 18px; font-weight:bold;"
-                                                                                target="_blank"> READ THE ARTICLE
-                                                                              </a>
-                                                                            </div>
-                                                                        
-                                                                        </td>
-                                                                      </tr>
-                                                                    </tbody>
-                                                                  </table>
-                                                                </td>
-                                                              </tr>
-                            
-                                                            </tbody>
-                                                          </table>
-                                                      </td>
-                                                    </tr>
+                                                <!-- button  -->
+                                                <tr>
+                                                  <td class="mobile-hide">
+                                                    <div class="mktoImg" id="read-the-article-button" mktoName="read-the-article-button1"
+                                                      mktolockimgsize="true">
+                                                      <a href="https://go.dealedge.com/investor-relations-article.html"
+                                                        style="text-decoration: none;" target="_blank"><img width="205"
+                                                          height="32"
+                                                          src="https://go.bain.com/rs/545-OFW-044/images/read-button3.png"
+                                                          alt="button" style="" /></a>
+                                                    </div>
+                                                  </td>
+                                                </tr>
                                               </tbody>
                                             </table>
                                           </td>
@@ -923,7 +806,7 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
                             <tr>
                               <td>
                                 <div class="mktoImg" mktoname="DealEdge_sector_study_book" id="DealEdge_sector_study_book">
-                                  <img width="110" src="https://lp.bain.com/rs/378-NYU-220/images/fpo-book.png" alt="fpo-book">
+                                  <img width="110" src="https://marketofocused.netlify.app/dealedge-email-template/master-email-template/fpo-book.png" alt="fpo-book">
                                 </div>
     
                               </td>
@@ -970,42 +853,15 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
                               <td height="16" style="font-size:16px; line-height:16px;">&nbsp;</td>
                             </tr>
     
-                           <!-- button  -->
-                        <tr>
-                          <td class="mktoText" mktoname="Downalod_now_two"
-                          id="Downalod_now_two">
-                         
-                              <table cellpadding="0" cellspacing="0" border="0">
-                                <tbody>
-                                  <tr>
-                                    <td align="left" valign="top">
-                                      <table cellpadding="0" cellspacing="0" border="0" style="border-radius:5px;" bgcolor="#cc0100">
-                                        <tbody>
-                                          <tr>
-                                            <td align="center" valign="middle" width="170" height="32"
-                                              style="font-family: 'Graphik', sans-serif; font-size:14px; font-weight:bold; ">
-                                             
-                                                <div>
-                                                  <a href="https://go.suttonplacestrategies.com/Custom-Analysis.html"
-                                                    style="padding:7px; display:block; font-family: 'Graphik', sans-serif; color: #fff; text-decoration: none; line-height: 18px; font-weight:bold;"
-                                                    target="_blank"> DOWNLOAD NOW
-                                                  </a>
-                                                </div>
-                                             
-                                            </td>
-                                          </tr>
-                                        </tbody>
-                                      </table>
-                                    </td>
-                                  </tr>
-                                  <!-- extra space  -->
-                                  <tr>
-                                    <td height="24" style="font-size:24px; line-height:24px;">&nbsp;</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                          </td>
-                        </tr>
+                            <!-- button  -->
+                            <tr>
+                              <td>
+                                <div class="mktoImg" id="DealEdge_sector_study_button" mktolockimgsize="true" MktoName="DealEdge_sector_study_button">
+                                  <a href="#" style="text-decoration: none;" target="_blank"><img width="170" height="32"
+                                      src="https://marketofocused.netlify.app/dealedge-email-template/master-email-template/download-button2.png" alt="button" style="" /></a>
+                                </div>
+                              </td>
+                            </tr>
     
     
     
@@ -1037,7 +893,7 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
                 <tr>
                   <td>
                     <div class="mktoImg" mktoname="full_image_image" id="full_image_image">
-                      <img width="600" class="img" src="https://lp.bain.com/rs/378-NYU-220/images/compare-performance.jpeg" alt="full Image">
+                      <img width="600" class="img" src="https://marketofocused.netlify.app/dealedge-email-template/master-email-template/compare-performance.jpeg" alt="full Image">
                     </div>
                   </td>
                 </tr>
@@ -1076,9 +932,9 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
                         <tr>
                           <td width="24" style="width:24px;"></td>
                           <td
-                            style="font-size:16px; line-height: 22px; color:#333333;font-family: 'Graphik','Arial', sans-serif;font-weight: 400;"><div class="mktoText" id="Textw" MktoName="textw">
+                            style="font-size:16px; line-height: 22px; color:#333333;font-family: 'Graphik','Arial', sans-serif;font-weight: 400;">
                             Access the private equity deal performance insights and benchmarks you always needed but
-                            couldn’t find:</div> </td>
+                            couldn’t find: </td>
                           <td width="8" style="width:8px;"></td>
                         </tr>
                       </tbody>
@@ -1102,7 +958,7 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
                                   <td> </td>
                                   <td valign="top">
                                     <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                      <tbody class="mktoText" id="Textr" MktoName="textr" >
+                                      <tbody>
                                         <!-- single line  -->
                                         <tr>
                                           <td valign="top" width="13"> <span
@@ -1162,7 +1018,7 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
                             </table>
                           </td>
                         </tr>
-                        </tbody>
+                      </tbody>
                     </table>
                   </td>
                 </tr>
@@ -1194,46 +1050,15 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
                         <tr>
                           <td height="20" style="font-size:20px; line-height:20px;">&nbsp;</td>
                         </tr>
-       
-
-                        <!-- button  -->
                         <tr>
                           <td width="24" style="width:24px;"></td>
-                          <td class="mktoText" mktoname="Request_A_demo1"
-                          id="Request_A_demo1">
-                         
-                              <table cellpadding="0" cellspacing="0" border="0">
-                                <tbody>
-                                  <tr>
-                                    <td align="left" valign="top">
-                                      <table cellpadding="0" cellspacing="0" border="0" bgcolor="#cc0100">
-                                        <tbody>
-                                          <tr>
-                                            <td align="center" valign="middle" width="160" height="32"
-                                              style="font-family: 'Graphik', sans-serif; font-size:14px; font-weight:bold; ">
-                                             
-                                                <div>
-                                                  <a href="https://go.suttonplacestrategies.com/Custom-Analysis.html"
-                                                    style="padding:7px; display:block; font-family: 'Graphik', sans-serif; color: #fff; text-decoration: none; line-height: 18px; font-weight:bold;"
-                                                    target="_blank"> REQUEST A DEMO
-                                                  </a>
-                                                </div>
-                                             
-                                            </td>
-                                          </tr>
-                                        </tbody>
-                                      </table>
-                                    </td>
-                                  </tr>
-                                  <!-- extra space  -->
-                                  <tr>
-                                    <td height="24" style="font-size:24px; line-height:24px;">&nbsp;</td>
-                                  </tr>
-                                </tbody>
-                              </table>
+                          <td
+                            style="font-family: 'Graphik','Arial', sans-serif; font-size:27px;  line-height: 40px;color:#000;font-weight: 400;">
+                            <a href="https://go.dealedge.com/contact-us.html" style="text-decoration: none;"><img
+                                width="161" height="32"
+                                src="https://go.bain.com/rs/545-OFW-044/images/request-button2.png" alt="button" /></a>
                           </td>
                         </tr>
-
                         <!-- extra space  -->
                         <tr>
                           <td height="32" style="font-size:32px; line-height:32px;">&nbsp;</td>
@@ -1310,43 +1135,16 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
                                   <td height="24" style="font-size:24px; line-height:24px;">&nbsp;</td>
                                 </tr>
 
-                                  <!-- button  -->
-                        <tr>
-                           
-                          <td class="mktoText" mktoname="Request_A_demo2"
-                          id="Request_A_demo2">
-                         
-                              <table cellpadding="0" cellspacing="0" border="0">
-                                <tbody>
-                                  <tr>
-                                    <td align="left" valign="top">
-                                      <table cellpadding="0" cellspacing="0" border="0" style="border-radius:5px;" bgcolor="#738a9e">
-                                        <tbody>
-                                          <tr>
-                                            <td align="center" valign="middle" width="170" height="32"
-                                              style="font-family: 'Graphik', sans-serif; font-size:13px; font-weight:bold; ">
-                                             
-                                                <div>
-                                                  <a href="https://go.suttonplacestrategies.com/Custom-Analysis.html"
-                                                    style="padding:7px; display:block;font-size:13px; font-family: 'Graphik', sans-serif; color: #fff; text-decoration: none; line-height: 18px; font-weight:bold;"
-                                                    target="_blank"> REQUEST A DEMO
-                                                  </a>
-                                                </div>
-                                             
-                                            </td>
-                                          </tr>
-                                        </tbody>
-                                      </table>
-                                    </td>
-                                  </tr>
-                                  <!-- extra space  -->
-                                  <tr>
-                                    <td height="24" style="font-size:24px; line-height:24px;">&nbsp;</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                          </td>
-                        </tr>
+                                <!-- button  -->
+                                <tr>
+                                  <td>
+                                    <div class="mktoImg" id="DealEdge_sector_study_button1" mktolockimgsize="true" MktoName="DealEdge_sector_study_button1">
+                                      <a href="#" style="text-decoration: none;" target="_blank">
+                                        <img width="170" height="32" src="https://marketofocused.netlify.app/dealedge-email-template/master-email-template/request-a-demo.png" alt="button"
+                                          style="" /></a>
+                                    </div>
+                                  </td>
+                                </tr>
 
                                 <!-- extra space  -->
                                 <tr>
@@ -1363,7 +1161,7 @@ body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
                                   <td>
                                     <div class="mktoImg" mktoname="DealEdge_sector_study_book"
                                       id="DealEdge_sector_study_book1" >
-                                      <img width="270" src="https://lp.bain.com/rs/378-NYU-220/images/new-dealedge.png" alt="fpo-book">
+                                      <img width="270" src="https://marketofocused.netlify.app/dealedge-email-template/master-email-template/new-dealedge.png" alt="fpo-book">
                                     </div>
 
                                   </td>
