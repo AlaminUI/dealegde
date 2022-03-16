@@ -20,16 +20,16 @@
         body{
             padding:0px;
             margin:0px;
-            font-family: 'Roboto', sans-serif;
+            font-family: Helvetica, Arial !important;
+            background: #2F5383;
+            padding: 0px 15px;
+            color:#21354D;
+            border: 2px solid #fff;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .banner {
-    background: url(img/banner.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    position: relative;
-    height: 400px;
-}
 
 .container {
     max-width: 970px;
@@ -38,51 +38,25 @@
     height: 100%;
 }
 
-.banner-text {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.banner-text h1 {
-    font-size: 70px;
-    color: #fff;
-}
-
-.section-title h2 {
-    font-size: 34px;
-    text-align: center;
-}
-
-.thumbs-section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
-.thumbs-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 32px;
-}
-
-.thumbs-wrap a img {
-    width: 100%;
-    max-width: 120px;
-}
-
-.thumbs-modal {
-    max-width: 700px;
+ 
+ 
+.review-wrap {
+    max-width: 1180px;
     margin: 0 auto;
-    border: 8px solid #3c5998;
     padding: 40px 24px;
+    background: #fff;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
 }
 
 .review-links a img {
     width: 100%;
-    max-width: 120px;
+    max-width: 220px;
 }
 
 .review-links {
@@ -90,21 +64,23 @@
     align-items: center;
     gap: 24px;
     justify-content: center;
-    margin-top: 32px;
+    margin-top: 40px;
 }
 
-.thumbs-modal-inner {
+.review-wrap-inner {
     text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-.thumbs-modal-inner h2 {
-    font-size: 32px;
+.review-wrap-inner h2 {
+    font-size: 36px;
     line-height: 1.3;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
-.thumbs-modal-inner p {
-    font-size: 16px;
+.review-wrap-inner p {
+    font-size: 20px;
     line-height: 1.5;
 }
 .form-modal {
@@ -118,63 +94,71 @@
     display: block;
     border-radius: 5px;
 }
-
-@media (max-width:767px) {
-    .banner {
-    
-    height: 260px;
-} 
-.banner-text h1 {
-    font-size: 40px;
-    color: #fff;
+.logo img {
+    max-width: 200px;
+    width: 100%;
+    margin-bottom: 50px;
 }
+.review-flex {
+    display: flex;
+    align-items: center;
+}
+@media (max-width:767px) {
+    .review-links a img {
+    width: 100%;
+    max-width: 132px;
+}
+.review-wrap-inner h2 {
+    font-size: 30px;
+     
+}
+.review-wrap-inner p {
+    font-size: 17px;
+    line-height: 1.4;
+}
+.review-wrap {
  
+    padding: 24px 16px;
+   
+}
+.logo img {
+    max-width: 160px;
+    width: 100%;
+    margin-bottom: 32px;
+}
 }
     </style>
 </head>
 <body>
-<div class="banner">
-    <div class="container">
-       <div class="banner-text">
-        <h1>Review</h1>
-       </div>
+ 
+
+ 
+
+
+
+
+<div class="review-wrap">
+    <div class="logo">
+        <img id="logo" src="" alt="compnay logo">
     </div>
-</div>
+   <div class="review-flex">
+    <div class="review-wrap-inner">
+        
+        <h2>Please Share Your Experience        </h2>
+        <p>Your feedback helps us to improve the experience for our clients. Please take a moment to click the Google icon below to leave us a review.
 
-
-<div class="thumbs-section">
-    <div class="container">
-        <div class="section-title">
-            <h2>How did we do?</h2>
-        </div>
-
-        <div class="thumbs-wrap">
-            <a href="#thumbs-up-modal" rel="modal:open"><img src="img/thumbs-up.png" alt=""></a>
-            <a href="#thumbs-down-modal" rel="modal:open"><img src="img/thumbs-down.png" alt=""></a>
-        </div>
-    </div>
-</div>
-
-
-
-
-<div id="thumbs-up-modal"   class="thumbs-modal modal">
-    <div class="thumbs-modal-inner">
-        <h2>Please Share Your Experience</h2>
-        <p>Your feedback is of the utmost importance to us. We are constantly striving to provide the best experience for our customers and your feedback helps us to define that experience.&nbsp;If you could take a minute and go to one of the platforms linked below and leave us a review, we would greatly appreciate it.&nbsp;</p>
+        </p>
 
         <div class="review-links">
-            <a target="_blank" id="facebookReview" href=""><img src="img/Review-Us-On-Facebook.png" alt="facebook"></a>
+            <a target="_blank" href="" id="googleReview"><img src="img/Google-Review-Button.png" alt="google"></a>
+            <a target="_blank" id="facebookReview" href=""><img src="img/Facebook-Review-Button.png" alt="facebook"></a>
 
-            <a target="_blank" href="" id="googleReview"><img src="img/review-us-on-google.png" alt="google"></a>
         </div>
     </div>
+   </div>
 </div>
 
-<div id="thumbs-down-modal"   class="form-modal modal">
-    <img src="img/form.png" alt="">
-</div>
-
+ 
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
@@ -195,9 +179,10 @@ var ReviewData=[]
 listing_data.forEach(function(d) {
    
     ReviewData.push({
-      Parameter:  d['URL PARAM'] ,
-      FacebookReview:  d['Facebook Review URL'] ,
-      GoogleReview:  d['Google Review URL'] 
+      Parameter:  d['URL Param'] ,
+      FacebookReview:  d['Final FB Reviews URL'] ,
+      GoogleReview:  d['Google Review URL'] ,
+      CompanyLogo:  d['Funeral Home Logos URL'] 
 });
 
 });
@@ -208,11 +193,16 @@ for(let a=0; a<ReviewData.length; a++){
     if(ReviewData[a].Parameter == query){
         document.getElementById('facebookReview').href=ReviewData[a].FacebookReview;
         document.getElementById('googleReview').href=ReviewData[a].GoogleReview;
-    }
+        document.getElementById('logo').src=ReviewData[a].CompanyLogo;
+    } 
    
 }
 
 </script>
+
+ 
+ 
+ 
 
 </body>
 </html>
