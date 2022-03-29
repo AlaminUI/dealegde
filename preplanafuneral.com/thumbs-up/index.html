@@ -221,8 +221,8 @@
     
     for(let a=0; a<ReviewData.length; a++){
         if(ReviewData[a].Parameter == query){
-            document.getElementById('thumbs-up').href= 'https://marketofocused.netlify.app/preplanafuneral.com?'+  ReviewData[a].Parameter;
-            document.getElementById('thumbs-down').href= 'https://marketofocused.netlify.app/preplanafuneral.com/form?'+  ReviewData[a].Parameter;
+            document.getElementById('thumbs-up').href= 'https://marketofocused.netlify.app/preplanafuneral.com/thumbs-up?client_code='+  ReviewData[a].Parameter;
+            document.getElementById('thumbs-down').href= 'https://marketofocused.netlify.app/preplanafuneral.com/form?client_code='+  ReviewData[a].Parameter;
             document.getElementById('logo').src=ReviewData[a].CompanyLogo;
         } 
        
