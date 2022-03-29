@@ -293,7 +293,7 @@ span.mktoButtonWrap.mktoRound {
 
  
 
-    var query = window.location.search.substring(1);
+ var query = window.location.search.match(/client_code=([^&]*)/i)[1];
      
     var ReviewData=[]
          
