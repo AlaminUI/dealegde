@@ -227,9 +227,11 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin-top: 18px;
+    flex-wrap: wrap;
+    gap: 12px 0px;
 }
 
 .testimoial-area {
@@ -499,11 +501,10 @@ section.protfolio-area {
     }
     .single-logo {
         width: 100%;
-        max-width: 70px;
+        max-width: 94px;
         height: 100%;
         min-height: 32px;
         max-height: 32px;
-    
     }
     h3 {
          
