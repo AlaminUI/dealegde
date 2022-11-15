@@ -80,7 +80,7 @@
 }
 
 .review-wrap-inner p {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.5;
 }
 .form-modal {
@@ -229,9 +229,6 @@ span.mktoButtonWrap.mktoShadow {
     margin-bottom: 32px;
 }
 }
-.hiderow fieldset.mktoFormCol .mktoFormRow:nth-child(9){
-    display: none!important;
-}
     </style>
 </head>
 <body>
@@ -249,27 +246,23 @@ span.mktoButtonWrap.mktoShadow {
    <div class="review-flex">
     <div class="review-wrap-inner">
         
-        <h2>Survey
+        <h2>Thanks for your feedback
+
         </h2>
-        <p>Lorem ipsum dolor elit sed sit amet, consectetur adipisicing elit, sed do tempor incididunt ut labore et dolore magna aliqua.
+        <div class="servey-progress-bar">
+            <img src="complete.png" alt="Survey-progress-bar">
+        </div>
+        <p>We appreciate you taking the time to share your valuable feedback with us.
+
+
 
         </p>
         
-        <div class="servey-progress-bar">
-            <img src="Survey-progress-bar-v2.png" alt="Survey-progress-bar">
-        </div>
-
-       <div class="servey-form">
-       
-         <form id="mktoForm_1056"></form>
-         
-       </div>
+    
     </div>
    </div>
 </div>
-
-<script src="//info.preplanafuneral.com/js/forms2/js/forms2.min.js"></script>
- <script>MktoForms2.loadForm("//info.preplanafuneral.com", "852-LNK-689", 1056);</script>
+ 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 
 <!-- jQuery Modal -->
@@ -278,26 +271,8 @@ span.mktoButtonWrap.mktoShadow {
 
 <script>
  var querys = window.location.search.match(/client_code=([^&]*)/i)[1];
- MktoForms2.whenReady(function(form){
-
-form.onSuccess(function(vals,formLevelTyURL){
-    // console.log(formLevelTyURL)
-  location.href = 'http://127.0.0.1:5501/?client_code='+ querys;
-
-  return false;
-
-});
-
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    if(querys == 10){
  
  
-document.querySelector('form').classList.add('hiderow');
-}
-});
-
 var ReviewData=[]
      
 listing_data.forEach(function(d) {

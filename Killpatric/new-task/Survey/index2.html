@@ -180,6 +180,9 @@ form {
 span.mktoButtonWrap.mktoShadow {
     margin-left: 0 !important;
 }
+.hiderow fieldset.mktoFormCol .mktoFormRow:nth-child(9){
+    display: none!important;
+}
 /* form css end  */
 @media (max-width:767px) {
     .review-links a img {
@@ -228,9 +231,6 @@ span.mktoButtonWrap.mktoShadow {
     width: 100%;
     margin-bottom: 32px;
 }
-}
-.hiderow fieldset.mktoFormCol .mktoFormRow:nth-child(9){
-    display: none!important;
 }
     </style>
 </head>
@@ -289,14 +289,17 @@ form.onSuccess(function(vals,formLevelTyURL){
 });
 
 });
+ 
+console.log("hhle"+ querys)
 
 document.addEventListener("DOMContentLoaded", function() {
     if(querys == 10){
  
  
-document.querySelector('form').classList.add('hiderow');
+document.querySelector('#mktoForm_1056').classList.add('hiderow');
 }
 });
+
 
 var ReviewData=[]
      

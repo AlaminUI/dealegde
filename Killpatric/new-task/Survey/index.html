@@ -68,7 +68,7 @@
 
 .review-wrap-inner {
     text-align: center;
-    max-width: 770px;
+    max-width: 700px;
     margin: 0 auto;
     width: 100%;
 }
@@ -80,7 +80,7 @@
 }
 
 .review-wrap-inner p {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.5;
 }
 .form-modal {
@@ -105,44 +105,54 @@
     width: 100%;
 }
 /* Form Normalizer CSS */
-.mktoForm fieldset legend {
-    padding: 0 1em;
-    font-size: 20px;
-    font-weight: bold;
+.mktoForm, .mktoForm .mktoFieldWrap, .mktoForm .mktoHtmlText, .mktoForm input, .mktoLogicalField .mktoCheckboxList {width:100% !important;}
+@media only screen and (min-width:480px) {
+.mktoFormCol:first-child:nth-last-child(2), .mktoFormCol:first-child:nth-last-child(2) ~ .mktoFormCol {width: 100% !important;}
+.mktoFormCol:first-child:nth-last-child(3), .mktoFormCol:first-child:nth-last-child(3) ~ .mktoFormCol {width: 50% !important;}
+.mktoFormCol:first-child:nth-last-child(4), .mktoFormCol:first-child:nth-last-child(4) ~ .mktoFormCol {width: 33.3333% !important;}
+.mktoFormCol:first-child:nth-last-child(3) ~ .mktoFormCol {padding-left: 0.8em !important;}
 }
-.mktoRadioList.mktoHasWidth {
-    display: flex;
-    align-items: center;
-}
-
-.mktoForm .mktoFieldWrap {
-    margin-top: 16px;
-}
-
-form {
-    max-width: 680px !important;
+@media only screen and (max-width:480px) {.mktoFormCol {width:100% !important;}}
+.mktoAsterix{display:none !important;}
+.mktoForm .mktoGutter {display:none !important;}
+.mktoButtonWrap {margin-left:0 !important;}
+.mktoForm input[type=text], .mktoForm input[type=url], .mktoForm input[type=email], .mktoForm input[type=tel], .mktoForm input[type=number], .mktoForm input[type=date], .mktoForm textarea.mktoField, .mktoForm select.mktoField {padding: 0.3em; width: 100% !important;}
+.mktoForm {clear: both; margin-bottom: 0.3em;}
+.mktoForm .mktoRadioList, .mktoForm .mktoCheckboxList {float: left !important; width: auto !important;}
+.mktoForm .mktoRadioList > label, .mktoForm .mktoCheckboxList > label {display: inherit !important;}
+.mktoForm input[type="radio"], .mktoForm input[type="checkbox"] {width: auto !important;}
+.mktoForm fieldset legend {margin: inherit !important;}
+	
+ .mktoFormCol {width:100% !important; padding-left: 0em !important;}	
+ .mktoForm input[type="text"],  .mktoForm input[type="url"],
+ .mktoForm input[type="email"],  .mktoForm input[type="tel"],
+ .mktoForm input[type="number"],  .mktoForm input[type="date"],
+ .mktoForm textarea.mktoField,  .mktoForm select.mktoField {
+    border-bottom: 1px solid #D9D9D9 !important;
+    border-radius: 0px;
+    color: #21354D !important;
+    font-family:
+    Helvetica, Arial !important;
+    font-size: 16px !important;
+    height: 31px !important;
+    padding: 0 !important;
     width: 100% !important;
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    line-height: 19px;
+    background-color: transparent !important;
+    box-shadow: none !important;
 }
-
-.mktoForm .mktoFormCol {
+.mktoHtmlText.mktoHasWidth {
     width: 100% !important;
-}
-
-.servey-form {
-    display: flex;
-    justify-content: center;
-    margin-top: 32px;
 }
 
 .mktoForm .mktoLabel {
+   
     font-size: 16px;
+    width: auto !important;
 }
-
-.mktoForm .mktoRadioList > label {
-    font-size: 15px;
-}
-
- 
 .mktoForm .mktoButtonWrap.mktoShadow .mktoButton {
     background: #FFC000 !important;
     border-color: #FFC000 !important;
@@ -177,31 +187,11 @@ form {
 .mktoForm input[type=text]:focus {
     border-bottom: 1px solid #b8b8b8 !important;
 }
-span.mktoButtonWrap.mktoShadow {
-    margin-left: 0 !important;
-}
 /* form css end  */
 @media (max-width:767px) {
     .review-links a img {
     width: 100%;
     max-width: 132px;
-}
-.mktoForm fieldset legend {
-   
-    font-size: 15px;
- 
-}
-
-.servey-progress-bar img {
-    width: 100%;
-    max-width: 300px;
-    margin-top: 24px;
-}
-.servey-progress-bar {
-    padding-bottom: 0;
-}
-.mktoForm .mktoFormRow .mktoFormCol {
-    margin-left: -4px;
 }
 .mktoForm .mktoButtonWrap.mktoShadow .mktoButton {
     font-size: 17px !important;
@@ -229,9 +219,6 @@ span.mktoButtonWrap.mktoShadow {
     margin-bottom: 32px;
 }
 }
-.hiderow fieldset.mktoFormCol .mktoFormRow:nth-child(9){
-    display: none!important;
-}
     </style>
 </head>
 <body>
@@ -249,27 +236,25 @@ span.mktoButtonWrap.mktoShadow {
    <div class="review-flex">
     <div class="review-wrap-inner">
         
-        <h2>Survey
+        <h2>Customer Satisfaction Survey
         </h2>
-        <p>Lorem ipsum dolor elit sed sit amet, consectetur adipisicing elit, sed do tempor incididunt ut labore et dolore magna aliqua.
-
-        </p>
         
         <div class="servey-progress-bar">
-            <img src="Survey-progress-bar-v2.png" alt="Survey-progress-bar">
+            <img src="Survey-progress-bar.png" alt="Survey-progress-bar">
         </div>
 
        <div class="servey-form">
        
-         <form id="mktoForm_1056"></form>
+         <form id="mktoForm_1045"></form>
          
        </div>
     </div>
    </div>
 </div>
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/URI.js/1.17.1/URI.js"></script>
 <script src="//info.preplanafuneral.com/js/forms2/js/forms2.min.js"></script>
- <script>MktoForms2.loadForm("//info.preplanafuneral.com", "852-LNK-689", 1056);</script>
+<script>MktoForms2.loadForm("//info.preplanafuneral.com", "852-LNK-689", 1045);</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 
 <!-- jQuery Modal -->
@@ -289,15 +274,7 @@ form.onSuccess(function(vals,formLevelTyURL){
 });
 
 });
-
-document.addEventListener("DOMContentLoaded", function() {
-    if(querys == 10){
  
- 
-document.querySelector('form').classList.add('hiderow');
-}
-});
-
 var ReviewData=[]
      
 listing_data.forEach(function(d) {

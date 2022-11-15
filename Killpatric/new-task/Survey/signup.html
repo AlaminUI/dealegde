@@ -68,7 +68,7 @@
 
 .review-wrap-inner {
     text-align: center;
-    max-width: 770px;
+    max-width: 750px;
     margin: 0 auto;
     width: 100%;
 }
@@ -78,9 +78,11 @@
     line-height: 1.3;
     margin-bottom: 8px;
 }
-
+.servey-form {
+    padding-top: 32px;
+}
 .review-wrap-inner p {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.5;
 }
 .form-modal {
@@ -105,52 +107,65 @@
     width: 100%;
 }
 /* Form Normalizer CSS */
-.mktoForm fieldset legend {
-    padding: 0 1em;
-    font-size: 20px;
-    font-weight: bold;
+.mktoForm, .mktoForm .mktoFieldWrap, .mktoForm .mktoHtmlText, .mktoForm input, .mktoLogicalField .mktoCheckboxList {width:100% !important;}
+@media only screen and (min-width:480px) {
+.mktoFormCol:first-child:nth-last-child(2), .mktoFormCol:first-child:nth-last-child(2) ~ .mktoFormCol {width: 100% !important;}
+.mktoFormCol:first-child:nth-last-child(3), .mktoFormCol:first-child:nth-last-child(3) ~ .mktoFormCol {width: 50% !important;}
+.mktoFormCol:first-child:nth-last-child(4), .mktoFormCol:first-child:nth-last-child(4) ~ .mktoFormCol {width: 33.3333% !important;}
+.mktoFormCol:first-child:nth-last-child(3) ~ .mktoFormCol {padding-left: 0.8em !important;}
 }
-.mktoRadioList.mktoHasWidth {
-    display: flex;
-    align-items: center;
-}
-
-.mktoForm .mktoFieldWrap {
-    margin-top: 16px;
-}
-
-form {
-    max-width: 680px !important;
+@media only screen and (max-width:480px) {.mktoFormCol {width:100% !important;}}
+.mktoAsterix{display:none !important;}
+.mktoForm .mktoGutter {display:none !important;}
+.mktoButtonWrap {margin-left:0 !important;}
+.mktoForm input[type=text], .mktoForm input[type=url], .mktoForm input[type=email], .mktoForm input[type=tel], .mktoForm input[type=number], .mktoForm input[type=date], .mktoForm textarea.mktoField, .mktoForm select.mktoField {padding: 0.3em; width: 100% !important;}
+.mktoForm {clear: both; margin-bottom: 0.3em;}
+.mktoForm .mktoRadioList, .mktoForm .mktoCheckboxList {float: left !important; width: auto !important;}
+.mktoForm .mktoRadioList > label, .mktoForm .mktoCheckboxList > label {display: inherit !important;}
+.mktoForm input[type="radio"], .mktoForm input[type="checkbox"] {width: auto !important;}
+.mktoForm fieldset legend {margin: inherit !important;}
+	
+ .mktoFormCol {width:100% !important; padding-left: 0em !important;}	
+ .mktoForm input[type="text"],  .mktoForm input[type="url"],
+ .mktoForm input[type="email"],  .mktoForm input[type="tel"],
+ .mktoForm input[type="number"],  .mktoForm input[type="date"],
+ .mktoForm textarea.mktoField,  .mktoForm select.mktoField {
+    border-bottom: 1px solid #D9D9D9 !important;
+    border-radius: 0px;
+    color: #21354D !important;
+    font-family:
+    Helvetica, Arial !important;
+    font-size: 16px !important;
+    height: 31px !important;
+    padding: 0 !important;
     width: 100% !important;
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    line-height: 19px;
+    background-color: transparent !important;
+    box-shadow: none !important;
 }
-
-.mktoForm .mktoFormCol {
+.mktoHtmlText.mktoHasWidth {
     width: 100% !important;
-}
-
-.servey-form {
-    display: flex;
-    justify-content: center;
-    margin-top: 32px;
 }
 
 .mktoForm .mktoLabel {
     font-size: 16px;
+    width: auto !important;
+    font-weight: normal !important;
 }
-
-.mktoForm .mktoRadioList > label {
-    font-size: 15px;
-}
-
- 
-.mktoForm .mktoButtonWrap.mktoShadow .mktoButton {
+.mktoForm .mktoButtonWrap.mktoGlow .mktoButton {
     background: #FFC000 !important;
+    font-size: 18px !important;
+    padding: 14px 56px !important;
+    cursor: pointer;
+    border-radius: 3px !important;
+}
+
+.mktoForm .mktoButtonWrap.mktoGlow .mktoButton:hover {
     border-color: #FFC000 !important;
-    color: #fff!important;
-    padding: 12px 24px!important;
-    font-size: 18px!important;
-    border-radius: 3px!important;
-    transition: 0.4s!important;
+    opacity: 0.8;
 }
 
 .mktoButtonRow {
@@ -160,9 +175,7 @@ form {
     margin-top: 24px !important;
 }
 
-.mktoForm .mktoButtonWrap.mktoShadow .mktoButton:hover {
-    opacity: 0.8;
-}
+
 
 .servey-progress-bar img {
     width: 100%;
@@ -177,31 +190,11 @@ form {
 .mktoForm input[type=text]:focus {
     border-bottom: 1px solid #b8b8b8 !important;
 }
-span.mktoButtonWrap.mktoShadow {
-    margin-left: 0 !important;
-}
 /* form css end  */
 @media (max-width:767px) {
     .review-links a img {
     width: 100%;
     max-width: 132px;
-}
-.mktoForm fieldset legend {
-   
-    font-size: 15px;
- 
-}
-
-.servey-progress-bar img {
-    width: 100%;
-    max-width: 300px;
-    margin-top: 24px;
-}
-.servey-progress-bar {
-    padding-bottom: 0;
-}
-.mktoForm .mktoFormRow .mktoFormCol {
-    margin-left: -4px;
 }
 .mktoForm .mktoButtonWrap.mktoShadow .mktoButton {
     font-size: 17px !important;
@@ -229,9 +222,6 @@ span.mktoButtonWrap.mktoShadow {
     margin-bottom: 32px;
 }
 }
-.hiderow fieldset.mktoFormCol .mktoFormRow:nth-child(9){
-    display: none!important;
-}
     </style>
 </head>
 <body>
@@ -249,27 +239,26 @@ span.mktoButtonWrap.mktoShadow {
    <div class="review-flex">
     <div class="review-wrap-inner">
         
-        <h2>Survey
+        <h2>Aftercare Signup
+
         </h2>
-        <p>Lorem ipsum dolor elit sed sit amet, consectetur adipisicing elit, sed do tempor incididunt ut labore et dolore magna aliqua.
+        <p>Please enter the lead information for new Grieve Well, Live Well subscriptions below.
 
         </p>
         
-        <div class="servey-progress-bar">
-            <img src="Survey-progress-bar-v2.png" alt="Survey-progress-bar">
-        </div>
+ 
 
        <div class="servey-form">
        
-         <form id="mktoForm_1056"></form>
+        <script src="//info.preplanafuneral.com/js/forms2/js/forms2.min.js"></script> <form id="mktoForm_1035"></form> <script>MktoForms2.loadForm("//info.preplanafuneral.com", "852-LNK-689", 1035);</script>
          
        </div>
     </div>
    </div>
 </div>
 
-<script src="//info.preplanafuneral.com/js/forms2/js/forms2.min.js"></script>
- <script>MktoForms2.loadForm("//info.preplanafuneral.com", "852-LNK-689", 1056);</script>
+ 
+ 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 
 <!-- jQuery Modal -->
@@ -277,27 +266,12 @@ span.mktoButtonWrap.mktoShadow {
 <script src="data.js"></script>
 
 <script>
- var querys = window.location.search.match(/client_code=([^&]*)/i)[1];
- MktoForms2.whenReady(function(form){
-
-form.onSuccess(function(vals,formLevelTyURL){
-    // console.log(formLevelTyURL)
-  location.href = 'http://127.0.0.1:5501/?client_code='+ querys;
-
-  return false;
-
-});
-
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    if(querys == 10){
  
- 
-document.querySelector('form').classList.add('hiderow');
-}
-});
 
+ 
+
+var query = window.location.search.match(/client_code=([^&]*)/i)[1];
+ 
 var ReviewData=[]
      
 listing_data.forEach(function(d) {
@@ -312,7 +286,7 @@ listing_data.forEach(function(d) {
  
 
 for(let a=0; a<ReviewData.length; a++){
-    if(ReviewData[a].Parameter == querys){
+    if(ReviewData[a].Parameter == query){
         document.getElementById('logo').src=ReviewData[a].CompanyLogo;
     } 
    
