@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <style>
+        body{
+            font-family: 'Roboto', sans-serif;
+            font-size:16px;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: 0.5s;
+  counter-reset: list; 
+        }
+        h1,h2,h3,h4,h5,h6{
+            font-family: 'Libre Franklin', sans-serif;
+        }
+        header {
+    padding: 10px 0px;
+    border-bottom: 1px solid #00000012;
+    -webkit-box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
+    box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
+    background: #fff;
+}
+
+.header-logo img {
+    width: 100%;
+    max-width: 150px;
+}
+section.banner-area {
+    padding-top: 110px;
+}
+.section1-inner {
+    text-align: center;
+}
+
+.title-bg {
+    background: #298acf;
+    display: inline-block;
+    padding: 16px 32px;
+    color: #fff;
+    font-weight: 700;
+}
+
+section.section1 {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.section1-inner h4 {
+    font-size: 22px;
+    font-weight: 700;
+    padding-top: 12px;
+    margin-bottom: 32px;
+}
+a.yellow-btn {
+    display: inline-block;
+    background: #ffde5a;
+    color: #000;
+    font-size: 20px;
+    padding: 16px 50px;
+    border-radius: 40px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: Helvetica,Arial,sans-serif;
+    transition: 0.5s;
+}
+
+a.yellow-btn:hover {
+    text-decoration: none;
+    background: #ddb309;
+    color: #fff;
+}
+h2 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.youtube-title ul {
+    padding-left: 19px;
+    padding-top: 16px;
+}
+
+.youtube-title ul li {
+    font-size: 20px;
+    padding-bottom: 6px;
+    font-weight: 500;
+}
+
+section.youtube-section {
+    padding-bottom: 90px;
+}
+.information-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.information-list ul li {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.information-list ul li:before {
+    counter-increment: list;                /* On incrémente le compteur section */
+    content: counter(list);
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background: #298acf;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 700;
+    top: 0;
+}
+
+.information-list ul li h5 {
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.section3-inner h2 {
+    font-size: 30px;
+    margin-bottom: 24px;
+}
+
+.section3-inner {
+    text-align: center;
+}
+
+.section3-inner p {
+    text-align: left;
+}
+
+.information-list {
+    padding-top: 32px;
+}
+
+section.section3 {
+    padding-bottom: 70px;
+}
+@media (max-width: 768px) {
+    .header-logo img {
+    width: 100%;
+    max-width: 110px;
+}
+section.banner-area {
+    padding-top: 86px;
+}
+section.section1 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.title-bg {
+ 
+    padding: 16px 16px;
+ 
+}
+h1 {
+    font-size: 21px;
+}
+.section1-inner h4 {
+    font-size: 18px;
+}
+section.youtube-section {
+    padding-bottom: 40px;
+}
+.section3-inner h2 {
+    font-size: 22px;
+    
+}
+.information-list ul li h5 {
+    font-size: 17px;
+}
+.section1-inner h5 {
+    font-size: 18px;
+    line-height: 1.4;
+}
+a.yellow-btn {
+    padding: 15px 34px;
+}
+}
+    </style>
+</head>
+<body>
+
+
+    <header class="fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header-logo">
+                        <img src="Jarrell-FH-logo.png" alt="logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner-area">
+        <div class="banner-inner">
+            <img src="banner-img.png" alt="banner" class="w-100">
+        </div>
+    </section>
+
+    <section class="section1">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                   <div class="section1-inner">
+                    <h1 class="title-bg">Peace Of Mind Is Easier Than You Think.</h1>
+                    <h4>No Pressure.  Just Information.
+                    </h4>
+                    <a href="#" class="yellow-btn pop-out">click here <br> for more information</a>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="youtube-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="youtube-video mb-4 mb-md-0">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/RwU7UZaSMZs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="youtube-title pl-0 pl-md-4">
+                        <h2>Want More Information?  Let Us Know. Here Is What We Will Send You Today.
+                        </h2>
+                        <ul>
+                            <li> Peace of Mind Planning Kit</li>
+                            <li> Traditional Funeral Information</li>
+                            <li> Cremation Information </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10">
+                    <div class="section3-inner">
+                        <h2 class="title-bg">SOME QUESTIONS WE CAN HELP ANSWER...</h2>
+                        <p>Planning ahead makes good sense. It's the same type of planning we've been doing all of our lives. We plan our education, health insurance, vacations and even retirement. Many people today are now also pre-planning their funerals. Listed below are some of the questions that we can help answer...</p>
+
+                        <div class="information-list">
+                            <ul>
+                                <li> 
+                                    <h5> CANTAFFORD IT?</h5>
+                                    Payment plans can be set up around any budget. Also, NO ONE is denied a plan based on health. Learn how to gain protection from day one all while making payments over time!
+                                </li>
+                                <li> 
+                                    <h5>WHAT ABOUT FUNERAL COSTS? </h5>
+                                    Advanced Funeral Planning saves money, gives you control, and helps relieve a difficult burden from your loved ones. When you record your decisions in advance, your family feels relieved to know exactly what you want, and they won't feel obligated to overspend. You'll preserve your family's financial assets by taking control, and you'll feel peace of mind.
+                                </li>
+                                <li> 
+                                    <h5> WHAT IF I MOVE?</h5>
+                                    Many people are not sure where they will end up living in the future. The good news is that all of our plans are 100% TRANSFERABLE to any funeral home in the country.
+                                </li>
+                                <li> 
+                                    <h5>CAN I USE LIFE INSURANCE TO COVER THE COSTS? </h5>
+                                    Oftentimes our families have life insurance in place to cover funeral costs. We can explain how this works and what steps you need to take PROACTIVELY to ensure your wishes are carried out.
+                                </li>
+                                <li> 
+                                    <h5>WHAT ABOUT MEDICAID? </h5>
+                                    Typically the government has an asset restriction in place for those trying to qualify for Medicaid. We can help provide you with all of the information that you need in order to have your prearranged funeral plan exempt from Medicaid Assets.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section1 pt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                   <div class="section1-inner">
+                    <h2 class="title-bg mb-4">Get More Information Today</h2>
+                    <h5>The prearrangement process can be very brief and simple, or it can be quite thorough.  The choice is YOURS.  Make sure that you have a plan in place leaving ANSWERS and not QUESTIONS.  
+                    </h5>
+                    <h4>No Pressure.  Just Information.
+                    </h4>
+                    <a href="#" class="yellow-btn pop-out">click here <br> for more information</a>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-inner text-center">
+                        <p>© Copyright Jarrell Funeral Home 2023
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script src="//info.preplanafuneral.com/js/forms2/js/forms2.min.js"></script>
+<script>
+for(var i=0; i<document.querySelectorAll(".pop-out").length; i++){
+document.querySelectorAll(".pop-out")[i].addEventListener("click", function(e) {
+            e.preventDefault();
+                
+                MktoForms2.loadForm("//info.preplanafuneral.com", "852-LNK-689", 1209, function (form){MktoForms2.lightbox(form).show();
+                form.onSuccess(function() {
+                    swal("Thank you ", "for reaching out to Us, an expert will contact you shortly.","success")
+return false;
+});
+            });
+
+            
+});
+
+}
+
+
+ 
+</script>
+</body>
+</html>
