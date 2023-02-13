@@ -126,6 +126,7 @@
     margin-bottom: 32px;
 }
 }
+.d-none{display:none;}
     </style>
 </head>
 <body>
@@ -137,7 +138,7 @@
 
 
 <div class="review-wrap">
-    <div class="logo">
+    <div class="logo d-none">
         <img id="logo" src="" alt="compnay logo">
     </div>
    <div class="review-flex">
@@ -148,7 +149,7 @@
 
         </p>
 
-        <div class="review-links">
+        <div class="review-links d-none">
             <a target="_blank" href="" id="googleReview"><img src="img/Google-Review-Button.png" alt="google"></a>
             <a target="_blank" id="facebookReview" href=""><img src="img/Facebook-Review-Button.png" alt="facebook"></a>
 
@@ -190,11 +191,18 @@ listing_data.forEach(function(d) {
 
 for(let a=0; a<ReviewData.length; a++){
     if(ReviewData[a].Parameter == query){
+        document.querySelector('.review-links').style.display="block";
+        document.querySelector('.logo').style.display="block";
         document.getElementById('facebookReview').href=ReviewData[a].FacebookReview;
         document.getElementById('googleReview').href=ReviewData[a].GoogleReview;
         document.getElementById('logo').src=ReviewData[a].CompanyLogo;
-    } 
-   
+    if(ReviewData[a].FacebookReview == ''  ){
+        document.getElementById('facebookReview').style.display="none";
+    }
+    if(ReviewData[a].GoogleReview == '' ){
+        document.getElementById('googleReview').style.display="none";
+    }
+}
 }
 
 </script>
