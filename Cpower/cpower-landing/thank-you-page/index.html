@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -710,6 +711,9 @@ section.power-grid {
                     width: 100%;
                 }
             }
+            .vc_row.wpb_row.vc_row-fluid.the-current-carousel {
+    display: none !important;
+}
         </style>
     </head>
     <body>
@@ -866,6 +870,28 @@ section.power-grid {
                  
                 </div>
             </section>
+
+            <section>
+              <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                       
+                        <style>
+  
+                        </style>
+                        <div id="my-div" style="width:100%;position: relative;height:900px;
+                        overflow: hidden; ">
+                            <iframe src="https://cpowerenergy.com/the-current#articles" scrolling="no" style="width:100%; position: absolute;
+                            top: -600px;
+                             " id="myiframe"  ></iframe>
+                            </div>
+                    </div>
+                </div>
+              </div>
+                
+        
+            </section>
+
         </main>
         <footer>
             <div class="container">
@@ -981,6 +1007,8 @@ section.power-grid {
 
 
  <script>
+
+
     $('.slider').slick({
  dots:true,
   slidesToShow: 1,
@@ -1015,7 +1043,11 @@ humberger.addEventListener("click", function(event) {
     navright.classList.toggle("active");
 
 })
-
+setTimeout(function() {
+    $("#myiframe").contents().find(".site-title").addClass('hideme');
+    console.log($("#myiframe").contents().find(".site-title"))
+},4000)
+$('#target-div').load('http://127.0.0.1:5500/update.html .power-grid');
  </script>
 
  
