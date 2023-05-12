@@ -188,15 +188,14 @@ listing_data.forEach(function(d) {
 
 });
 
-banner= $('#headerimg');
-
+ 
 
 $(window).on('load', function() {
-    console.log($("#headerimg").height())
+ 
      if($("#headerimg").height() >600){
         $("#headerimg").css('height',"auto");
      }else{
-        $("#headerimg").css('height',"500");
+        $("#headerimg").css('max-height',"500");
      }
 });
 
