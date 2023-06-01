@@ -1,4 +1,4 @@
-listing_data = [
+listing_data =[
   {
     "Funeral Home": "A Simple Service Burial & Cremation- Lancaster",
     "Clean FH name for LP": "A Simple Service Burial & Cremation",
@@ -1781,9 +1781,9 @@ listing_data = [
     "Account Website": "",
     "zapier identifier": "",
     "Notes__1": "",
-    "Tested?": "FALSE",
+    "Tested?": "TRUE",
     "tested by": "",
-    "__2": "colors are wrong on the page"
+    "__2": ""
   },
   {
     "Funeral Home": "Keeling & Goodman Funeral Home- Paducah",
@@ -1875,7 +1875,7 @@ listing_data = [
     "Account Website": "",
     "zapier identifier": "",
     "Notes__1": "",
-    "Tested?": "FALSE",
+    "Tested?": "TRUE",
     "tested by": "",
     "__2": ""
   },
@@ -1922,7 +1922,7 @@ listing_data = [
     "Account Website": "http://www.oneilfuneralhome.com",
     "zapier identifier": "oneil-fh",
     "Notes__1": "",
-    "Tested?": "FALSE",
+    "Tested?": "TRUE",
     "tested by": "",
     "__2": ""
   },
@@ -1969,7 +1969,7 @@ listing_data = [
     "Account Website": "http://www.raynowellfuneralhome.com/",
     "zapier identifier": "ray-nowell-fh",
     "Notes__1": "",
-    "Tested?": "FALSE",
+    "Tested?": "TRUE",
     "tested by": "",
     "__2": ""
   },
@@ -2018,7 +2018,7 @@ listing_data = [
     "Notes__1": "",
     "Tested?": "FALSE",
     "tested by": "",
-    "__2": ""
+    "__2": "no contact that works/ email won't work"
   },
   {
     "Funeral Home": "Rose Lynn Funeral Home- Lutcher",
@@ -2063,7 +2063,7 @@ listing_data = [
     "Account Website": "",
     "zapier identifier": "",
     "Notes__1": "",
-    "Tested?": "FALSE",
+    "Tested?": "TRUE",
     "tested by": "",
     "__2": ""
   },
@@ -2110,7 +2110,7 @@ listing_data = [
     "Account Website": "https://www.unitedfuneralservice.com/",
     "zapier identifier": "",
     "Notes__1": "",
-    "Tested?": "FALSE",
+    "Tested?": "TRUE",
     "tested by": "",
     "__2": ""
   },
@@ -2157,7 +2157,7 @@ listing_data = [
     "Account Website": "http://www.watsonfuneralservices.com",
     "zapier identifier": "watson-fh",
     "Notes__1": "",
-    "Tested?": "FALSE",
+    "Tested?": "TRUE",
     "tested by": "",
     "__2": ""
   },
@@ -2204,7 +2204,7 @@ listing_data = [
     "Account Website": "http://www.bennettfuneralservice.com/",
     "zapier identifier": "bennet-may-and-pierce-fh",
     "Notes__1": "",
-    "Tested?": "FALSE",
+    "Tested?": "TRUE",
     "tested by": "",
     "__2": ""
   },
@@ -2251,7 +2251,7 @@ listing_data = [
     "Account Website": "www.bennettmay.com",
     "zapier identifier": "",
     "Notes__1": "",
-    "Tested?": "FALSE",
+    "Tested?": "TRUE",
     "tested by": "",
     "__2": ""
   },
@@ -2345,7 +2345,7 @@ listing_data = [
     "Account Website": "www.caseylaskowskifh.com",
     "zapier identifier": "",
     "Notes__1": "",
-    "Tested?": "",
+    "Tested?": "TRUE",
     "tested by": "",
     "__2": ""
   },
@@ -2392,7 +2392,7 @@ listing_data = [
     "Account Website": "www.claybarnette.com",
     "zapier identifier": "",
     "Notes__1": "",
-    "Tested?": "",
+    "Tested?": "TRUE",
     "tested by": "",
     "__2": ""
   },
@@ -2422,9 +2422,9 @@ listing_data = [
     "Campaign Name": "Internet Campaign - Edwards Funeral Home",
     "Campaign ID": "7014O000001SpCl",
     "NEW campaign ID": "7014O000001Th6yQAC",
-    "Counselor (Contact + Lead Owner)": "Jimmy Sawyer",
-    "Contact ID": "0034O00002scrSs",
-    "Lead Owner ID": "0054O0000091V3Z",
+    "Counselor (Contact + Lead Owner)": "justin smith",
+    "Contact ID": "0034O00002TEJ3fQAH",
+    "Lead Owner ID": "0054O000009kOa9QAE",
     "Account ID": "0014O000025VEfu",
     "L2P?": "",
     "Logo link": "https://info.preplanafuneral.com/rs/852-LNK-689/images/Edwards%20Logo%20%281%29.png",
@@ -2439,7 +2439,7 @@ listing_data = [
     "Account Website": "www.edwardsfhc.com",
     "zapier identifier": "edwards-fh",
     "Notes__1": "",
-    "Tested?": "",
+    "Tested?": "TRUE",
     "tested by": "",
     "__2": ""
   },
@@ -2486,7 +2486,7 @@ listing_data = [
     "Account Website": "www.hollandfuneraldirectors.com",
     "zapier identifier": "holland-fh",
     "Notes__1": "",
-    "Tested?": "",
+    "Tested?": "FALSE",
     "tested by": "",
     "__2": ""
   },
@@ -2533,7 +2533,7 @@ listing_data = [
     "Account Website": "",
     "zapier identifier": "",
     "Notes__1": "",
-    "Tested?": "",
+    "Tested?": "FALSE",
     "tested by": "",
     "__2": ""
   },
@@ -2580,7 +2580,7 @@ listing_data = [
     "Account Website": "www.hultgrenfh.com",
     "zapier identifier": "hultgren-fh-copy",
     "Notes__1": "",
-    "Tested?": "",
+    "Tested?": "FALSE",
     "tested by": "",
     "__2": ""
   },
@@ -2627,7 +2627,7 @@ listing_data = [
     "Account Website": "https://www.imesfuneralhome.com/",
     "zapier identifier": "imes-fh",
     "Notes__1": "",
-    "Tested?": "",
+    "Tested?": "FALSE",
     "tested by": "",
     "__2": ""
   },
@@ -2674,7 +2674,7 @@ listing_data = [
     "Account Website": "www.jandtfredrickson.com",
     "zapier identifier": "jandt-fredrickson-fh",
     "Notes__1": "",
-    "Tested?": "",
+    "Tested?": "FALSE",
     "tested by": "",
     "__2": ""
   },
@@ -2721,7 +2721,7 @@ listing_data = [
     "Account Website": "www.mccoyblossomfh.com",
     "zapier identifier": "mccoy-blossom-fh",
     "Notes__1": "",
-    "Tested?": "",
+    "Tested?": "FALSE",
     "tested by": "",
     "__2": ""
   },
@@ -2853,7 +2853,7 @@ listing_data = [
     "Logo link": "https://info.preplanafuneral.com/rs/852-LNK-689/images/O%27Quinn-Logo_colored.jpg",
     "Logo above header": "",
     "Header Link": "https://info.preplanafuneral.com/rs/852-LNK-689/images/OQuinn.header.png",
-    "Video Embed code": "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/823826592?h=bc453c71fe&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"Preplanning Video\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"></script>",
+    "Video Embed code": "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/823876790?h=926460cafa&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"O&amp;#039;Quinn Peebles Phillips Funeral Home &amp;amp; Crematory\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"></script>",
     "Email Customizations": "",
     "Drop Down Customizations": "",
     "LP Customizations": "custom video - old old Connor vid",
