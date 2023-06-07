@@ -1,9 +1,10 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="index, nofollow">
     <title>Landing page</title>
  <link rel="shortcut icon" href="https://info.preplanafuneral.com/rs/852-LNK-689/images/Screen-Shot-2016-07-11-at-5.37.23-PM_clipped_rev_1-1-66x66.png?v=1" type="image/x-icon">
     <style>
@@ -230,8 +231,21 @@ span.mktoButtonWrap.mktoShadow {
 }
 }
     </style>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" >
+<link rel="icon" href="/favicon.ico" type="image/x-icon" >
+
+
+<style>.mktoGen.mktoImg {display:inline-block; line-height:0;}</style>
 </head>
-<body>
+<body id="bodyId">
+ 
+
+ 
+
+
+
+
+
  
 
  
@@ -241,7 +255,7 @@ span.mktoButtonWrap.mktoShadow {
 
 <div class="review-wrap">
     <div class="logo">
-        <img id="logo" src="" alt="compnay logo">
+        <img id="logo" src alt="company logo">
     </div>
    <div class="review-flex">
     <div class="review-wrap-inner">
@@ -250,14 +264,15 @@ span.mktoButtonWrap.mktoShadow {
 
         </h2>
         <div class="servey-progress-bar">
-            <img src="complete.png" alt="Survey-progress-bar">
+            <img src="https://info.preplanafuneral.com/rs/852-LNK-689/images/Survey - progress bar - V4- Pt 4- v2.png" alt="Survey-progress-bar">
         </div>
-        <p>We appreciate you taking the time to share your valuable feedback with us.
-
-
-
-        </p>
+        <p>We appreciate you taking the time to share your valuable feedback with us. </p>
         
+        <div class="review-links">
+            <a target="_blank" href id="googleReview"><img src="https://info.preplanafuneral.com/rs/852-LNK-689/images/Google-Review-Button.png" alt="google"></a>
+            <a target="_blank" id="facebookReview" href><img src="https://info.preplanafuneral.com/rs/852-LNK-689/images/Facebook-Review-Button.png" alt="facebook"></a>
+
+        </div>
     
     </div>
    </div>
@@ -267,7 +282,7 @@ span.mktoButtonWrap.mktoShadow {
 
 <!-- jQuery Modal -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script> -->
-<script src="data.js"></script>
+<script src="https://info.preplanafuneral.com/rs/852-LNK-689/images/data1.js"></script>
 
 <script>
  var querys = window.location.search.match(/client_code=([^&]*)/i)[1];
@@ -279,6 +294,8 @@ listing_data.forEach(function(d) {
    
     ReviewData.push({
       Parameter:  d['URL Param/ client code'] ,
+      FacebookReview:  d['Final FB Reviews URL'] ,
+      GoogleReview:  d['Google Review URL'] ,
       CompanyLogo:  d['Funeral Home Logos URL'] 
 });
 
@@ -291,12 +308,34 @@ for(let a=0; a<ReviewData.length; a++){
         document.getElementById('logo').src=ReviewData[a].CompanyLogo;
     } 
    
+    if(ReviewData[a].Parameter == querys){
+        document.getElementById('facebookReview').href=ReviewData[a].FacebookReview;
+        document.getElementById('googleReview').href=ReviewData[a].GoogleReview;
+        document.getElementById('logo').src=ReviewData[a].CompanyLogo;
+    if(ReviewData[a].FacebookReview == ''  ){
+        document.getElementById('facebookReview').style.display="none";
+    }
+    if(ReviewData[a].GoogleReview == '' ){
+        document.getElementById('googleReview').style.display="none";
+    }
 }
+}
+
+ 
 
 </script>
 
  
  
  
+<script type="text/javascript" src="//munchkin.marketo.net//munchkin-beta.js"></script><script>Munchkin.init('852-LNK-689', {customName: 'Survey-thankyou', wsInfo: 'j1RR'});</script>
+
+ 
+ 
+ 
+<script type="text/javascript" src="/js/stripmkttok.js"></script>
+
 </body>
 </html>
+
+
