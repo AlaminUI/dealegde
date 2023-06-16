@@ -230,6 +230,7 @@ span.mktoButtonWrap.mktoShadow {
     margin-bottom: 32px;
 }
 }
+.d-block {display: block!important;}
     </style>
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" >
 <link rel="icon" href="/favicon.ico" type="image/x-icon" >
@@ -239,20 +240,7 @@ span.mktoButtonWrap.mktoShadow {
 </head>
 <body id="bodyId">
  
-
  
-
-
-
-
-
- 
-
- 
-
-
-
-
 <div class="review-wrap">
     <div class="logo">
         <img id="logo" src alt="company logo">
@@ -268,11 +256,13 @@ span.mktoButtonWrap.mktoShadow {
         </div>
         <p>We appreciate you taking the time to share your valuable feedback with us. </p>
         
+       <div class="review-box" style="display:none;">
         <div class="review-links">
             <a target="_blank" href id="googleReview"><img src="https://info.preplanafuneral.com/rs/852-LNK-689/images/Google-Review-Button.png" alt="google"></a>
             <a target="_blank" id="facebookReview" href><img src="https://info.preplanafuneral.com/rs/852-LNK-689/images/Facebook-Review-Button.png" alt="facebook"></a>
 
         </div>
+       </div>
     
     </div>
    </div>
@@ -301,7 +291,29 @@ listing_data.forEach(function(d) {
 
 });
 
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+getarray = getCookie('positivereview').split(",");
  
+ 
+if(getarray[0] == querys && getarray[1]  == 'Yes'){
+    
+ 
+document.querySelector('.review-box').classList.add('d-block');
+}
 
 for(let a=0; a<ReviewData.length; a++){
     if(ReviewData[a].Parameter == querys){
@@ -321,6 +333,11 @@ for(let a=0; a<ReviewData.length; a++){
 }
 }
 
+ 
+
+
+
+ 
  
 
 </script>
