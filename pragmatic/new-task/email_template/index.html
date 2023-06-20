@@ -14,7 +14,10 @@
  
     <style type="text/css">
 
-
+:root {
+Color-scheme: light dark;
+supported-color-schemes:light dark;
+}
       /* CLIENT-SPECIFIC STYLES */
   
       body,table,td,a{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
@@ -65,11 +68,13 @@ td.w100px img {
 
   @media (prefers-color-scheme: dark ) {
 .outlookbutton{background:#EDC817!important;color:#11294B!important;}
-.logobg{background-color:#f4f3f3!important;}
-td{color:#fff!important;}
+/* .logobg{background-color:#f4f3f3!important;} */
+table tbody tr td{color:#fff!important;}
+.footer-wrap tbody tr td{color:#9D9D9D!important;}
   }
   [data-ogsc] .outlookbutton{background:#EDC817!important;color:#11294B!important;}
-  [data-ogsc] .logobg{background-color:#f4f3f3!important;}
+ 
+  [data-ogsc]  .footer-wrap tbody tr td{color:#9D9D9D!important;}
     </style> 
     <!--[if mso]>
     <style>
@@ -149,7 +154,7 @@ td{color:#fff!important;}
                             
                               <tr> 
                                 <td align="left" valign="top"> 
-                                    <img src="https://marketofocused.netlify.app/pragmatic/new-task/email_template/logo.png" width="78" alt="logo">
+                                    <img src="https://marketofocused.netlify.app/pragmatic/new-task/email_template/logo.jpg" width="78" alt="logo">
                                 </td> 
                               </tr> 
                             </tbody> 
@@ -444,7 +449,7 @@ td{color:#fff!important;}
             
 
               <!-- footer area  -->
-              <table class="w-100"   width="560" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0"> 
+              <table class="w-100 footer-wrap"   width="560" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0"> 
                 <tbody align="center" style="display:block ;"> 
                   <tr> 
                     <td width="30" class="w-0" style="width:30px">&nbsp;</td>
