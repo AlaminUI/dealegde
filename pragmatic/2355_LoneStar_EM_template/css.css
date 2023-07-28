@@ -16,13 +16,18 @@ img.logo-image {
     max-width: 90px;
 }
 
-ul.sfNavHorizontalDropDown {display: flex;justify-content: end;gap: 30px;}
+ul.sfNavHorizontalDropDown {
+    display: flex;
+    justify-content: end;
+    gap: 0px;
+}
 
 ul.sfNavHorizontalDropDown li a {
     font-size: 17px !important;
-    color: #11294c;
-  
-    
+    color: #11294c !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    padding-top: 12px !important;
 }
 
 .sf_cols.navbarwrap {
@@ -31,34 +36,46 @@ ul.sfNavHorizontalDropDown li a {
     padding: 24px 0px;
   justify-content: space-between;
 }
-
 ul.sfNavHorizontalDropDown li:last-child a {
     background: #EDC817;
-     
-    padding: 11px 32px;
+    padding: 11px 32px !important;
     border-radius: 5px;
     border: 2px solid #EDC817;
     transition: 0.4s;
-      margin-right: -30px;
-      font-family: 'urbane',sans-serif;
+    margin-right: 0;
+    font-family: 'urbane',sans-serif;
     font-weight: 600;
-  font-size: 16px !important;
+    font-size: 16px !important;
     color: #11294B;
-      
 }
 
 ul.sfNavHorizontalDropDown li:last-child a:hover {
     background: transparent;
      color:#11294B;
-    text-decoration: none;
+    text-decoration: none!important;
     
 }
 
 ul.sfNavHorizontalDropDown li a:hover {
-    text-decoration: none;
+    text-decoration: none!important;
     color: #4b9cd3;
 }
+ul.sfNavHorizontalDropDown li {
+    border-width: 0px !important;
+    box-sizing: border-box !important;
+    display: block;
+    width: 100%;
+    float: none !important;
+}
 
+.sfNavWrp.sfNavHorizontalDropDownWrp {
+    display: flex;
+    justify-content: end;
+}
+
+ul.sfNavHorizontalDropDown li:last-child {
+    margin-left: 15px;
+}
 .sf_cols.footer-wrap {
     background: #12294B;
     padding: 50px 0px;
@@ -92,7 +109,7 @@ ul.sfNavHorizontalDropDown li a:hover {
 
 .footer-item ul li a:hover {
     color: #4b9cd3;
-    text-decoration: none;
+    text-decoration: none!important;
 }
 div#T9B0A1F6B024_Col00 {
     flex-direction: column;
@@ -142,7 +159,7 @@ div#T9B0A1F6B024_Col00 {
 
 .copyright ul li a:hover {
     color: #4b9cd3;
-    text-decoration: none;
+    text-decoration: none!important;
 }
 @media (min-width:992px) and (max-width:1199px){
   
