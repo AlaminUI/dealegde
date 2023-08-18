@@ -20,6 +20,12 @@
     .clientcode84 .information-list ul li:before {
         background:#4F0D0E;
     }
+    .calendly-active {
+    width: 100%;
+    height: 700px;
+    margin-top: -70px;
+    margin-bottom: 50px;
+}
  </style>
  
 
@@ -33,10 +39,8 @@
 
 
     
-    <div class="calendly-inline-widget" data-url="https://calendly.com/dpaler/15-minute-start-up-phone-conversation?utm_source=TKGLP" style="min-width:320px;height:700px;"></div>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
     
+ 
 
 
     <header>
@@ -110,6 +114,13 @@
         </div>
     </section>
 
+    <section class="calendly-area">
+        <div class="container">
+            <div class="calendly">
+                <div id="calendly" class="calendly-inline-widget" data-url=""></div>
+            </div>
+        </div>
+    </section>
 
     <section class="section3">
         <h2 class="title-bg">SOME QUESTIONS WE CAN HELP ANSWER...</h2>
@@ -185,6 +196,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script> -->
     <script src="//info.preplanafuneral.com/js/forms2/js/forms2.min.js"></script>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+    
     <script src="data.js"></script>
 <script>
 
@@ -204,11 +218,12 @@ NewDataArray = listing_data.map(function(d) {
     Parameter: d['URL param'],
     HeaderImage: d['Header Link'],
     Video: d['Video Embed code'],
-    dropdown: d['Drop Down Customizations']
+    dropdown: d['Drop Down Customizations'],
+    calendly: d['calendly link']
   };
 });
 
-
+ 
  
 
 $(window).on('load', function() {
@@ -238,6 +253,11 @@ for(let a=0; a<NewDataArray.length; a++){
         document.getElementById('logo').src=NewDataArray[a].Logo;
         document.getElementById('headerimg').src=NewDataArray[a].HeaderImage;
         document.getElementById('video').innerHTML=NewDataArray[a].Video;
+        if(NewDataArray[a].calendly){
+            document.getElementById('calendly').dataset.url=NewDataArray[a].calendly;
+            document.getElementById('calendly').classList.add('calendly-active')
+        }
+       
         found = true;
     break;
     }   
