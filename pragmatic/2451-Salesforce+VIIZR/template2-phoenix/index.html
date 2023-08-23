@@ -58,8 +58,9 @@ supported-color-schemes:light dark;
   .mobile{width:100%!important;display:block!important;padding:0!important}
   .img{width:100%!important;height:auto!important}
   [class="mobileOff"]{width:0!important;display:none!important}
+  .mobileOff{width:0!important;display:none!important}
   [class*="mobileOn"]{display:block!important;max-height:none!important}
-  .w-100{width:100%!important;display:block!important}
+  .mobileOn{display:block!important;max-height:none!important}
   .w-full{width:100%!important;max-width:100%!important}
   .footer-wrap{width:100%!important;display:block!important}
   .p-0{padding:0!important}
@@ -152,7 +153,11 @@ td.cta-text-size {
 
   </head> 
   <body style="margin:0; padding:0; background-color:#fafafa;" class="body"> 
-   
+    <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+      Take advantage of our special offer
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      </div
     <center> 
 
          
@@ -295,8 +300,12 @@ td.cta-text-size {
                           <tbody> 
                             <tr> 
                               <td align="center" valign="top"> 
-                                  <img src="https://marketofocused.netlify.app/pragmatic/2451-Salesforce+VIIZR/template2-phoenix/banner-2.jpg" class="w-100" width="219" style="display:block;width:219px" alt="banner image">
-                              </td> 
+                             
+                                  <img src="https://marketofocused.netlify.app/pragmatic/2451-Salesforce+VIIZR/template2-phoenix/banner-2-phoenix.jpg" class="mobileOff" width="219" style="display:block;width:219px" alt="banner image">
+                                  <!--[if !mso]><!-->
+                                    <img src="https://marketofocused.netlify.app/pragmatic/2451-Salesforce+VIIZR/template2-phoenix/banner-2-phoenix-mobile.png" class="w-100 mobileOn" width="100%" style="display:none;" alt="banner image">
+                                  <!--<![endif]-->
+                                </td> 
                             </tr> 
 
                           </tbody> 
@@ -361,7 +370,7 @@ td.cta-text-size {
                                           </tr> 
                                         <tr> 
                                           <td  style="color:#3A3B50; font-family: 'Inter','Helvetica','Arial',sans-serif;font-size:19px;mso-line-height-rule:exactly;  line-height:26px;font-weight: 600;letter-spacing: -0.7px;" align="left" class="cta-text-size" valign="middle"> 
-                                            Schedule a demo by 9/29/23 and get a free YETI® tumbler*
+                                            Schedule a demo by 9/29/23 and get a free YETI<sup>®</sup> tumbler<sup>*</sup>
                                           
                                           </td> 
                                           
@@ -741,7 +750,7 @@ td.cta-text-size {
               <tr> 
                 <td  style="color:#1F2137; font-family: 'Inter','Helvetica','Arial',sans-serif;font-size:16px;mso-line-height-rule:exactly;  line-height:24px;font-weight: 400;" align="left" valign="top"> 
 
-                  Schedule your demo of VIIZR today and get a free YETI tumbler. Plus, access VIIZR for free until the end of the year with our <a href="#" style="text-decoration: underline;color:#384CFF;">special offer.</a>†
+                  Schedule your demo of VIIZR today and get a free YETI tumbler. Plus, access VIIZR for free until the end of the year with our <a href="#" style="text-decoration: underline;color:#384CFF;">special offer.</a><sup>†</sup>
                 </td> 
                 
               </tr> 
