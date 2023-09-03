@@ -193,7 +193,7 @@
     padding: 8px 16px;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    display: flex!important;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -231,6 +231,7 @@
     margin-top: 18px;
     flex-wrap: wrap;
     gap: 12px 0px;
+    max-width: 808px;
 }
 
 .testimoial-area {
@@ -491,6 +492,9 @@ section.protfolio-area {
  
         font-size: 18px;
       
+    }
+    .client-compnay-logo-wrap {
+        max-width: 400px;
     }
 }
 
