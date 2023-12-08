@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="1060018310736-l2r63l6edmjo06u90605n3ireop649b9.apps.googleusercontent.com">
     <title>Document</title>
 </head>
 <body>
@@ -10,33 +11,87 @@
     <div class="form">
         <form id="mktoForm_1319"></form>
     </div>
+ 
 
 
     <script src="//info.preplanafuneral.com/js/forms2/js/forms2.min.js"></script>
     
       <script>MktoForms2.loadForm("//info.preplanafuneral.com", "852-LNK-689", 1319);</script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+   
 
 
       <script>
-         function setCookie(cname, cvalue, exdays) {
-  const d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  let expires = "expires="+ d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
+//          function setCookie(cname, cvalue, exdays) {
+//   const d = new Date();
+//   d.setTime(d.getTime() + (exdays*24*60*60*1000));
+//   let expires = "expires="+ d.toUTCString();
+//   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+// }
 
 MktoForms2.whenReady(function(form){
  
   document.querySelector("button").addEventListener("click",function(e) {
       
-      // cookiearray = [ form.getValues().Marketo_URL_Parameter__c,form.getValues().wouldyourecommendourfuneralhometoothers]
- 
-    
-      if(form.getValues().leadQuizContacts == 'Yes'){
-  location.href = 'https://marketofocused.netlify.app/';
 
-      }
+// Assuming you have an array of values like this
+const quizValues = [
+     form.getValues().leadQuizContacts,
+     form.getValues().leadQuizEmploymentHistory,
+     form.getValues().leadQuizInsurancePolicies,
+     form.getValues().leadQuizPersonalPreferences,
+     form.getValues().leadQuizTaxRecords,
+     form.getValues().leadQuizWill,
+     form.getValues().leadQuiz_FuneralOptions,
+     form.getValues().leadQuiz_MedicalRecords,
+     form.getValues().leadQuiz_MilitaryRecords,
+     form.getValues().leadQuiz_Propertyassetsdebt,
+     form.getValues().leadQuiz_VitalStats,
+];
+
+// Count the number of "Yes" values
+const yesCount = quizValues.filter(value => value === 'Yes').length;
+ 
+ 
+switch (yesCount) {
+    case 10:
+        window.location.href = 'https://info.preplanafuneral.com/Quiz--Thank-you-91.html';
+        break;
+    case 9:
+        window.location.href = 'https://info.preplanafuneral.com/Quiz--Thank-you-82.html';
+        break;
+    case 8:
+        window.location.href = 'https://info.preplanafuneral.com/Quiz--Thank-you-73.html';
+        break;
+    case 7:
+        window.location.href = 'https://info.preplanafuneral.com/Quiz--Thank-you-64.html';
+        break;
+    case 6:
+        window.location.href = 'https://info.preplanafuneral.com/Quiz--Thank-you-55.html';
+        break;
+    case 5:
+        window.location.href = 'https://info.preplanafuneral.com/Quiz--Thank-you-45.html';
+        break;
+    case 4:
+        window.location.href = 'https://info.preplanafuneral.com/Quiz--Thank-you-36.html';
+        break;
+    case 3:
+        window.location.href = 'https://info.preplanafuneral.com/Quiz--Thank-you-27.html';
+        break;
+    case 2:
+        window.location.href = 'https://info.preplanafuneral.com/Quiz--Thank-you-18.html';
+        break;
+    case 1:
+        window.location.href = 'https://info.preplanafuneral.com/Quiz--Thank-you-9.html';
+        break;
+    case 0:
+        window.location.href = 'https://info.preplanafuneral.com/Quiz--Thank-you-0.html';
+        break;
+    default:
+        // Handle unexpected values or add additional cases as needed
+        break;
+}
+ 
       
    })
 
@@ -50,6 +105,10 @@ MktoForms2.whenReady(function(form){
  });
  
  });
+
+ 
       </script>
+
+      
 </body>
 </html>
