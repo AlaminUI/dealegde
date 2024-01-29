@@ -1756,3 +1756,6 @@
 .btn-polat-left:hover .btn-text {
 	transform: translateX(200%);
 }
+a.hover-primary:hover {
+    color: #a7443d !important;
+}

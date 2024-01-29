@@ -6598,3 +6598,106 @@ a.text-900:hover, a.text-900:focus {
 .context-dark .text-contrast {
 	color: #798eb4;
 }
+
+/* testimonial-slick */
+.testimonial-slick-single{
+	color:#fff;
+	text-align: center;
+	border-radius: 10px;
+  background: #fff;
+	padding: 50px;
+}
+.slick-slide {
+	margin: 0 15px;
+}
+@media only screen and (min-width: 992px){
+	.slick-slide {
+		margin: 0 25px;
+	}
+}
+
+.testimonial-icon i{
+		font-size: 20px;
+		letter-spacing: 5.4px;
+		color: #f8c51c;
+}
+.testimonial-title h3{
+		font-size: 24px;
+		font-weight: 900;
+		line-height: 1.5em;
+		text-align: center;
+		color: #ffffff;
+}
+
+.testimonial-message p {
+    font-size: 16px;
+    line-height: 1.6em;
+    text-align: center;
+    color: #000;
+    font-family: "Libre Caslon Text", sans-serif;
+}
+.testimonial-author-info{}
+.testimonial-author-info .author-name h4 {
+    opacity: 0.7;
+    font-size: 16px;
+    line-height: 1em;
+    text-align: center;
+    color: #000;
+}
+.testimonial-author-info .author-designation h5{
+	opacity: 0.3;
+  font-family: 'Muli', sans-serif;
+  font-size: 15px;
+  line-height: 1em;
+  color: #ffffff;
+}
+
+/* Testimonial Spacing */
+.testimonial-icon {
+    margin-bottom: 13px;
+}
+.testimonial-title {
+    margin-bottom: 36px;
+}
+.testimonial-message {
+    padding: 0 50px;
+    margin-bottom: 32px;
+}
+.testimonial-author-info .author-name {
+    margin-bottom: 10px;
+}
+ul.slick-dots {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+ul.slick-dots li button {
+    font-size: 0px;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+ul.slick-dots li.slick-active button {
+    background: #a7453c;
+}
+@media only screen and (max-width: 1367px){
+	.testimonial-slick-single{
+		padding: 20px;
+	}
+	.testimonial-message {
+		padding: 0 10px;
+	}
+}
+@media only screen and (max-width: 991px){
+	.testimonial-slick-single{
+		padding: 20px;
+	}
+	.testimonial-message {
+		padding: 0px;
+	}
+}
+
