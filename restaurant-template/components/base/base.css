@@ -6699,5 +6699,8 @@ ul.slick-dots li.slick-active button {
 	.testimonial-message {
 		padding: 0px;
 	}
+	.sm-justify-content-center {
+		justify-content: start !important;
+	}
 }
 
