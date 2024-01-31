@@ -6704,3 +6704,9 @@ ul.slick-dots li.slick-active button {
 	}
 }
 
+@media (max-width: 767px) {
+	.rd-navbar-fixed .navbar-logo img {
+		width: 100%;
+		max-width: 188px;
+	}
+}
