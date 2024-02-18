@@ -6716,6 +6716,6 @@ ul.slick-dots li.slick-active button {
 	section.hero-image img {
 		height: 100%;
 		object-fit: cover;
-		object-position: left;
+		object-position: right;
 	}
 }
