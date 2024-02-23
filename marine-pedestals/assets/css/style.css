@@ -210,6 +210,10 @@ footer {
   margin: 0;
   font-size: 15px;
 }
+.left-text .btn {
+  background: #fff;
+  color: #083a81;
+}
 /************** Template CSS End **************/
 
 @media (max-width:767px) {
@@ -254,5 +258,9 @@ h2 {
 }
 .cta-content.text-center h2 br {
   display: none;
+}
+.left-text .btn {
+  
+  margin-bottom: 40px;
 }
 }
