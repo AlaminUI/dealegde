@@ -46,7 +46,7 @@ supported-color-schemes:light dark;
   u +  .outlookbutton{font-size:100px!important}
       /* MEDIA QUERIES */
  
-      @media all and (max-width:639px) {
+      @media only screen and (max-width:639px) {
   .wrapper{max-width:100%!important;padding:0!important;width:100%}
   .container{width:100%;max-width:100%!important;display:block}
   .mobile{width:100%!important;display:block!important;padding:0!important}
@@ -66,14 +66,14 @@ supported-color-schemes:light dark;
   .mobile-block {display: block!important;overflow: visible!important;}
   .button-center{margin:0 auto;}
 }
- 
-  @media all and (max-width:380px){
+@media only screen and (max-width:540px) { .mobile-full{width:100%!important;display:block!important;padding:0!important}}
+  @media only screen and (max-width:380px){
     .font-sm-22 {font-size: 22px!important;mso-line-height-rule: exactly;line-height: 28px!important;letter-spacing: -1px !important;}
     .button-sm{width:154px!important;}
 }
 
   @media (prefers-color-scheme: dark ) {
-
+ 
 table tbody tr td{color:#fff!important;}
 .full-text tbody tr td a{color:#fff!important;}
 .logobg tbody tr td{color:#9D9D9D!important;}
@@ -94,6 +94,7 @@ table tbody tr td span{color:#fff!important;}
   [data-ogsc]  table tbody tr td{color:#fff!important;}
   [data-ogsc] .bg-white {background:#fff;background-color: #fff!important; }
   [data-ogsc] .dark-bg-card{background:#121111!important}
+  [data-ogsc] .outlookbutton{background:#4e4e4e!important}
  
 
     </style> 
@@ -127,9 +128,9 @@ table tbody tr td span{color:#fff!important;}
            <table  width="100%" cellpadding="0"  class="logobg" cellspacing="0" border="0" style="background-color:#fff;" bgcolor="#fff"  > 
             <tbody> 
               <tr> 
-                <td align="left" valign="top"> 
-                  <table width="600" cellpadding="0" align="center" cellspacing="0" border="0" class="container"  > 
-                    <tbody class="m-0" align="center" style="margin:0px 30px;display:block;"> 
+                <td align="left" valign="top" > 
+                  <table width="600" cellpadding="0" align="center" cellspacing="0" border="0" class="w-100"  > 
+                    <tbody class="m-0" align="center" style="display:block;"> 
  
                           <!-- space  start --> 
                           <tr> 
@@ -137,7 +138,7 @@ table tbody tr td span{color:#fff!important;}
                         </tr> 
                         <!-- space  end-->
                         <tr> 
-                          <td  style="color:#707070; font-family:'Arial',sans-serif;font-size:11px;mso-line-height-rule:exactly;  line-height:20px;font-weight: 400;text-align: center; " align="center" valign="top"> 
+                          <td  style="color:#707070; padding:0px 15px 0px; font-family:'Arial',sans-serif;font-size:11px;mso-line-height-rule:exactly;  line-height:20px;font-weight: 400;text-align: center; " align="center" valign="top"> 
                             Get cutting-edge security with rapid deployment and 24/7 protection.  |  <a href="#" style="color:#707070;text-decoration: underline;">View this email as a web page.</a>
                           </td> 
                          
@@ -155,10 +156,10 @@ table tbody tr td span{color:#fff!important;}
         <!-- logo area end -->
           
                <!-- logo area  -->
-           <table  width="100%" cellpadding="0" cellspacing="0" border="0" class="logobg" style="background-color:#fff;border-bottom:5px solid #272727;" bgcolor="#fff"  > 
+           <table  width="100%" cellpadding="0" cellspacing="0" border="0" class="logobg dark-bg-card" style="background-color:#fff;border-bottom:5px solid #272727;" bgcolor="#fff"  > 
             <tbody> 
           <tr>
-            <td background="headerbg.jpg" style="background-image:url(img/headerbg.jpg);background-position:center top; background-repeat:no-repeat; background-size:cover;">
+            <td background="https://marketofocused.netlify.app/pragmatic/stallion/img/headerbg.jpg" style="background-image:url(https://marketofocused.netlify.app/pragmatic/stallion/img/headerbg.jpg);background-position:center top; background-repeat:no-repeat; background-size:cover;">
               <table cellpadding="0" width="100%" cellspacing="0" border="0">
                 <tbody>
                         <!-- space  start --> 
@@ -185,7 +186,7 @@ table tbody tr td span{color:#fff!important;}
                                 <td align="left" valign="top">
                                   <a href="#" style="text-decoration: none;">
 
-                                  <img src="img/logo.png" width="187" alt="logo">
+                                  <img src="https://marketofocused.netlify.app/pragmatic/stallion/img/logo2.png" width="187" alt="logo">
 
        
                                   </a>
@@ -241,7 +242,7 @@ table tbody tr td span{color:#fff!important;}
                       <![endif]-->
                           <!-- space  start --> 
                           <tr> 
-                            <td height="34" style="font-size:1px; mso-line-height-rule:exactly;  line-height:34px;">&nbsp;</td> 
+                            <td height="25" style="font-size:1px; mso-line-height-rule:exactly;  line-height:25px;">&nbsp;</td> 
                         </tr> 
         
                     <!-- space  end-->
@@ -263,14 +264,14 @@ table tbody tr td span{color:#fff!important;}
                         <table cellpadding="0" width="180" class="button-sm"  height="38"  cellspacing="0" border="0"> 
                           <tbody> 
                             <tr> 
-                              <td align="center"  height="38"  bgcolor="#fff"  valign="middle" style="font-family: 'Montserrat','Arial', sans-serif; font-size:18px; font-weight:500; background-color:#005A8B;display:block; color: #fff!important;"> <a class="outlookbutton" href="#" style="padding: 10px; display:block; font-family:'Montserrat', 'Arial', sans-serif; color: #fff!important;  text-decoration: none; mso-line-height-rule:exactly;  line-height: 17px; font-weight: 500; font-size: 18px;" target="_blank"> Learn More </a> </td> 
+                              <td align="center"  height="38"  bgcolor="#fff"  valign="middle" style="font-family: 'Montserrat','Arial', sans-serif; font-size:18px; font-weight:500; background-color:#005A8B;display:block; color: #fff;"> <a class="outlookbutton" href="#" style="padding: 10px; display:block; font-family:'Montserrat', 'Arial', sans-serif; color: #fff;  text-decoration: none; mso-line-height-rule:exactly;  line-height: 18px; font-weight: 500; font-size: 18px;" target="_blank"> Learn More </a> </td> 
                             </tr> 
                           </tbody> 
                         </table> </td> 
                     </tr> 
                            <!-- space  start --> 
                            <tr> 
-                            <td height="37" style="font-size:1px; mso-line-height-rule:exactly;height:37px;  line-height:37px;">&nbsp;</td> 
+                            <td height="28" style="font-size:1px; mso-line-height-rule:exactly;height:28px;  line-height:28px;">&nbsp;</td> 
                         </tr> 
 
 
@@ -285,8 +286,11 @@ table tbody tr td span{color:#fff!important;}
                     <tbody> 
                       <tr> 
                         <td align="center" valign="top"> 
-                            <img src="img/banner-1.jpg" class="mobile-none" width="235" style="display:block;" alt="banner image">
-                            <img src="img/banner-1-mobile.jpg" class="mobile-block" width="118" style="display:none;" alt="banner image">
+                            <img src="https://marketofocused.netlify.app/pragmatic/stallion/img/banner-1.jpg" class="mobile-none" width="235" style="display:block;" alt="banner image">
+                            <!--[if !mso]><!-->
+                            <img src="https://marketofocused.netlify.app/pragmatic/stallion/img/banner-1-mobile.jpg" class="mobile-block" width="118" style="display:none;" alt="banner image">
+                            <!--<![endif]-->
+
                         </td> 
                       </tr> 
 
@@ -385,11 +389,18 @@ table tbody tr td span{color:#fff!important;}
                   <tr> 
                     
                     <td align="left" valign="top" class="pl-30" style="padding-left:40px;"> 
+                      
                       <table cellpadding="0" width="100%" cellspacing="0" border="0"> 
                         <tbody> 
 
                           <tr>
-                            <td class="mobile"> 
+                            <td> 
+                              <!--[if (gte mso 9)|(IE)]>
+                                    <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="width: 100%;">
+                                    <tr>
+                                    <td valign="top" style="width:290px;">
+                                    <![endif]-->
+                                    <div style="display:inline-block;vertical-align:middle;">
                               <table cellpadding="0" width="340" class="w-100" cellspacing="0" border="0">
                                 <tbody>
                             
@@ -417,9 +428,40 @@ table tbody tr td span{color:#fff!important;}
 
                                               <!-- single line  -->
                                               <tr> 
-                                                <td valign="top" width="25"> <span style="color:#FB471F;font-size:60px;line-height: 10px;">•</span></td>
+                                               <td>
+                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td valign="top" width="25" style="font-size: 12px;line-height: 10px;"> <span style="color:#FB471F;font-size:20px;line-height: 20px;">&#9679;
+                                                      </span></td>
+  
+                                                      <td style="font-family: 'Montserrat','Arial', sans-serif; font-size:16px;  mso-line-height-rule:exactly;  line-height: 22px;color:#272727;font-weight: 600;">  Trained technicians can set up the site in 30 minutes or less
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                 </table>
+                                               </td>
+                                                </tr>
 
-                                                <td style="font-family: 'Montserrat','Arial', sans-serif; font-size:16px;  mso-line-height-rule:exactly;  line-height: 22px;color:#272727;font-weight: 600;">  Trained technicians can set up the site in 30 minutes or less
+                                              <!-- extra space  --> 
+                                              <tr> 
+                                                <td height="15" style="font-size:15px; mso-line-height-rule:exactly;  line-height:15px;">&nbsp;</td> 
+                                              </tr> 
+                                              <!-- single line  -->
+                                              <tr> 
+                                                <td>
+                                                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                    <tbody>
+                                                      <tr>
+                                                        <td valign="top" width="25" style="font-size: 12px;line-height: 10px;"> <span style="color:#FB471F;font-size:20px;line-height: 20px;">&#9679;
+                                                      </span></td>
+
+                                                        <td style="font-family: 'Montserrat','Arial', sans-serif; font-size:16px;  mso-line-height-rule:exactly;  line-height: 22px;color:#272727;font-weight: 600;"> Access 24/7 real-time and historical footage
+        
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
                                                 </td>
                                                 </tr>
 
@@ -429,11 +471,20 @@ table tbody tr td span{color:#fff!important;}
                                               </tr> 
                                               <!-- single line  -->
                                               <tr> 
-                                                <td valign="top" width="25"> <span style="color:#FB471F;font-size:60px;line-height: 10px;">•</span></td>
+                                               <td>
+                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td valign="top" width="25" style="font-size: 12px;line-height: 10px;"> <span style="color:#FB471F;font-size:20px;line-height: 20px;">&#9679;
+                                                      </span></td>
 
-                                                <td style="font-family: 'Montserrat','Arial', sans-serif; font-size:16px;  mso-line-height-rule:exactly;  line-height: 22px;color:#272727;font-weight: 600;"> Access 24/7 real-time and historical footage
-
-                                                </td>
+                                                      <td style="font-family: 'Montserrat','Arial', sans-serif; font-size:16px;  mso-line-height-rule:exactly;  line-height: 22px;color:#272727;font-weight: 600;">  Remote video surveillance monitoring
+      
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                               </td>
                                                 </tr>
 
                                               <!-- extra space  --> 
@@ -442,11 +493,20 @@ table tbody tr td span{color:#fff!important;}
                                               </tr> 
                                               <!-- single line  -->
                                               <tr> 
-                                                <td valign="top" width="25"> <span style="color:#FB471F;font-size:60px;line-height: 10px;">•</span></td>
+                                               <td>
+                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td valign="top" width="25" style="font-size: 12px;line-height: 10px;"> <span style="color:#FB471F;font-size:20px;line-height: 20px;">&#9679;
+                                                      </span></td>
 
-                                                <td style="font-family: 'Montserrat','Arial', sans-serif; font-size:16px;  mso-line-height-rule:exactly;  line-height: 22px;color:#272727;font-weight: 600;">  Remote video surveillance monitoring
-
-                                                </td>
+                                                      <td style="font-family: 'Montserrat','Arial', sans-serif; font-size:16px;  mso-line-height-rule:exactly;  line-height: 22px;color:#272727;font-weight: 600;">  Manage all sites from a unified platform
+      
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                               </td>
                                                 </tr>
 
                                               <!-- extra space  --> 
@@ -455,23 +515,19 @@ table tbody tr td span{color:#fff!important;}
                                               </tr> 
                                               <!-- single line  -->
                                               <tr> 
-                                                <td valign="top" width="25"> <span style="color:#FB471F;font-size:60px;line-height: 10px;">•</span></td>
+                                               <td>
+                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td valign="top" width="25" style="font-size: 12px;line-height: 10px;"> <span style="color:#FB471F;font-size:20px;line-height: 20px;">&#9679;
+                                                      </span></td>
 
-                                                <td style="font-family: 'Montserrat','Arial', sans-serif; font-size:16px;  mso-line-height-rule:exactly;  line-height: 22px;color:#272727;font-weight: 600;">  Manage all sites from a unified platform
-
-                                                </td>
-                                                </tr>
-
-                                              <!-- extra space  --> 
-                                              <tr> 
-                                                <td height="15" style="font-size:15px; mso-line-height-rule:exactly;  line-height:15px;">&nbsp;</td> 
-                                              </tr> 
-                                              <!-- single line  -->
-                                              <tr> 
-                                                <td valign="top" width="25"> <span style="color:#FB471F;font-size:60px;line-height: 10px;">•</span></td>
-
-                                                <td style="font-family: 'Montserrat','Arial', sans-serif; font-size:16px;  mso-line-height-rule:exactly;  line-height: 22px;color:#272727;font-weight: 600;">  Unify all job sites and cameras  with one cloud platform
-                                                </td>
+                                                      <td style="font-family: 'Montserrat','Arial', sans-serif; font-size:16px;  mso-line-height-rule:exactly;  line-height: 22px;color:#272727;font-weight: 600;">  Unify all job sites and cameras  with one cloud platform
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                               </td>
                                                 </tr>
 
                                  
@@ -493,20 +549,32 @@ table tbody tr td span{color:#fff!important;}
                               </tr>
                                 </tbody>
                               </table>
+                              </div>
+                               <!--[if (gte mso 9)|(IE)]>
+                              </td>
+                              
+                              </td><td valign="top" style="width:220px;">
+                              <![endif]-->
 
+                              <div style="display:inline-block;vertical-align:middle;" class="w-full">
+                              <table cellpadding="0" width="215" class="button-center"  cellspacing="0" border="0">
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <img src="https://marketofocused.netlify.app/pragmatic/stallion/img/rob-trailer-render.png" width="215" alt="rob-trailer-render">
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>  
+                              </div>
+                              <!--[if (gte mso 9)|(IE)]>
+                                </td>
+                                </tr>
+                                </table>
+                                <![endif]-->
                             </td>
                            
-                          <td class="mobile">
-                          <table cellpadding="0" width="220" class="button-center"  cellspacing="0" border="0">
-                            <tbody>
-                              <tr>
-                                <td>
-                                  <img src="img/rob-trailer-render.png" width="220" alt="rob-trailer-render">
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>  
-                          </td>
+                         
                           </tr>
 
                     
@@ -527,7 +595,7 @@ table tbody tr td span{color:#fff!important;}
                 <tbody> 
                   <tr>
                     <td>
-                      <img src="img/bg-corner.png" style="display: block;" width="100%" alt="corner">
+                      <img src="https://marketofocused.netlify.app/pragmatic/stallion/img/bg-corner.png" style="display: block;" width="100%" alt="corner">
                     </td>
                   </tr>
                 </tbody>
@@ -564,7 +632,7 @@ table tbody tr td span{color:#fff!important;}
                       </tr> 
                       <tr> 
                         <td  style="color:#272727; font-family: 'Montserrat','Arial',sans-serif;font-size:16px;mso-line-height-rule:exactly;  line-height:24px;font-weight: 400;letter-spacing: 0px; " align="left" valign="top"> 
-                          From the job site to the cloud, Stallion delivers security, comfort, and connection to all our partners’ locations natonwide. To learn more or get a quote, call <span style="color: #FB471F;font-weight: bold;">1 (833) 247-2666</span>, email us at <span style="color: #FB471F;font-weight: bold;" >sales@stallionis.com</span>, or <a href="#" style="color: #FB471F;font-weight: bold;text-decoration: none;">visit our site</a>.
+                          From the job site to the cloud, Stallion delivers security, comfort, and connection to all our partners’ locations natonwide. To learn more or get a quote, call <span style="color: #FB471F!important;font-weight: bold;">1 (833) 247-2666</span>, email us at <span style="color: #FB471F!important;font-weight: bold;" >sales@stallionis.com</span>, or <a href="#" style="color: #FB471F;font-weight: bold;text-decoration: none;">visit our site</a>.
                         </td> 
                         
                       </tr> 
@@ -580,7 +648,7 @@ table tbody tr td span{color:#fff!important;}
                     <table cellpadding="0" width="180"   height="38"  cellspacing="0" border="0"> 
                       <tbody> 
                         <tr> 
-                          <td align="center"  height="38"  bgcolor="#fff"  valign="middle" style="font-family: 'Montserrat','Arial', sans-serif; font-size:18px; font-weight:500; background-color:#005A8B;display:block; color: #fff!important;"> <a class="outlookbutton" href="#" style="padding: 10px; display:block; font-family:'Montserrat', 'Arial', sans-serif; color: #fff!important;  text-decoration: none; mso-line-height-rule:exactly;  line-height: 17px; font-weight: 500; font-size: 18px;" target="_blank"> Learn More </a> </td> 
+                          <td align="center"  height="38"  bgcolor="#fff"  valign="middle" style="font-family: 'Montserrat','Arial', sans-serif; font-size:18px; font-weight:500; background-color:#005A8B;display:block; color: #fff;"> <a class="outlookbutton" href="#" style="padding: 10px; display:block; font-family:'Montserrat', 'Arial', sans-serif; color: #fff;  text-decoration: none; mso-line-height-rule:exactly;  line-height: 18px; font-weight: 500; font-size: 18px;" target="_blank"> Learn More </a> </td> 
                         </tr> 
                       </tbody> 
                     </table> </td> 
