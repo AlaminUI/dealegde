@@ -102,12 +102,17 @@
 
 .agent-inner img {
     max-width: 270px;
-    margin-top: -120px;
+ 
     border-radius: 6px;
+}
+.agent-photo {
+    margin-top: -120px;
+    display: flex;
+    align-items: center;
 }
 .agent-info {
     padding: 32px 0px;
-    padding-bottom: 54px;
+    padding-bottom: 64px;
 }
 
 .agent-info h2 {
@@ -298,7 +303,11 @@ body.error-page {
     margin-top: 24px;
     padding-bottom: 16px;
 }
-
+.agent-photo {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+}
 .hero-content {
     padding: 70px 0px;
 }
@@ -405,7 +414,9 @@ body.error-page {
                 <h2 id="AgentName"></h2>
                 <p id="AgentTitle"></p>
             </div>
-            <img id="agentHeadshot" src="" alt="agent">
+            <div class="agent-photo">
+                <img id="agentHeadshot" src="" alt="agent">
+            </div>
         </div>
     </div>
 </div>
