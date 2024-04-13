@@ -289,14 +289,54 @@ body.error-page {
                 color: #fff;
                 padding: 20px 15px;
             }
+            .phone-number {
+    text-align: center;
+}
 
+.phone-number p {
+    font-size: 30px;
+    color: #fff;
+    margin: 0;
+    padding-bottom: 24px;
+}
+
+.phone-number a {
+    display: block;
+    max-width: 270px;
+    background: #f9ce69;
+    padding: 8px 14px;
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #3a3935;
+    text-decoration: none;
+    font-weight: 500;
+    border: 2px solid #645941;
+    transition: 0.5s;
+    margin: 0 auto;
+}
+
+.phone-number a:hover {
+    background: transparent;
+    color: #f9ce69;
+    border-color: #f9ce69;
+}
+div#video {
+    max-width: 700px;
+    margin: 0 auto;
+}
 @media (max-width:991px) {
     .header-inner {
     flex-direction: column-reverse;
     justify-content: center;
     text-align: center;
 }
-
+.phone-number p {
+    font-size: 26px;
+    
+}
 .header-btn {
     display: flex;
     justify-content: center;
@@ -379,6 +419,9 @@ body.error-page {
     margin: 0 auto;
 }
 }
+.d-none {
+    display: none;
+}
     </style>
 
 </head>
@@ -426,7 +469,7 @@ body.error-page {
     <div class="container">
        <div class="video-inner">
         <h2>11 Commonly Asked Question </h2>
-        <img src="video.png" alt="video">
+        <div id="video"></div>
        </div>
     </div>
 </div>
@@ -445,6 +488,10 @@ body.error-page {
                 <img src="arrow.jpg" alt="arrow">
             </div>
         </div>
+        <div class="phone-number d-none">
+            <p>No pressure, just information.</p>
+            <a href="#">Schedule An Appointment</a>
+        </div>
     </div>
 </div>
     
@@ -460,7 +507,7 @@ body.error-page {
 
 <footer>
     <div class="container">
-        <p>©Jarrell Funeral Home 2024</p>
+        <p>Copyright © 2024 TKG. All Rights Reserved.</p>
     </div>
 </footer>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
@@ -482,6 +529,7 @@ AgentsList = agents.map(function(d) {
     Parameter: d['URL Param'],
     AgentName: d['Agent Name'],
     AgentTitle: d['Agent title'],
+    Phone: d['Phone'],
     agentHeadshot: d['Agent Headshot'],
     Video: d['Video embed'],
     CalendlyLink: d['Calendly link'],
@@ -496,10 +544,22 @@ for(let a=0; a<AgentsList.length; a++){
     
     if(AgentsList[a].Parameter == query){
         const calendlyHtmlCode = AgentsList[a].calendlyEmbed.replace(/<script[^>]*>(?:.|\n)*?<\/script>/gm, '');
+  
+        if(calendlyHtmlCode==''){
+            document.querySelector('.calendly-inner').classList.add('d-none');
+            document.querySelector('.phone-number').classList.remove('d-none');
+        }
+        if(AgentsList[a].Phone != ''){
+            document.getElementById('CalendlyLink').href=AgentsList[a].Phone;
+            document.querySelector('.phone-number a').href=AgentsList[a].Phone;
+        }else{
+            document.getElementById('CalendlyLink').href=AgentsList[a].CalendlyLink;
+        }
             document.getElementById('logo').src=AgentsList[a].Logo;
             document.getElementById('agentHeadshot').src=AgentsList[a].agentHeadshot;
          
-            document.getElementById('CalendlyLink').href=AgentsList[a].CalendlyLink;
+            
+            document.getElementById('video').innerHTML = AgentsList[a].Video;
             document.getElementById('calendlyEmbed').innerHTML = calendlyHtmlCode;
             document.getElementById('AgentName').innerHTML = AgentsList[a].AgentName
             document.getElementById('AgentTitle').innerHTML = AgentsList[a].AgentTitle
