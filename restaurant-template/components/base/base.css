@@ -6703,7 +6703,7 @@ ul.slick-dots li.slick-active button {
     font-size: 20px;
     text-align: left;
     color: #000;
-    padding-bottom: 8px;
+    padding-bottom: 4px;
 }
 
 .food-details p {
@@ -6711,15 +6711,15 @@ ul.slick-dots li.slick-active button {
     text-align: left;
     color: #343b42;
     margin: 0;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     display: -webkit-box;
     overflow: hidden;
 }
 
 p.food-price {
-    padding-top: 12px;
-	color: #000;
+    padding-top: 6px;
+    color: #000;
 }
 
 .food-details {
