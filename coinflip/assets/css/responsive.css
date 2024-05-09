@@ -80,6 +80,17 @@
     .social-icons {
         flex-wrap: wrap;
     }
+    h3 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+    h2 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+    header.scroll-active .header-logo {
+        padding-left: 0;
+    }
 }
 
 /* Small devices (landscape phones, 576px and up) */
