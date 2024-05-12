@@ -124,8 +124,8 @@ a {font-size: 100%;
 main a{
   transition: .2s;
   text-decoration: underline;
-  text-decoration-thickness: 3px;
-  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+  /* text-underline-offset: 3px; */
   text-decoration-color: #fb0;
   color:#000;
 }
@@ -134,8 +134,8 @@ main a:hover{
   outline: none;
   border: none;
   text-decoration: underline;
-  text-decoration-thickness: 3px;
-  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+ 
 }
 
 /* icon  */
