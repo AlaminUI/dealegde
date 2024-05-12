@@ -2,6 +2,9 @@
 font-family: 'Roboto', sans-serif;*/
 
 /************** Default CSS **************/
+html{
+  scroll-behavior: smooth;
+}
 *{
   box-sizing: border-box;
   padding:0;
