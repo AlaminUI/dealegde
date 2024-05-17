@@ -667,7 +667,6 @@ main a:hover{
 /************** Default CSS End **************/
 .primary-btn {
   display: inline-flex;
-  border: 1px solid transparent;
   border-radius: 24px;
   background: #242e3d;
   color: #fff;
@@ -684,7 +683,12 @@ main a:hover{
   padding: 12px 24px;
 }
 
-.primary-btn:hover{background:#374760;}
+.primary-btn:hover {
+  background: #374760;
+  color: #fff;
+  text-decoration: none !important;
+ 
+}
 
 .header-logo img {
   max-width: 150px;
