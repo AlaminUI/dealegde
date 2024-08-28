@@ -120,14 +120,14 @@
             </div>
         </div>
     </section>
-
+<!-- 
     <section class="calendly-area">
         <div class="container">
             <div class="calendly">
                 <div id="calendly" class="calendly-inline-widget" data-url=""></div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="section3">
         <h2 class="title-bg">SOME QUESTIONS WE CAN HELP ANSWER...</h2>
@@ -288,7 +288,7 @@ document.querySelector('body').innerHTML=`
 }
 
 
-
+// FirstName
 
 for(var i=0; i<document.querySelectorAll(".pop-out").length; i++){
 document.querySelectorAll(".pop-out")[i].addEventListener("click", function(e) {
@@ -296,7 +296,10 @@ document.querySelectorAll(".pop-out")[i].addEventListener("click", function(e) {
                 
                 MktoForms2.loadForm("//info.preplanafuneral.com", "852-LNK-689", 1209, function (form){MktoForms2.lightbox(form).show()
                     counter=0;
-
+                   
+                        if(query == 234){
+                            $('#FirstName').parent().parent().remove();
+                        }
    // Set your proxy (hidden) field to visible field mappings
 
    var proxySources = [
