@@ -153,8 +153,8 @@ header {
   align-items: center;
 }
 
-span.action-btn img {
-  height: 16px;
+.action-btn img {
+  height: 26px;
   margin-left: 7px;
 }
 
@@ -164,7 +164,7 @@ span.action-btn img {
 }
 
 .hero-right form {
-  background: #fff;
+  background: #009274;
   padding: 32px 24px;
   border-radius: 8px;
   max-width: 460px;
@@ -183,7 +183,7 @@ span.action-btn img {
 }
 
 form button {
-  background: #a9eb20;
+  background: #ffd638;
   color: #000;
   display: inline-block;
   padding: 14px 34px;
@@ -208,6 +208,7 @@ form input:focus {
 }
 .input-group label {
   font-size: 14px;
+  color: #fff;
 }
 section.video-area {
   padding: 80px 0px;
@@ -262,7 +263,7 @@ section.testimonial-area {
 }
 section.our-success {
   background: #406bd9;
-  padding: 60px;
+  padding: 60px 0px;
 }
 
 .success-wrap {
@@ -372,3 +373,108 @@ footer {
   justify-content: end;
 }
 /************** Template CSS End **************/
+
+
+@media (max-width:991px) {
+  .banner-wrapper {
+    grid-template-columns: auto;
+}
+
+.hero-left {
+    max-width: 100%;
+}
+
+.hero-right form {
+    margin: 0 auto;
+    margin-top: 32px;
+}
+
+.success-wrap {
+    grid-template-columns: auto;
+}
+
+.single-success {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.video-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.video iframe {
+  width: 100%;
+  max-width: 568px;
+  /* height: 257px; */
+  border-width: 0px;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-wrap {
+    grid-template-columns: auto;
+}
+
+.single-testimonial {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.footer-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-logos {
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.footer-left p {
+    text-align: center;
+}
+
+footer {
+    padding: 40px 0px;
+}
+
+section.testimonial-area {
+    padding: 40px 0px;
+}
+
+section.video-area {
+    padding: 40px 0px;
+}
+
+header {
+    padding: 50px 0px;
+}
+h2.action-btn {text-align: center;display: block;margin-top: 20px;}
+
+.action-btn img {display: none;}
+
+h1 {
+    font-size: 32px;
+}
+
+section.our-success {
+    padding: 40px 0px;
+}
+
+.footer-logos img:nth-child(2) {
+    max-width: 140px;
+}
+
+.footer-logos img {
+    max-width: 50px;
+}
+
+.footer-logos img:nth-child(3) {
+    max-width: 85px;
+}
+}
