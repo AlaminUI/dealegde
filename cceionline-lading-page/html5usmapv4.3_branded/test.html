@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Map Example</title>
+    <link rel='stylesheet' href='http://handandstonefranchise.com/wp-content/plugins/usahtmlmap/static/css/map.css'>
+    <script type='text/javascript' src='http://handandstonefranchise.com/wp-content/plugins/usahtmlmap/static/js/raphael.min.js'></script>
+    <script type='text/javascript' src='http://handandstonefranchise.com/wp-content/plugins/usahtmlmap/static/js/map.js'></script>
+    <script type='text/javascript'>
+		function usahtml5map_set_state_text(state) { usahtml5map_set_state_text_0(state); } // Compatability hack.
+		</script>
+	
+  </head>
+	<body>
+		<div class='usaHtml5Mapbottom htmlMapResponsive' style='max-width:780px'>
+			<div id='usa-html5-map-map-container_0' class='usaHtml5MapContainer'></div>
+				<style>
+					#usa-html5-map-map-container_0 .fm-tooltip {
+						color: #000000;
+						font-size: 20px;
+					}
+				</style>
+				<script src='http://handandstonefranchise.com/index.php?usahtml5map_js_data=true&map_id=0&r=44490'></script>
+				<script>
+					var usahtml5map_map_0 = new FlaMap(usahtml5map_map_cfg_0);
+					usahtml5map_map_0.drawOnDomReady('usa-html5-map-map-container_0');
+					function usahtml5map_set_state_text_0(state) {
+						jQuery('#usa-html5-map-state-info_0').html('Loading...');
+						jQuery.ajax({
+							type: 'POST',
+							url: 'http://handandstonefranchise.com/index.php?usahtml5map_get_state_info='+state+'&map_id=0',
+							success: function(data, textStatus, jqXHR){
+								jQuery('#usa-html5-map-state-info_0').html(data);
+							},
+							dataType: 'text'
+						});
+					}
+				</script>
+				<div id='usa-html5-map-state-info_0' class='usaHtml5MapStateInfo'></div>
+				</div>
+				<div style='clear: both'></div>
+				<!-- end HTML5 Map -->
+		
+		
+			</div>
+		
+	</body>
+</html>
+      
+    
+
