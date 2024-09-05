@@ -218,7 +218,9 @@ section.video-area {
   grid-template-columns: 1fr 1fr;
   gap: 32px;
 }
-
+.benefits h2 {
+  font-size: 26px;
+}
 .video iframe {
   width: 100%;
   height: 322px;
