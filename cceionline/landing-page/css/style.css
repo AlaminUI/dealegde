@@ -50,6 +50,9 @@ table {
     background-color: white;
     box-shadow: 0 0px 2px rgba(0,0,0,0.1);
     padding-bottom: 14px;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .logo img {width: 100%;max-width: 275px;}
@@ -257,6 +260,7 @@ li.dropdown:hover .sub-menu {
 
 .breadcrumb-area {
     text-align: center;
+    margin-top: 128px;
 }
 
 .breadcrumb-content h1 {
@@ -297,6 +301,9 @@ li.dropdown:hover .sub-menu {
 }
 .contact-form {
     text-align: right;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 30px;
+    border-radius: 8px;
 }
 
 .form-info ul li {
@@ -487,9 +494,31 @@ li.dropdown:hover .sub-menu {
 .certification-logo {
     height: 66px;
 }
+.actions {
+    margin-top: 0px;
+}
 
+.actions .hs-button {
+    background: #009274 !important;
+    border-color: #009274!important;
+}
+
+.actions .hs-button:hover {
+    opacity: 0.8;
+    background: #009274 !important;
+    border-color: #009274 !important;
+}
  
 @media (max-width:991px) {
+    .breadcrumb-content h1 {
+        font-size: 32px;
+       
+    }
+    .breadcrumb-content p {
+       
+        font-size: 16px;
+        
+    }
     span.sub-arrow {
         display: none;
     }
@@ -623,8 +652,11 @@ ul.nav-links.active {
 
 .breadcrumb-area {
     background-size: cover !important;!i;!;
+    margin-top: 99px;
 }
-
+.breadcrumb-content {
+    padding: 50px 0px;
+}
 .form-info ul li {
     font-size: 16px;
 }
