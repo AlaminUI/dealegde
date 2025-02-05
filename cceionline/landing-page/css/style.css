@@ -327,6 +327,8 @@ li.dropdown:hover .sub-menu {
 .calendy-area {
     background: #529e7d;
     padding-bottom: 20px;
+    position: relative;
+    z-index: -1;
 }
 
 .calendy-wrapper {
