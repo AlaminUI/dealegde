@@ -1,3 +1,10 @@
+/* Theme base styles */
+
+/* Tools
+Any animations, or functions used throughout the project.
+Note: _macros.css needs to be imported into each stylesheet where macros are used and not included here
+*/
+
 /* Reset CSS */
 * {
     margin: 0;
@@ -811,7 +818,10 @@ font-family: 'FontAwesome';
     gap: 24px;
     padding-top: 20px;
 }
-
+.q-icon img {
+    width: 20px;
+    margin-top: 5px;
+}
 .single-question {
     background: #fff;
     border-radius: 8px;
@@ -912,8 +922,8 @@ blockquote .author {
   }
 
   .offer-box-wrapper {
-    padding: 40px 32px;
-    max-width: 740px;
+    padding: 40px 44px;
+    max-width: 832px;
     text-align: center;
     margin: 0 auto;
     border-radius: 8px;
@@ -927,10 +937,11 @@ blockquote .author {
     font-weight: bold;
     margin-top: 4px;
     transition: 0.4s;
+  font-size:20px;
 }
 
 .offer-box p {
-    font-size: 22px;
+    font-size: 28px;
 }
 
 .offer-box-area {
@@ -1242,7 +1253,7 @@ ul.nav-links.active {
     }
     
     .subscription-details-wrap ul {
-        padding-left: 18px;
+        padding-left: 0px;
     }
     
     .why-choose-wrapper {
@@ -1269,8 +1280,15 @@ ul.nav-links.active {
         font-size: 16px;
     }
     .offer-box p {
-        font-size: 18px;
+        font-size: 20px;
     }
+    .offer-box-wrapper {
+    padding: 26px;
+}
+
+.offer-box-wrapper a {
+    font-size: 16px;
+}
 .header-bg {
     min-height: auto;
     padding: 80px 0px;
@@ -1305,6 +1323,24 @@ ul.nav-links.active {
         margin: 0;
         padding-bottom: 56.25%;
     }
+  .social-icons {
+    justify-content: center;
+}
+
+.footer-address {
+    text-align: center;
+}
+
+.footer-links {
+    justify-content: center;
+}
+  .footer-content {
+     
+    text-align: center;
+}
+  .footer-description br {
+    display: none;
+}
 }
 
 @media (max-width:450px) {
@@ -1323,4 +1359,21 @@ ul.nav-links.active {
     ul.nav-links {
         width: 150px;
     }
+  .single-question {
+ 
+    padding: 20px 18px;
+ 
+}
+  .social-icon {
+    width: 36px;
+    height: 36px;
+   
+}
+  .footer-logo {
+    max-width: 230px;
+    width: 100%;
+}
+  .logo img {
+    max-width: 200px;
+}
 }
